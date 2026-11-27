@@ -43,7 +43,7 @@ function decoration(d) {
     bubble.classList.add('on');
     animate(img, 'cici-hop', 300);
     sfx.hello();
-    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5 }), 550);
+    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio) }), 550);
     clearTimeout(hideTimer);
     hideTimer = setTimeout(() => bubble.classList.add('gone'), 9000);
   };

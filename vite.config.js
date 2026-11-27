@@ -40,9 +40,11 @@ export default defineConfig(({ mode }) => {
             .filter((f) => !/\.woff2?$/.test(f) || (/-latin-\d+-normal/.test(f) && f.endsWith('.woff2')))
             .sort();
           files.push(`manifest-${app}.webmanifest`, `icons/${app}-180.png`, `icons/${app}-192.png`, `icons/${app}-512.png`);
-          // This app's images (public/images/<app>/, e.g. home tiles) so it works fully offline.
+          // This app's images and audio (public/images|audio/<app>/, e.g. home tiles, Cici's greeting) so it works fully offline.
           const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(join(d, e.name)) : [join(d, e.name)]));
-          try { files.push(...walk(join(dir, 'images', app)).map((f) => f.slice(dir.length + 1).split('\\').join('/'))); } catch { /* no images for this app */ }
+          for (const kind of ['images', 'audio']) {
+            try { files.push(...walk(join(dir, kind, app)).map((f) => f.slice(dir.length + 1).split('\\').join('/'))); } catch { /* none for this app */ }
+          }
           const version = createHash('sha256').update(files.join('\n')).digest('hex').slice(0, 10);
           const swPath = join(dir, 'sw.js');
           const sw = readFileSync(swPath, 'utf8')
