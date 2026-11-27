@@ -103,7 +103,10 @@ function decoration(d) {
   };
   img.addEventListener('click', () => { if (Date.now() - lastGreet > 600) greet(); });
   const who = session.profile?.id ?? session.profile?.name;
-  if (greetedProfile !== who) {
+  // Greet when a learner was just picked, or on the first home visit of the session
+  // (not every time the child comes back from an activity).
+  if (session.greetOnHome || greetedProfile !== who) {
+    session.greetOnHome = false;
     greetedProfile = who;
     setTimeout(greet, 900); // after the slide-in
   }

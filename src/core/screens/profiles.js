@@ -16,6 +16,7 @@ export function profilesScreen() {
       onclick: () => {
         if (managing) { editProfile(p); return; }
         setActiveProfile(p);
+        session.greetOnHome = true; // the home mascot says hello every time a learner is picked
         navigate('/home');
       },
     },
