@@ -1,0 +1,543 @@
+{
+  "id": "demonstratives",
+  "title": "This / That / These / Those",
+  "lesson": {
+    "intro": "This, that, these and those are pointing words. They tell us [[how many]] things there are and [[how near]] they are.",
+    "points": [
+      "[[This]] = one thing that is near: This is my pencil.",
+      "[[That]] = one thing that is far: That is a bird.",
+      "[[These]] = many things that are near: These are my shoes.",
+      "[[Those]] = many things that are far: Those are mountains.",
+      "Use \"is\" with this and that. Use \"are\" with these and those."
+    ],
+    "examples": [
+      {
+        "text": "[[This]] is my bag.",
+        "note": "one, near"
+      },
+      {
+        "text": "[[That]] is the school bus.",
+        "note": "one, far"
+      },
+      {
+        "text": "[[These]] cookies are delicious.",
+        "note": "many, near"
+      },
+      {
+        "text": "[[Those]] stars are very bright.",
+        "note": "many, far"
+      }
+    ],
+    "tip": "One → this/that. Many → these/those. Near → this/these. Far → that/those."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ is my pencil. (in my hand)",
+      "options": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "answer": "This",
+      "explanation": "One thing, near → this.",
+      "id": "demonstratives-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ is a bird. (far away in the sky)",
+      "options": [
+        "That",
+        "This",
+        "These"
+      ],
+      "answer": "That",
+      "explanation": "One thing, far → that.",
+      "id": "demonstratives-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ are my shoes. (here, near me)",
+      "options": [
+        "These",
+        "This",
+        "That"
+      ],
+      "answer": "These",
+      "explanation": "Many things, near → these.",
+      "id": "demonstratives-003"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ are mountains. (far away)",
+      "options": [
+        "Those",
+        "These",
+        "This"
+      ],
+      "answer": "Those",
+      "explanation": "Many things, far → those.",
+      "id": "demonstratives-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Look at ___ stars in the sky!",
+      "options": [
+        "those",
+        "this",
+        "these"
+      ],
+      "answer": "those",
+      "explanation": "Stars are many and far away.",
+      "id": "demonstratives-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ apple in my hand is sweet.",
+      "options": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "answer": "This",
+      "explanation": "One apple, near → this.",
+      "id": "demonstratives-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Can you see ___ cows over there?",
+      "options": [
+        "those",
+        "these",
+        "this"
+      ],
+      "answer": "those",
+      "explanation": "Many cows, far → those.",
+      "id": "demonstratives-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ cookies on my plate are delicious.",
+      "options": [
+        "These",
+        "Those",
+        "That"
+      ],
+      "answer": "These",
+      "explanation": "Many cookies, near → these.",
+      "id": "demonstratives-008"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ is my house over there.",
+      "options": [
+        "That",
+        "This",
+        "Those"
+      ],
+      "answer": "That",
+      "explanation": "One house, far → that.",
+      "id": "demonstratives-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "This ___ my bag.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "explanation": "Use \"is\" with this.",
+      "id": "demonstratives-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "These ___ my books.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "answer": "are",
+      "explanation": "Use \"are\" with these.",
+      "id": "demonstratives-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "That ___ a beautiful house.",
+      "options": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "is",
+      "explanation": "Use \"is\" with that.",
+      "id": "demonstratives-012"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Those ___ my classmates.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "answer": "are",
+      "explanation": "Use \"are\" with those.",
+      "id": "demonstratives-013"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ birds on the fence are noisy. (far away)",
+      "options": [
+        "Those",
+        "This",
+        "These"
+      ],
+      "answer": "Those",
+      "explanation": "Many birds, far → those.",
+      "id": "demonstratives-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ flowers here smell nice.",
+      "options": [
+        "These",
+        "This",
+        "That"
+      ],
+      "answer": "These",
+      "explanation": "Many flowers, near → these.",
+      "id": "demonstratives-015"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Who is ___ man standing over there?",
+      "options": [
+        "that",
+        "this",
+        "these"
+      ],
+      "answer": "that",
+      "explanation": "One man, far → that.",
+      "id": "demonstratives-016"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I like ___ shirt I am wearing now.",
+      "options": [
+        "this",
+        "that",
+        "those"
+      ],
+      "answer": "this",
+      "explanation": "One shirt, near (I am wearing it) → this.",
+      "id": "demonstratives-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ were the best days of my life.",
+      "options": [
+        "Those",
+        "These",
+        "This"
+      ],
+      "answer": "Those",
+      "explanation": "We use \"those\" for many things far away in time.",
+      "id": "demonstratives-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Is ___ your car parked across the road?",
+      "options": [
+        "that",
+        "this",
+        "these"
+      ],
+      "answer": "that",
+      "explanation": "One car, far → that.",
+      "id": "demonstratives-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ who finish early may go out to play.",
+      "options": [
+        "Those",
+        "These",
+        "That"
+      ],
+      "answer": "Those",
+      "explanation": "\"Those who\" means \"the people who\".",
+      "id": "demonstratives-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Please pass me ___ scissors on your table.",
+      "options": [
+        "those",
+        "that",
+        "this"
+      ],
+      "answer": "those",
+      "explanation": "\"Scissors\" is plural, and they are on your table (far from me).",
+      "id": "demonstratives-021"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "You hold one book in your hand. What do you say?",
+      "options": [
+        "This is a book.",
+        "These are a book.",
+        "Those is a book."
+      ],
+      "answer": "This is a book.",
+      "explanation": "One thing, near → this is.",
+      "id": "demonstratives-022"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "You point at many kites far away. What do you say?",
+      "options": [
+        "Those are kites.",
+        "This is kites.",
+        "These is kites."
+      ],
+      "answer": "Those are kites.",
+      "explanation": "Many things, far → those are.",
+      "id": "demonstratives-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is for ONE thing that is NEAR?",
+      "options": [
+        "this",
+        "that",
+        "these",
+        "those"
+      ],
+      "answer": "this",
+      "explanation": "This = one, near.",
+      "id": "demonstratives-024"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is for MANY things that are FAR?",
+      "options": [
+        "those",
+        "this",
+        "that",
+        "these"
+      ],
+      "answer": "those",
+      "explanation": "Those = many, far.",
+      "id": "demonstratives-025"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is for MANY things that are NEAR?",
+      "options": [
+        "these",
+        "this",
+        "that",
+        "those"
+      ],
+      "answer": "these",
+      "explanation": "These = many, near.",
+      "id": "demonstratives-026"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "These oranges are sweet.",
+        "This oranges are sweet.",
+        "These orange are sweet.",
+        "These oranges is sweet."
+      ],
+      "answer": "These oranges are sweet.",
+      "explanation": "These + plural noun + are.",
+      "id": "demonstratives-027"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "That bridge over there is very long.",
+        "This bridge over there is very long.",
+        "Those bridge over there is very long.",
+        "These bridge over there is very long."
+      ],
+      "answer": "That bridge over there is very long.",
+      "explanation": "One bridge, far → that.",
+      "id": "demonstratives-028"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Those trousers are too long for me.",
+        "That trousers is too long for me.",
+        "This trousers are too long for me.",
+        "Those trousers is too long for me."
+      ],
+      "answer": "Those trousers are too long for me.",
+      "explanation": "\"Trousers\" is plural.",
+      "id": "demonstratives-029"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "This are my toys.",
+      "answer": "This",
+      "correction": "These",
+      "explanation": "\"This\" should be \"These\". Toys = many, so use \"these\".",
+      "id": "demonstratives-030"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "These is my pencil.",
+      "answer": "These",
+      "correction": "This",
+      "explanation": "\"These\" should be \"This\". One pencil, so use \"this\".",
+      "id": "demonstratives-031"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Those is a big ship.",
+      "answer": "Those",
+      "correction": "That",
+      "explanation": "\"Those\" should be \"That\". One ship, so use \"that\".",
+      "id": "demonstratives-032"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "That are my friends over there.",
+      "answer": "That",
+      "correction": "Those",
+      "explanation": "\"That\" should be \"Those\". Friends = many, so use \"those\".",
+      "id": "demonstratives-033"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "This shoes are new.",
+      "answer": "This",
+      "correction": "These",
+      "explanation": "\"This\" should be \"These\". Shoes = many, so use \"these\".",
+      "id": "demonstratives-034"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I like these dress.",
+      "answer": "these",
+      "correction": "this",
+      "explanation": "\"these\" should be \"this\". One dress, so use \"this\".",
+      "id": "demonstratives-035"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Look at that birds flying over the sea!",
+      "answer": "that",
+      "correction": "those",
+      "explanation": "\"that\" should be \"those\". Birds = many, so use \"those\".",
+      "id": "demonstratives-036"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "This scissors are very sharp.",
+      "answer": "This",
+      "correction": "These",
+      "explanation": "\"This\" should be \"These\". \"Scissors\" is plural.",
+      "id": "demonstratives-037"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "This is my bag.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "demonstratives-038"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "Those are my friends.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "demonstratives-039"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "These flowers are very beautiful.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "demonstratives-040"
+    }
+  ]
+}

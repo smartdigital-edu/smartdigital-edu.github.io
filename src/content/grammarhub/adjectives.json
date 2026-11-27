@@ -1,0 +1,568 @@
+{
+  "id": "adjectives",
+  "title": "Adjectives",
+  "lesson": {
+    "intro": "An adjective is a describing word. It tells us more about a noun: its [[colour]], [[size]], [[shape]], [[feeling]], [[taste]] or [[number]].",
+    "points": [
+      "Colour: red, blue, green. Size: big, tiny, tall. Shape: round, square.",
+      "Feelings: happy, sad, angry. Taste: sweet, sour, salty. Number: one, three, many.",
+      "An adjective usually comes before a noun (a [[red]] apple) or after \"is/are\" (The apple is [[red]]).",
+      "To compare two things, add -er + than: tall → [[taller]] than. For long words use more: [[more beautiful]] than.",
+      "To compare three or more, use the + -est: the [[tallest]]. For long words use most: the [[most beautiful]].",
+      "Some adjectives change completely: good → better → best; bad → worse → worst."
+    ],
+    "examples": [
+      {
+        "text": "I ate a [[juicy]] mango.",
+        "note": "juicy describes the mango"
+      },
+      {
+        "text": "The elephant is [[big]].",
+        "note": "adjective after \"is\""
+      },
+      {
+        "text": "Ali is [[taller]] than Abu.",
+        "note": "comparing two people"
+      },
+      {
+        "text": "Mount Kinabalu is the [[highest]] mountain in Malaysia.",
+        "note": "comparing many"
+      },
+      {
+        "text": "This is the [[most interesting]] book I have read.",
+        "note": "long adjective → most"
+      }
+    ],
+    "tip": "Short word ending consonant-vowel-consonant? Double the last letter: big → bigger → biggest. Ending in y? Change y to i: happy → happier → happiest."
+  },
+  "questions": [
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is an adjective (a describing word)?",
+      "options": [
+        "big",
+        "run",
+        "house",
+        "sing"
+      ],
+      "answer": "big",
+      "explanation": "\"Big\" describes size.",
+      "id": "adjectives-001"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is an adjective?",
+      "options": [
+        "yellow",
+        "banana",
+        "eat",
+        "under"
+      ],
+      "answer": "yellow",
+      "explanation": "\"Yellow\" describes colour.",
+      "id": "adjectives-002"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is an adjective?",
+      "options": [
+        "happy",
+        "smile",
+        "boy",
+        "play"
+      ],
+      "answer": "happy",
+      "explanation": "\"Happy\" describes a feeling.",
+      "id": "adjectives-003"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the adjective?",
+      "sentence": "The tall man waved.",
+      "options": [
+        "tall",
+        "man",
+        "waved",
+        "the"
+      ],
+      "answer": "tall",
+      "explanation": "\"Tall\" describes the man.",
+      "id": "adjectives-004"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the adjective?",
+      "sentence": "I have a soft pillow.",
+      "options": [
+        "soft",
+        "pillow",
+        "have",
+        "I"
+      ],
+      "answer": "soft",
+      "explanation": "\"Soft\" describes the pillow.",
+      "id": "adjectives-005"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is the adjective?",
+      "sentence": "The hungry tiger roared.",
+      "options": [
+        "hungry",
+        "tiger",
+        "roared",
+        "the"
+      ],
+      "answer": "hungry",
+      "explanation": "\"Hungry\" describes the tiger.",
+      "id": "adjectives-006"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word describes how food tastes?",
+      "options": [
+        "spicy",
+        "bowl",
+        "cook",
+        "spoon"
+      ],
+      "answer": "spicy",
+      "explanation": "\"Spicy\" describes taste.",
+      "id": "adjectives-007"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which word is the opposite of \"heavy\"?",
+      "options": [
+        "light",
+        "big",
+        "strong",
+        "hard"
+      ],
+      "answer": "light",
+      "explanation": "Heavy and light are opposites.",
+      "id": "adjectives-008"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which word is the opposite of \"noisy\"?",
+      "options": [
+        "quiet",
+        "loud",
+        "busy",
+        "happy"
+      ],
+      "answer": "quiet",
+      "explanation": "Noisy and quiet are opposites.",
+      "id": "adjectives-009"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "An elephant is bigger than a horse.",
+        "An elephant is more big than a horse.",
+        "An elephant is biggest than a horse.",
+        "An elephant is bigest than a horse."
+      ],
+      "answer": "An elephant is bigger than a horse.",
+      "explanation": "Compare two with -er + than: big → bigger.",
+      "id": "adjectives-010"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "This is the most interesting book in the library.",
+        "This is the interestingest book in the library.",
+        "This is the more interesting book in the library.",
+        "This is the most interestinger book in the library."
+      ],
+      "answer": "This is the most interesting book in the library.",
+      "explanation": "Long adjectives use \"the most\" to compare many things.",
+      "id": "adjectives-011"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Choose the correct order of adjectives.",
+      "options": [
+        "a lovely small red ball",
+        "a red small lovely ball",
+        "a small lovely red ball",
+        "a red lovely small ball"
+      ],
+      "answer": "a lovely small red ball",
+      "explanation": "Opinion comes first, then size, then colour.",
+      "id": "adjectives-012"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The sky is ___.",
+      "options": [
+        "blue",
+        "run",
+        "table"
+      ],
+      "answer": "blue",
+      "explanation": "\"Blue\" describes the colour of the sky.",
+      "id": "adjectives-013"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ice is very ___.",
+      "options": [
+        "cold",
+        "hot",
+        "loud"
+      ],
+      "answer": "cold",
+      "explanation": "Ice is cold.",
+      "id": "adjectives-014"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A giraffe has a ___ neck.",
+      "options": [
+        "long",
+        "short",
+        "round"
+      ],
+      "answer": "long",
+      "explanation": "Giraffes have long necks.",
+      "id": "adjectives-015"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The kitten is small and ___.",
+      "options": [
+        "cute",
+        "cutely",
+        "cuteness"
+      ],
+      "answer": "cute",
+      "explanation": "\"Cute\" is the adjective.",
+      "id": "adjectives-016"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Sugar tastes ___.",
+      "options": [
+        "sweet",
+        "sour",
+        "salty"
+      ],
+      "answer": "sweet",
+      "explanation": "Sugar is sweet.",
+      "id": "adjectives-017"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Lemons taste ___.",
+      "options": [
+        "sour",
+        "sweet",
+        "soft"
+      ],
+      "answer": "sour",
+      "explanation": "Lemons are sour.",
+      "id": "adjectives-018"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Kim is ___ than her sister.",
+      "options": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "answer": "taller",
+      "explanation": "To compare two people, use -er + than.",
+      "id": "adjectives-019"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A cheetah is the ___ animal on land.",
+      "options": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "answer": "fastest",
+      "explanation": "To compare many, use the + -est.",
+      "id": "adjectives-020"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Today is ___ than yesterday.",
+      "options": [
+        "hotter",
+        "hoter",
+        "hottest"
+      ],
+      "answer": "hotter",
+      "explanation": "hot → hotter: double the t and add -er.",
+      "id": "adjectives-021"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "This box is ___ than that one.",
+      "options": [
+        "heavier",
+        "heavyer",
+        "heaviest"
+      ],
+      "answer": "heavier",
+      "explanation": "heavy → heavier: change y to i and add -er.",
+      "id": "adjectives-022"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mount Kinabalu is the ___ mountain in Malaysia.",
+      "options": [
+        "highest",
+        "higher",
+        "high"
+      ],
+      "answer": "highest",
+      "explanation": "Comparing all mountains, so use the + -est.",
+      "id": "adjectives-023"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My drawing is ___ than yours.",
+      "options": [
+        "better",
+        "gooder",
+        "best"
+      ],
+      "answer": "better",
+      "explanation": "good → better → best.",
+      "id": "adjectives-024"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "This is the ___ day of my life!",
+      "options": [
+        "best",
+        "better",
+        "goodest"
+      ],
+      "answer": "best",
+      "explanation": "good → better → best.",
+      "id": "adjectives-025"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Her handwriting is ___ than mine.",
+      "options": [
+        "neater",
+        "more neat",
+        "neatest"
+      ],
+      "answer": "neater",
+      "explanation": "neat is a short word: neat → neater.",
+      "id": "adjectives-026"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Science is ___ than I thought.",
+      "options": [
+        "more interesting",
+        "interestinger",
+        "most interesting"
+      ],
+      "answer": "more interesting",
+      "explanation": "Long adjectives use \"more ... than\".",
+      "id": "adjectives-027"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The Rajang River is the ___ river in Malaysia.",
+      "options": [
+        "longest",
+        "longer",
+        "most long"
+      ],
+      "answer": "longest",
+      "explanation": "Comparing all rivers: the longest.",
+      "id": "adjectives-028"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The weather today is ___ than it was last week.",
+      "options": [
+        "worse",
+        "badder",
+        "worst"
+      ],
+      "answer": "worse",
+      "explanation": "bad → worse → worst.",
+      "id": "adjectives-029"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I saw a bluely bird.",
+      "answer": "bluely",
+      "correction": "blue",
+      "explanation": "\"bluely\" should be \"blue\". \"Blue\" is the adjective.",
+      "id": "adjectives-030"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My bag is heavy than yours.",
+      "answer": "heavy",
+      "correction": "heavier",
+      "explanation": "\"heavy\" should be \"heavier\". With \"than\" we use the -er form.",
+      "id": "adjectives-031"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He is the tallest than his brother.",
+      "answer": "tallest",
+      "correction": "taller",
+      "explanation": "\"tallest\" should be \"taller\". Comparing two people, so use \"taller than\".",
+      "id": "adjectives-032"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "This is the goodest cake ever.",
+      "answer": "goodest",
+      "correction": "best",
+      "explanation": "\"goodest\" should be \"best\". good → better → best.",
+      "id": "adjectives-033"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Ali is more fast than Chong.",
+      "answer": "more",
+      "correction": "faster (not \"more fast\")",
+      "explanation": "\"more\" should be \"faster (not \"more fast\")\". Short adjectives add -er instead of using \"more\".",
+      "id": "adjectives-034"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Today is the hotest day this year.",
+      "answer": "hotest",
+      "correction": "hottest",
+      "explanation": "\"hotest\" should be \"hottest\". Double the t: hottest.",
+      "id": "adjectives-035"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She is the most kindest girl in class.",
+      "answer": "most",
+      "correction": "kindest (remove \"most\")",
+      "explanation": "\"most\" should be \"kindest (remove \"most\")\". Do not use \"most\" and -est together.",
+      "id": "adjectives-036"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The red dress is more prettier than the blue one.",
+      "answer": "more",
+      "correction": "prettier (remove \"more\")",
+      "explanation": "\"more\" should be \"prettier (remove \"more\")\". Do not use \"more\" and -er together.",
+      "id": "adjectives-037"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The big dog is brown.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "adjectives-038"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "My sister is younger than me.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "adjectives-039"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "This is the most beautiful garden.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "adjectives-040"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word describes the size of the ant?",
+      "sentence": "The tiny ant carried a crumb.",
+      "options": [
+        "tiny",
+        "ant",
+        "carried",
+        "crumb"
+      ],
+      "answer": "tiny",
+      "explanation": "\"Tiny\" tells us the size of the ant.",
+      "id": "adjectives-041"
+    }
+  ]
+}

@@ -1,0 +1,568 @@
+{
+  "id": "verbs",
+  "title": "Verbs",
+  "lesson": {
+    "intro": "A verb is a doing or action word. It tells us what someone or something [[does]]. Every sentence needs a verb.",
+    "points": [
+      "Action verbs: run, jump, eat, write, swim, read, cook.",
+      "Being verbs: [[am]], [[is]], [[are]] (now) and [[was]], [[were]] (past). I am, he/she/it is, we/you/they are.",
+      "Having verbs: I/you/we/they [[have]]; he/she/it [[has]].",
+      "With he, she, it or one person/thing, add -s or -es to the verb: she [[sings]], he [[watches]], it [[flies]].",
+      "With I, you, we, they or many people/things, use the verb without -s: they [[sing]]."
+    ],
+    "examples": [
+      {
+        "text": "The baby [[sleeps]] in the cot.",
+        "note": "one baby → sleeps"
+      },
+      {
+        "text": "Birds [[fly]] in the sky.",
+        "note": "many birds → fly"
+      },
+      {
+        "text": "I [[am]] happy today.",
+        "note": "being verb"
+      },
+      {
+        "text": "Mother [[cooks]] nasi lemak on Sunday.",
+        "note": "action verb"
+      },
+      {
+        "text": "We [[have]] two goldfish.",
+        "note": "having verb"
+      }
+    ],
+    "tip": "To find the verb, ask: \"What is someone doing?\" or \"What is happening?\""
+  },
+  "questions": [
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a verb (an action word)?",
+      "options": [
+        "jump",
+        "table",
+        "green",
+        "happy"
+      ],
+      "answer": "jump",
+      "explanation": "Jump is something you do.",
+      "id": "verbs-001"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a verb?",
+      "options": [
+        "eat",
+        "plate",
+        "hungry",
+        "food"
+      ],
+      "answer": "eat",
+      "explanation": "Eat is an action.",
+      "id": "verbs-002"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a verb?",
+      "options": [
+        "swim",
+        "pool",
+        "water",
+        "wet"
+      ],
+      "answer": "swim",
+      "explanation": "Swim is an action.",
+      "id": "verbs-003"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is a verb?",
+      "options": [
+        "write",
+        "pencil",
+        "paper",
+        "neat"
+      ],
+      "answer": "write",
+      "explanation": "Write is an action.",
+      "id": "verbs-004"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is NOT a verb?",
+      "options": [
+        "chair",
+        "sit",
+        "stand",
+        "walk"
+      ],
+      "answer": "chair",
+      "explanation": "A chair is a thing (a noun).",
+      "id": "verbs-005"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the verb?",
+      "sentence": "The boy kicks the ball.",
+      "options": [
+        "kicks",
+        "boy",
+        "ball",
+        "the"
+      ],
+      "answer": "kicks",
+      "explanation": "\"Kicks\" tells us what the boy does.",
+      "id": "verbs-006"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is the verb?",
+      "sentence": "My sister sings beautifully.",
+      "options": [
+        "sings",
+        "sister",
+        "beautifully",
+        "my"
+      ],
+      "answer": "sings",
+      "explanation": "\"Sings\" tells us what my sister does.",
+      "id": "verbs-007"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is the verb?",
+      "sentence": "The children laughed at the clown.",
+      "options": [
+        "laughed",
+        "children",
+        "clown",
+        "at"
+      ],
+      "answer": "laughed",
+      "explanation": "\"Laughed\" tells us what the children did.",
+      "id": "verbs-008"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which word is the verb?",
+      "sentence": "Grandmother carefully sewed a new baju kurung.",
+      "options": [
+        "sewed",
+        "carefully",
+        "new",
+        "Grandmother"
+      ],
+      "answer": "sewed",
+      "explanation": "\"Sewed\" is the action.",
+      "id": "verbs-009"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Which sentence has TWO action verbs?",
+      "options": [
+        "Amir ran and jumped.",
+        "Amir is tall.",
+        "Amir has a red bag.",
+        "Amir and Ali are friends."
+      ],
+      "answer": "Amir ran and jumped.",
+      "explanation": "\"Ran\" and \"jumped\" are both actions.",
+      "id": "verbs-010"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "In which sentence is \"watch\" a verb?",
+      "options": [
+        "I watch cartoons on Saturday.",
+        "My watch is new.",
+        "That watch is expensive.",
+        "Her watch is gold."
+      ],
+      "answer": "I watch cartoons on Saturday.",
+      "explanation": "In the first sentence \"watch\" is something I do. In the others it is a thing.",
+      "id": "verbs-011"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Birds ___ in the sky.",
+      "options": [
+        "fly",
+        "swim",
+        "bark"
+      ],
+      "answer": "fly",
+      "explanation": "The complete sentence is: \"Birds fly in the sky.\"",
+      "id": "verbs-012"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Fish ___ in the water.",
+      "options": [
+        "swim",
+        "fly",
+        "walk"
+      ],
+      "answer": "swim",
+      "explanation": "The complete sentence is: \"Fish swim in the water.\"",
+      "id": "verbs-013"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ milk every morning.",
+      "options": [
+        "drink",
+        "eat",
+        "read"
+      ],
+      "answer": "drink",
+      "explanation": "We drink milk.",
+      "id": "verbs-014"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We ___ our hands before eating.",
+      "options": [
+        "wash",
+        "wear",
+        "write"
+      ],
+      "answer": "wash",
+      "explanation": "The complete sentence is: \"We wash our hands before eating.\"",
+      "id": "verbs-015"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Please ___ the door. It is cold.",
+      "options": [
+        "close",
+        "open",
+        "eat"
+      ],
+      "answer": "close",
+      "explanation": "When it is cold, we close the door.",
+      "id": "verbs-016"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The baby ___ when she is hungry.",
+      "options": [
+        "cries",
+        "cry",
+        "crying"
+      ],
+      "answer": "cries",
+      "explanation": "With he, she or it, we add -s or -es: cry → cries.",
+      "id": "verbs-017"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ eight years old.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am",
+      "explanation": "We always say \"I am\".",
+      "id": "verbs-018"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "They ___ in the canteen now.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "answer": "are",
+      "explanation": "We say \"they are\".",
+      "id": "verbs-019"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She ___ a red bicycle.",
+      "options": [
+        "has",
+        "have",
+        "having"
+      ],
+      "answer": "has",
+      "explanation": "Use \"has\" with he, she and it.",
+      "id": "verbs-020"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We ___ two cats at home.",
+      "options": [
+        "have",
+        "has",
+        "is"
+      ],
+      "answer": "have",
+      "explanation": "Use \"have\" with I, you, we and they.",
+      "id": "verbs-021"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My father ___ to work by train.",
+      "options": [
+        "goes",
+        "go",
+        "going"
+      ],
+      "answer": "goes",
+      "explanation": "\"My father\" = he, so go → goes.",
+      "id": "verbs-022"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The sun ___ in the east.",
+      "options": [
+        "rises",
+        "rise",
+        "rising"
+      ],
+      "answer": "rises",
+      "explanation": "\"The sun\" = it, so rise → rises.",
+      "id": "verbs-023"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Everyone ___ to bring a water bottle.",
+      "options": [
+        "needs",
+        "need",
+        "needing"
+      ],
+      "answer": "needs",
+      "explanation": "\"Everyone\" is singular, so the verb takes -s.",
+      "id": "verbs-024"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mathematics ___ my favourite subject.",
+      "options": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "is",
+      "explanation": "\"Mathematics\" is the name of one subject, so it takes \"is\".",
+      "id": "verbs-025"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Each of the pupils ___ a library card.",
+      "options": [
+        "has",
+        "have",
+        "having"
+      ],
+      "answer": "has",
+      "explanation": "\"Each\" is singular, so we use \"has\".",
+      "id": "verbs-026"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Neither of the boys ___ the answer.",
+      "options": [
+        "knows",
+        "know",
+        "knowing"
+      ],
+      "answer": "knows",
+      "explanation": "\"Neither\" is singular, so the verb takes -s.",
+      "id": "verbs-027"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The dog bark at the cat.",
+      "answer": "bark",
+      "correction": "barks",
+      "explanation": "\"bark\" should be \"barks\". One dog = it, so we add -s.",
+      "id": "verbs-028"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She play the piano.",
+      "answer": "play",
+      "correction": "plays",
+      "explanation": "\"play\" should be \"plays\". With \"she\" we add -s.",
+      "id": "verbs-029"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "They is my cousins.",
+      "answer": "is",
+      "correction": "are",
+      "explanation": "\"is\" should be \"are\". We say \"they are\".",
+      "id": "verbs-030"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I has a new pencil box.",
+      "answer": "has",
+      "correction": "have",
+      "explanation": "\"has\" should be \"have\". We say \"I have\".",
+      "id": "verbs-031"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He are very tall.",
+      "answer": "are",
+      "correction": "is",
+      "explanation": "\"are\" should be \"is\". We say \"he is\".",
+      "id": "verbs-032"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My mother cook dinner every evening.",
+      "answer": "cook",
+      "correction": "cooks",
+      "explanation": "\"cook\" should be \"cooks\". \"My mother\" = she, so we add -s.",
+      "id": "verbs-033"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Everybody like ice cream.",
+      "answer": "like",
+      "correction": "likes",
+      "explanation": "\"like\" should be \"likes\". \"Everybody\" is singular.",
+      "id": "verbs-034"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Each of the girls have a ribbon.",
+      "answer": "have",
+      "correction": "has",
+      "explanation": "\"have\" should be \"has\". \"Each\" is singular.",
+      "id": "verbs-035"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The frog jumps into the pond.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "verbs-036"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "We play badminton after school.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "verbs-037"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "My brother washes the car every Sunday.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "verbs-038"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the verb?",
+      "sentence": "Ducks swim in the pond.",
+      "options": [
+        "swim",
+        "ducks",
+        "pond",
+        "in"
+      ],
+      "answer": "swim",
+      "explanation": "\"Swim\" is what the ducks do.",
+      "id": "verbs-039"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ a story book every night.",
+      "options": [
+        "read",
+        "sleep",
+        "drink"
+      ],
+      "answer": "read",
+      "explanation": "We read books.",
+      "id": "verbs-040"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The pupils ___ the classroom every Friday.",
+      "options": [
+        "clean",
+        "cleans",
+        "cleaning"
+      ],
+      "answer": "clean",
+      "explanation": "\"The pupils\" are many, so the verb has no -s.",
+      "id": "verbs-041"
+    }
+  ]
+}

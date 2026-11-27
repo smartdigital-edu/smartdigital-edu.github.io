@@ -1,0 +1,566 @@
+{
+  "id": "articles",
+  "title": "Articles (a / an / the)",
+  "lesson": {
+    "intro": "A, an and the are articles. They come before a noun.",
+    "points": [
+      "Use [[a]] before a word that begins with a consonant SOUND: a cat, a ball, a yellow kite.",
+      "Use [[an]] before a word that begins with a vowel SOUND (a, e, i, o, u): an apple, an egg, an ice cream, an orange, an umbrella.",
+      "Listen to the sound, not the letter: [[an]] hour (silent h), [[a]] uniform (sounds like \"you\").",
+      "Use [[the]] for something special or already mentioned: I saw a dog. [[The]] dog was barking.",
+      "Use [[the]] for things there is only one of: the sun, the moon, the sky."
+    ],
+    "examples": [
+      {
+        "text": "I ate [[an]] apple and [[a]] banana.",
+        "note": "an + vowel sound, a + consonant sound"
+      },
+      {
+        "text": "We waited for [[an]] hour.",
+        "note": "the h is silent"
+      },
+      {
+        "text": "She wears [[a]] uniform.",
+        "note": "\"uniform\" starts with a \"you\" sound"
+      },
+      {
+        "text": "[[The]] sun is very hot today.",
+        "note": "there is only one sun"
+      },
+      {
+        "text": "I saw a cat. [[The]] cat was black.",
+        "note": "already mentioned"
+      }
+    ],
+    "tip": "Say the word out loud. If it starts with a vowel sound, use \"an\"."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I have ___ apple.",
+      "options": [
+        "an",
+        "a",
+        "the"
+      ],
+      "answer": "an",
+      "explanation": "\"Apple\" begins with a vowel sound.",
+      "id": "articles-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She has ___ cat.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"Cat\" begins with a consonant sound.",
+      "id": "articles-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "There is ___ egg in the basket.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Egg\" begins with a vowel sound.",
+      "id": "articles-003"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He is riding ___ bicycle.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"Bicycle\" begins with a consonant sound.",
+      "id": "articles-004"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I can see ___ elephant.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Elephant\" begins with a vowel sound.",
+      "id": "articles-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My father bought ___ umbrella.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Umbrella\" begins with a vowel sound.",
+      "id": "articles-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We saw ___ owl in the tree.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Owl\" begins with a vowel sound.",
+      "id": "articles-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Please pass me ___ orange.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Orange\" begins with a vowel sound.",
+      "id": "articles-008"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ahmad is ___ good boy.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"Good\" begins with a consonant sound.",
+      "id": "articles-009"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ sun is very hot today.",
+      "options": [
+        "The",
+        "A",
+        "An"
+      ],
+      "answer": "The",
+      "explanation": "There is only one sun, so we use \"the\".",
+      "id": "articles-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I waited for ___ hour.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "The h in \"hour\" is silent, so it begins with a vowel sound.",
+      "id": "articles-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She wears ___ uniform to school.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"Uniform\" begins with a \"you\" sound, which is a consonant sound.",
+      "id": "articles-012"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Kuala Lumpur is ___ capital city of Malaysia.",
+      "options": [
+        "the",
+        "a",
+        "an"
+      ],
+      "answer": "the",
+      "explanation": "There is only one capital city of Malaysia.",
+      "id": "articles-013"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I saw a dog. ___ dog was barking.",
+      "options": [
+        "The",
+        "A",
+        "An"
+      ],
+      "answer": "The",
+      "explanation": "We use \"the\" for something already mentioned.",
+      "id": "articles-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My uncle is ___ engineer.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"Engineer\" begins with a vowel sound.",
+      "id": "articles-015"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "It was ___ honour to meet the Sultan.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "The h in \"honour\" is silent.",
+      "id": "articles-016"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He is ___ honest man.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "The h in \"honest\" is silent.",
+      "id": "articles-017"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She studies at ___ university in Johor.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"University\" begins with a \"you\" sound.",
+      "id": "articles-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ moon goes round the Earth.",
+      "options": [
+        "The",
+        "A",
+        "An"
+      ],
+      "answer": "The",
+      "explanation": "There is only one moon of the Earth.",
+      "id": "articles-019"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Can you play ___ guitar?",
+      "options": [
+        "the",
+        "a",
+        "an"
+      ],
+      "answer": "the",
+      "explanation": "We use \"the\" with musical instruments.",
+      "id": "articles-020"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "This is ___ one-way street.",
+      "options": [
+        "a",
+        "an"
+      ],
+      "answer": "a",
+      "explanation": "\"One\" begins with a \"w\" sound.",
+      "id": "articles-021"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He is ___ MP from Perak.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"MP\" is said \"em-pee\", which begins with a vowel sound.",
+      "id": "articles-022"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mount Everest is ___ highest mountain in the world.",
+      "options": [
+        "the",
+        "a",
+        "an"
+      ],
+      "answer": "the",
+      "explanation": "Use \"the\" with superlatives like \"highest\".",
+      "id": "articles-023"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The doctor took ___ X-ray of my arm.",
+      "options": [
+        "an",
+        "a"
+      ],
+      "answer": "an",
+      "explanation": "\"X\" is said \"eks\", which begins with a vowel sound.",
+      "id": "articles-024"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "an ant",
+        "a ant"
+      ],
+      "answer": "an ant",
+      "explanation": "\"Ant\" begins with a vowel sound.",
+      "id": "articles-025"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "a lion",
+        "an lion"
+      ],
+      "answer": "a lion",
+      "explanation": "\"Lion\" begins with a consonant sound.",
+      "id": "articles-026"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "an ice cream",
+        "a ice cream"
+      ],
+      "answer": "an ice cream",
+      "explanation": "\"Ice\" begins with a vowel sound.",
+      "id": "articles-027"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "a yellow ball",
+        "an yellow ball"
+      ],
+      "answer": "a yellow ball",
+      "explanation": "\"Yellow\" begins with a consonant sound.",
+      "id": "articles-028"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "an old man",
+        "a old man"
+      ],
+      "answer": "an old man",
+      "explanation": "\"Old\" begins with a vowel sound.",
+      "id": "articles-029"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Choose the correct words.",
+      "options": [
+        "an hour",
+        "a hour"
+      ],
+      "answer": "an hour",
+      "explanation": "The h in \"hour\" is silent.",
+      "id": "articles-030"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word needs \"an\"?",
+      "options": [
+        "insect",
+        "butterfly",
+        "spider",
+        "bee"
+      ],
+      "answer": "insect",
+      "explanation": "\"Insect\" begins with a vowel sound.",
+      "id": "articles-031"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which word needs \"a\"?",
+      "options": [
+        "unicorn",
+        "umbrella",
+        "uncle",
+        "onion"
+      ],
+      "answer": "unicorn",
+      "explanation": "\"Unicorn\" begins with a \"you\" sound.",
+      "id": "articles-032"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "The Earth goes round the Sun.",
+        "A Earth goes round a Sun.",
+        "An Earth goes round the Sun.",
+        "The Earth goes round a Sun."
+      ],
+      "answer": "The Earth goes round the Sun.",
+      "explanation": "There is only one Earth and one Sun, so we use \"the\".",
+      "id": "articles-033"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I ate a orange.",
+      "answer": "a",
+      "correction": "an",
+      "explanation": "\"a\" should be \"an\". \"Orange\" begins with a vowel sound.",
+      "id": "articles-034"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She has an new bag.",
+      "answer": "an",
+      "correction": "a",
+      "explanation": "\"an\" should be \"a\". \"New\" begins with a consonant sound.",
+      "id": "articles-035"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "There is a ant on the table.",
+      "answer": "a",
+      "correction": "an",
+      "explanation": "\"a\" should be \"an\". \"Ant\" begins with a vowel sound.",
+      "id": "articles-036"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "We waited a hour for the bus.",
+      "answer": "a",
+      "correction": "an",
+      "explanation": "\"a\" should be \"an\". The h in \"hour\" is silent.",
+      "id": "articles-037"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He wants to be an pilot.",
+      "answer": "an",
+      "correction": "a",
+      "explanation": "\"an\" should be \"a\". \"Pilot\" begins with a consonant sound.",
+      "id": "articles-038"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "An university is a place of learning.",
+      "answer": "An",
+      "correction": "A",
+      "explanation": "\"An\" should be \"A\". \"University\" begins with a \"you\" sound.",
+      "id": "articles-039"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She is a honest girl.",
+      "answer": "a",
+      "correction": "an",
+      "explanation": "\"a\" should be \"an\". The h in \"honest\" is silent.",
+      "id": "articles-040"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I have an orange.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "articles-041"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "The cat is sleeping on a mat.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "articles-042"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "He is an honest boy.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "articles-043"
+    }
+  ]
+}

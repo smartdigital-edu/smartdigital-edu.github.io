@@ -1,0 +1,549 @@
+{
+  "id": "pronouns",
+  "title": "Pronouns",
+  "lesson": {
+    "intro": "A pronoun is a word that takes the place of a noun, so we do not have to repeat the noun again and again.",
+    "points": [
+      "Subject pronouns do the action: [[I]], [[you]], [[he]], [[she]], [[it]], [[we]], [[they]].",
+      "Object pronouns receive the action: [[me]], [[you]], [[him]], [[her]], [[it]], [[us]], [[them]].",
+      "Possessive words show who owns something: my, your, his, her, its, our, their (+ noun) and [[mine]], [[yours]], [[his]], [[hers]], [[ours]], [[theirs]] (on their own).",
+      "Use \"he\" for a boy or man, \"she\" for a girl or woman, \"it\" for an animal or a thing, and \"they\" for more than one.",
+      "Reflexive pronouns end in -self or -selves: myself, yourself, himself, herself, itself, ourselves, themselves."
+    ],
+    "examples": [
+      {
+        "text": "Ali is tall. [[He]] plays basketball.",
+        "note": "\"He\" replaces Ali."
+      },
+      {
+        "text": "Siti has a kitten. [[She]] loves [[it]] very much.",
+        "note": "\"She\" = Siti, \"it\" = the kitten."
+      },
+      {
+        "text": "The teacher praised [[us]].",
+        "note": "\"us\" is an object pronoun."
+      },
+      {
+        "text": "This red pencil is [[mine]].",
+        "note": "\"mine\" shows that I own it."
+      },
+      {
+        "text": "They made the poster [[themselves]].",
+        "note": "reflexive pronoun"
+      }
+    ],
+    "tip": "When you see \"___ and I\" or \"___ and me\", cover the other person's name and read the sentence again: \"Me went\" sounds wrong, so it should be \"I went\"."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Siti is my sister. ___ is seven years old.",
+      "options": [
+        "She",
+        "He",
+        "It"
+      ],
+      "answer": "She",
+      "explanation": "Siti is a girl, so we use \"she\".",
+      "id": "pronouns-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ahmad likes rice. ___ eats it every day.",
+      "options": [
+        "He",
+        "She",
+        "They"
+      ],
+      "answer": "He",
+      "explanation": "Ahmad is a boy, so we use \"he\".",
+      "id": "pronouns-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The cat is hungry. ___ wants some fish.",
+      "options": [
+        "It",
+        "He",
+        "We"
+      ],
+      "answer": "It",
+      "explanation": "We use \"it\" for an animal.",
+      "id": "pronouns-003"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mei and I are friends. ___ play together.",
+      "options": [
+        "We",
+        "They",
+        "I"
+      ],
+      "answer": "We",
+      "explanation": "\"Mei and I\" means \"we\".",
+      "id": "pronouns-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The children are in the field. ___ are playing football.",
+      "options": [
+        "They",
+        "We",
+        "It"
+      ],
+      "answer": "They",
+      "explanation": "\"The children\" are more than one person, so we use \"they\".",
+      "id": "pronouns-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Please give the book to ___.",
+      "options": [
+        "me",
+        "I",
+        "my"
+      ],
+      "answer": "me",
+      "explanation": "After a word like \"to\" we use the object pronoun \"me\".",
+      "id": "pronouns-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I saw Encik Lim and waved at ___.",
+      "options": [
+        "him",
+        "he",
+        "his"
+      ],
+      "answer": "him",
+      "explanation": "\"Him\" is the object pronoun for a man.",
+      "id": "pronouns-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My mother is kind. I love ___ very much.",
+      "options": [
+        "her",
+        "she",
+        "hers"
+      ],
+      "answer": "her",
+      "explanation": "\"Her\" is the object pronoun for a woman.",
+      "id": "pronouns-008"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "This is Kumar's bag. It is ___ bag.",
+      "options": [
+        "his",
+        "him",
+        "he"
+      ],
+      "answer": "his",
+      "explanation": "\"His\" shows that the bag belongs to Kumar.",
+      "id": "pronouns-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We have a new car. ___ car is red.",
+      "options": [
+        "Our",
+        "Us",
+        "We"
+      ],
+      "answer": "Our",
+      "explanation": "\"Our\" shows that the car belongs to us.",
+      "id": "pronouns-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The dog wagged ___ tail.",
+      "options": [
+        "its",
+        "it's",
+        "it"
+      ],
+      "answer": "its",
+      "explanation": "\"Its\" shows that the tail belongs to the dog. \"It's\" means \"it is\".",
+      "id": "pronouns-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Are these pencils ___?",
+      "options": [
+        "yours",
+        "your",
+        "you"
+      ],
+      "answer": "yours",
+      "explanation": "\"Yours\" is used on its own, without a noun after it.",
+      "id": "pronouns-012"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "That house is ___. We live there.",
+      "options": [
+        "ours",
+        "our",
+        "us"
+      ],
+      "answer": "ours",
+      "explanation": "\"Ours\" is used on its own, without a noun after it.",
+      "id": "pronouns-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The twins lost ___ umbrella.",
+      "options": [
+        "their",
+        "there",
+        "they're"
+      ],
+      "answer": "their",
+      "explanation": "\"Their\" shows ownership. \"There\" is a place and \"they're\" means \"they are\".",
+      "id": "pronouns-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The teacher asked Ravi and ___ to clean the board.",
+      "options": [
+        "me",
+        "I",
+        "my"
+      ],
+      "answer": "me",
+      "explanation": "Cover \"Ravi and\": \"asked me\" is correct.",
+      "id": "pronouns-015"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Nurul and ___ went to the library.",
+      "options": [
+        "I",
+        "me",
+        "mine"
+      ],
+      "answer": "I",
+      "explanation": "Cover \"Nurul and\": \"I went\" is correct.",
+      "id": "pronouns-016"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The prize is ___. She won it fairly.",
+      "options": [
+        "hers",
+        "her",
+        "she"
+      ],
+      "answer": "hers",
+      "explanation": "\"Hers\" is used on its own to show that something belongs to her.",
+      "id": "pronouns-017"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Between you and ___, the test was easy.",
+      "options": [
+        "me",
+        "I",
+        "myself"
+      ],
+      "answer": "me",
+      "explanation": "After the preposition \"between\" we use the object pronoun \"me\".",
+      "id": "pronouns-018"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "They hurt ___ while playing.",
+      "options": [
+        "themselves",
+        "theirselves",
+        "them"
+      ],
+      "answer": "themselves",
+      "explanation": "The reflexive pronoun for \"they\" is \"themselves\". \"Theirselves\" is not a word.",
+      "id": "pronouns-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I made this birthday card ___.",
+      "options": [
+        "myself",
+        "me",
+        "mine"
+      ],
+      "answer": "myself",
+      "explanation": "\"Myself\" shows that I did it on my own.",
+      "id": "pronouns-020"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a pronoun?",
+      "options": [
+        "she",
+        "girl",
+        "sing",
+        "pretty"
+      ],
+      "answer": "she",
+      "explanation": "\"She\" can take the place of a girl's name.",
+      "id": "pronouns-021"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word can take the place of \"the ball\"?",
+      "options": [
+        "it",
+        "he",
+        "she",
+        "they"
+      ],
+      "answer": "it",
+      "explanation": "We use \"it\" for one thing.",
+      "id": "pronouns-022"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word can replace \"my brother and I\" at the start of a sentence?",
+      "options": [
+        "we",
+        "they",
+        "us",
+        "he"
+      ],
+      "answer": "we",
+      "explanation": "\"My brother and I\" = \"we\".",
+      "id": "pronouns-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word can replace \"the girls\"?",
+      "options": [
+        "they",
+        "she",
+        "it",
+        "we"
+      ],
+      "answer": "they",
+      "explanation": "\"The girls\" are more than one, so we use \"they\".",
+      "id": "pronouns-024"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is a possessive pronoun?",
+      "options": [
+        "mine",
+        "me",
+        "I",
+        "myself"
+      ],
+      "answer": "mine",
+      "explanation": "\"Mine\" shows that something belongs to me.",
+      "id": "pronouns-025"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "He and I are cousins.",
+        "Him and me are cousins.",
+        "Me and him are cousins.",
+        "He and me are cousins."
+      ],
+      "answer": "He and I are cousins.",
+      "explanation": "Both people are doing the action (subject), so we use \"he\" and \"I\".",
+      "id": "pronouns-026"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "The book is hers.",
+        "The book is her's.",
+        "The book is she.",
+        "The book is herself."
+      ],
+      "answer": "The book is hers.",
+      "explanation": "Possessive pronouns like \"hers\" never have an apostrophe.",
+      "id": "pronouns-027"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which word is a reflexive pronoun?",
+      "options": [
+        "ourselves",
+        "our",
+        "ours",
+        "us"
+      ],
+      "answer": "ourselves",
+      "explanation": "Reflexive pronouns end in -self or -selves.",
+      "id": "pronouns-028"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Its wing is broken.",
+        "It's wing is broken.",
+        "Its' wing is broken.",
+        "It wing is broken."
+      ],
+      "answer": "Its wing is broken.",
+      "explanation": "\"Its\" (no apostrophe) shows ownership.",
+      "id": "pronouns-029"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Lina is my friend. He is kind.",
+      "answer": "He",
+      "correction": "She",
+      "explanation": "\"He\" should be \"She\". Lina is a girl.",
+      "id": "pronouns-030"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Me am eight years old.",
+      "answer": "Me",
+      "correction": "I",
+      "explanation": "\"Me\" should be \"I\". Use \"I\" when you are the one doing the action.",
+      "id": "pronouns-031"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The birds built they nest in the tree.",
+      "answer": "they",
+      "correction": "their",
+      "explanation": "\"they\" should be \"their\". \"Their\" shows that the nest belongs to the birds.",
+      "id": "pronouns-032"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Please give the ball to she.",
+      "answer": "she",
+      "correction": "her",
+      "explanation": "\"she\" should be \"her\". After \"to\" we use the object pronoun \"her\".",
+      "id": "pronouns-033"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "This pencil is your.",
+      "answer": "your",
+      "correction": "yours",
+      "explanation": "\"your\" should be \"yours\". At the end of a sentence, use \"yours\".",
+      "id": "pronouns-034"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Us like to read storybooks.",
+      "answer": "Us",
+      "correction": "We",
+      "explanation": "\"Us\" should be \"We\". Use \"we\" when we are doing the action.",
+      "id": "pronouns-035"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My father and me went fishing.",
+      "answer": "me",
+      "correction": "I",
+      "explanation": "\"me\" should be \"I\". Cover \"My father and\": \"I went fishing\".",
+      "id": "pronouns-036"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The cat cleaned itself paws.",
+      "answer": "itself",
+      "correction": "its",
+      "explanation": "\"itself\" should be \"its\". \"Its\" shows that the paws belong to the cat.",
+      "id": "pronouns-037"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "She is my best friend.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "pronouns-038"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "They are playing in the garden.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "pronouns-039"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "This blue bag is mine.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "pronouns-040"
+    }
+  ]
+}

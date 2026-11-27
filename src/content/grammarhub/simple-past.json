@@ -1,0 +1,564 @@
+{
+  "id": "simple-past",
+  "title": "Simple Past Tense",
+  "lesson": {
+    "intro": "We use the simple past tense for actions that [[already happened]] and are finished.",
+    "points": [
+      "Regular verbs add -ed: play → [[played]], walk → [[walked]].",
+      "Verbs ending in e add -d: like → [[liked]]. Short verbs may double the last letter: stop → [[stopped]].",
+      "Consonant + y → change y to i and add -ed: cry → [[cried]].",
+      "Irregular verbs change: go → [[went]], eat → [[ate]], see → [[saw]], buy → [[bought]], write → [[wrote]].",
+      "am / is → [[was]]; are → [[were]].",
+      "Negative and questions use did + base verb: I [[did not go]]. [[Did]] you [[see]] it?",
+      "Signal words: yesterday, last night, last week, two days ago, in 2020."
+    ],
+    "examples": [
+      {
+        "text": "Yesterday, we [[played]] badminton.",
+        "note": "regular verb"
+      },
+      {
+        "text": "I [[went]] to the market last Sunday.",
+        "note": "irregular: go → went"
+      },
+      {
+        "text": "She [[was]] very happy.",
+        "note": "is → was"
+      },
+      {
+        "text": "They [[did not watch]] TV last night.",
+        "note": "negative"
+      },
+      {
+        "text": "[[Did]] you [[finish]] your homework?",
+        "note": "question"
+      }
+    ],
+    "tip": "After \"did\" or \"did not\", always use the base verb: Did you see? (not \"saw\")."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Yesterday, I ___ football.",
+      "options": [
+        "played",
+        "play",
+        "plays"
+      ],
+      "answer": "played",
+      "explanation": "\"Yesterday\" tells us it is in the past.",
+      "id": "simple-past-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Last night, we ___ a movie.",
+      "options": [
+        "watched",
+        "watch",
+        "watches"
+      ],
+      "answer": "watched",
+      "explanation": "Past tense: watch → watched.",
+      "id": "simple-past-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She ___ happy yesterday.",
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "answer": "was",
+      "explanation": "is → was.",
+      "id": "simple-past-003"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "They ___ at the beach last Sunday.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "answer": "were",
+      "explanation": "are → were.",
+      "id": "simple-past-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ to the market yesterday.",
+      "options": [
+        "went",
+        "go",
+        "goed"
+      ],
+      "answer": "went",
+      "explanation": "go → went (irregular).",
+      "id": "simple-past-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He ___ nasi lemak for breakfast this morning.",
+      "options": [
+        "ate",
+        "eat",
+        "eated"
+      ],
+      "answer": "ate",
+      "explanation": "eat → ate (irregular).",
+      "id": "simple-past-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We ___ a rainbow after the rain.",
+      "options": [
+        "saw",
+        "see",
+        "seed"
+      ],
+      "answer": "saw",
+      "explanation": "see → saw (irregular).",
+      "id": "simple-past-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The bus ___ at the bus stop.",
+      "options": [
+        "stopped",
+        "stoped",
+        "stop"
+      ],
+      "answer": "stopped",
+      "explanation": "stop → stopped: double the p.",
+      "id": "simple-past-008"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My father ___ a new car last month.",
+      "options": [
+        "bought",
+        "buyed",
+        "buy"
+      ],
+      "answer": "bought",
+      "explanation": "buy → bought (irregular).",
+      "id": "simple-past-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Siti ___ a letter to her grandmother.",
+      "options": [
+        "wrote",
+        "writed",
+        "write"
+      ],
+      "answer": "wrote",
+      "explanation": "write → wrote (irregular).",
+      "id": "simple-past-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The baby ___ all night.",
+      "options": [
+        "cried",
+        "cryed",
+        "cry"
+      ],
+      "answer": "cried",
+      "explanation": "cry → cried: change y to i and add -ed.",
+      "id": "simple-past-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We ___ our project two days ago.",
+      "options": [
+        "finished",
+        "finish",
+        "finishing"
+      ],
+      "answer": "finished",
+      "explanation": "\"Two days ago\" is in the past.",
+      "id": "simple-past-012"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ go to school yesterday because I was sick.",
+      "options": [
+        "did not",
+        "do not",
+        "does not"
+      ],
+      "answer": "did not",
+      "explanation": "Past negative: did not + verb.",
+      "id": "simple-past-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ you visit the zoo last holiday?",
+      "options": [
+        "Did",
+        "Do",
+        "Does"
+      ],
+      "answer": "Did",
+      "explanation": "Past question: Did + subject + verb.",
+      "id": "simple-past-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She did not ___ her umbrella.",
+      "options": [
+        "bring",
+        "brought",
+        "brings"
+      ],
+      "answer": "bring",
+      "explanation": "After \"did not\" use the base verb.",
+      "id": "simple-past-015"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The boys ___ across the field.",
+      "options": [
+        "ran",
+        "run",
+        "runned"
+      ],
+      "answer": "ran",
+      "explanation": "run → ran (irregular).",
+      "id": "simple-past-016"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Puan Lee ___ us a story yesterday.",
+      "options": [
+        "told",
+        "telled",
+        "tell"
+      ],
+      "answer": "told",
+      "explanation": "tell → told (irregular).",
+      "id": "simple-past-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The pupils ___ the national anthem during assembly this morning.",
+      "options": [
+        "sang",
+        "sing",
+        "singed"
+      ],
+      "answer": "sang",
+      "explanation": "sing → sang (irregular).",
+      "id": "simple-past-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He ___ his finger while cutting vegetables.",
+      "options": [
+        "cut",
+        "cutted",
+        "cuts"
+      ],
+      "answer": "cut",
+      "explanation": "\"Cut\" stays the same in the past.",
+      "id": "simple-past-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "When the bell rang, the pupils ___ their books.",
+      "options": [
+        "closed",
+        "close",
+        "closes"
+      ],
+      "answer": "closed",
+      "explanation": "Both actions happened in the past.",
+      "id": "simple-past-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Malaysia ___ independence in 1957.",
+      "options": [
+        "gained",
+        "gains",
+        "gain"
+      ],
+      "answer": "gained",
+      "explanation": "1957 is in the past.",
+      "id": "simple-past-021"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The thief ___ away when he saw the police.",
+      "options": [
+        "ran",
+        "runs",
+        "run"
+      ],
+      "answer": "ran",
+      "explanation": "run → ran.",
+      "id": "simple-past-022"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "What is the past tense of \"jump\"?",
+      "options": [
+        "jumped",
+        "jumps",
+        "jumping"
+      ],
+      "answer": "jumped",
+      "explanation": "jump + ed = jumped.",
+      "id": "simple-past-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "What is the past tense of \"go\"?",
+      "options": [
+        "went",
+        "goed",
+        "gone",
+        "goes"
+      ],
+      "answer": "went",
+      "explanation": "go → went.",
+      "id": "simple-past-024"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "What is the past tense of \"eat\"?",
+      "options": [
+        "ate",
+        "eated",
+        "eats",
+        "eating"
+      ],
+      "answer": "ate",
+      "explanation": "eat → ate.",
+      "id": "simple-past-025"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "What is the past tense of \"swim\"?",
+      "options": [
+        "swam",
+        "swimmed",
+        "swims",
+        "swum"
+      ],
+      "answer": "swam",
+      "explanation": "swim → swam.",
+      "id": "simple-past-026"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which words are a time signal for the past?",
+      "sentence": "We visited Melaka last year.",
+      "options": [
+        "last year",
+        "visited Melaka",
+        "We"
+      ],
+      "answer": "last year",
+      "explanation": "\"Last year\" tells us when it happened.",
+      "id": "simple-past-027"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Did you see the rainbow?",
+        "Did you saw the rainbow?",
+        "Do you saw the rainbow?",
+        "Did you seen the rainbow?"
+      ],
+      "answer": "Did you see the rainbow?",
+      "explanation": "Did + subject + base verb.",
+      "id": "simple-past-028"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "What is the past tense of \"think\"?",
+      "options": [
+        "thought",
+        "thinked",
+        "thank",
+        "thunk"
+      ],
+      "answer": "thought",
+      "explanation": "think → thought.",
+      "id": "simple-past-029"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "What is the past tense of \"teach\"?",
+      "options": [
+        "taught",
+        "teached",
+        "thought",
+        "teaches"
+      ],
+      "answer": "taught",
+      "explanation": "teach → taught.",
+      "id": "simple-past-030"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Yesterday I play with my cousin.",
+      "answer": "play",
+      "correction": "played",
+      "explanation": "\"play\" should be \"played\". \"Yesterday\" needs the past tense.",
+      "id": "simple-past-031"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Last week we goed to the zoo.",
+      "answer": "goed",
+      "correction": "went",
+      "explanation": "\"goed\" should be \"went\". go → went.",
+      "id": "simple-past-032"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She were very tired last night.",
+      "answer": "were",
+      "correction": "was",
+      "explanation": "\"were\" should be \"was\". Use \"was\" with she.",
+      "id": "simple-past-033"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He buyed a kite yesterday.",
+      "answer": "buyed",
+      "correction": "bought",
+      "explanation": "\"buyed\" should be \"bought\". buy → bought.",
+      "id": "simple-past-034"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "They was at home last Sunday.",
+      "answer": "was",
+      "correction": "were",
+      "explanation": "\"was\" should be \"were\". Use \"were\" with they.",
+      "id": "simple-past-035"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I did not went to the party.",
+      "answer": "went",
+      "correction": "go",
+      "explanation": "\"went\" should be \"go\". After \"did not\" use the base verb.",
+      "id": "simple-past-036"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Did she finished her homework?",
+      "answer": "finished",
+      "correction": "finish",
+      "explanation": "\"finished\" should be \"finish\". After \"did\" use the base verb.",
+      "id": "simple-past-037"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Two days ago, my mother cook chicken curry.",
+      "answer": "cook",
+      "correction": "cooked",
+      "explanation": "\"cook\" should be \"cooked\". \"Two days ago\" needs the past tense.",
+      "id": "simple-past-038"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I played with my friends yesterday.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-past-039"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "We went to the beach last Sunday.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-past-040"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "She did not bring her book.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-past-041"
+    }
+  ]
+}

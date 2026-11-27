@@ -1,0 +1,569 @@
+{
+  "id": "conjunctions",
+  "title": "Conjunctions",
+  "lesson": {
+    "intro": "A conjunction is a joining word. It joins two words or two sentences together.",
+    "points": [
+      "[[and]] adds more: I have a cat and a dog.",
+      "[[but]] shows a difference: I like durian but my sister does not.",
+      "[[or]] gives a choice: Do you want tea or coffee?",
+      "[[because]] gives a reason: She was late because it rained.",
+      "[[so]] shows a result: It was raining, so we stayed inside.",
+      "More joining words: before, after, until, while, when, although, unless."
+    ],
+    "examples": [
+      {
+        "text": "Ali likes apples [[and]] bananas.",
+        "note": "adds more"
+      },
+      {
+        "text": "He is small [[but]] strong.",
+        "note": "difference"
+      },
+      {
+        "text": "Would you like to draw [[or]] read?",
+        "note": "choice"
+      },
+      {
+        "text": "We stayed at home [[because]] it was very hot.",
+        "note": "reason"
+      },
+      {
+        "text": "[[Although]] it was raining, they played football.",
+        "note": "surprise / contrast"
+      }
+    ],
+    "tip": "\"Because\" answers \"Why?\". \"So\" tells you \"What happened next?\"."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I have a cat ___ a dog.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "answer": "and",
+      "explanation": "\"And\" adds more.",
+      "id": "conjunctions-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Do you want tea ___ coffee?",
+      "options": [
+        "or",
+        "and",
+        "because"
+      ],
+      "answer": "or",
+      "explanation": "\"Or\" gives a choice.",
+      "id": "conjunctions-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ali likes apples ___ bananas.",
+      "options": [
+        "and",
+        "or",
+        "so"
+      ],
+      "answer": "and",
+      "explanation": "\"And\" joins two things he likes.",
+      "id": "conjunctions-003"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I like durian, ___ my sister does not.",
+      "options": [
+        "but",
+        "and",
+        "or"
+      ],
+      "answer": "but",
+      "explanation": "\"But\" shows a difference.",
+      "id": "conjunctions-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "It is raining, ___ we cannot play outside.",
+      "options": [
+        "so",
+        "but",
+        "or"
+      ],
+      "answer": "so",
+      "explanation": "\"So\" shows the result.",
+      "id": "conjunctions-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She was late ___ the bus broke down.",
+      "options": [
+        "because",
+        "so",
+        "and"
+      ],
+      "answer": "because",
+      "explanation": "\"Because\" gives the reason.",
+      "id": "conjunctions-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Would you like to draw ___ to read?",
+      "options": [
+        "or",
+        "so",
+        "because"
+      ],
+      "answer": "or",
+      "explanation": "\"Or\" gives a choice.",
+      "id": "conjunctions-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I can swim ___ I cannot dive.",
+      "options": [
+        "but",
+        "so",
+        "or"
+      ],
+      "answer": "but",
+      "explanation": "\"But\" shows a difference.",
+      "id": "conjunctions-008"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He is small, ___ he is very strong.",
+      "options": [
+        "but",
+        "so",
+        "because"
+      ],
+      "answer": "but",
+      "explanation": "\"But\" shows a surprise or difference.",
+      "id": "conjunctions-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I was hungry, ___ I ate a sandwich.",
+      "options": [
+        "so",
+        "but",
+        "or"
+      ],
+      "answer": "so",
+      "explanation": "\"So\" shows what happened as a result.",
+      "id": "conjunctions-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We stayed at home ___ it was very hot.",
+      "options": [
+        "because",
+        "but",
+        "or"
+      ],
+      "answer": "because",
+      "explanation": "\"Because\" gives the reason.",
+      "id": "conjunctions-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The shirt is cheap ___ pretty.",
+      "options": [
+        "and",
+        "or",
+        "so"
+      ],
+      "answer": "and",
+      "explanation": "\"And\" adds another good point.",
+      "id": "conjunctions-012"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Wash your hands ___ you eat.",
+      "options": [
+        "before",
+        "until",
+        "unless"
+      ],
+      "answer": "before",
+      "explanation": "We wash our hands first, before eating.",
+      "id": "conjunctions-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "You can watch TV ___ you finish your homework.",
+      "options": [
+        "after",
+        "because",
+        "but"
+      ],
+      "answer": "after",
+      "explanation": "Homework first, TV after.",
+      "id": "conjunctions-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Wait here ___ I come back.",
+      "options": [
+        "until",
+        "because",
+        "so"
+      ],
+      "answer": "until",
+      "explanation": "\"Until\" means up to the time when.",
+      "id": "conjunctions-015"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ravi ate his lunch ___ he played football.",
+      "options": [
+        "before",
+        "unless",
+        "or"
+      ],
+      "answer": "before",
+      "explanation": "\"Before\" tells us the order of actions.",
+      "id": "conjunctions-016"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ it was raining, they still played football.",
+      "options": [
+        "Although",
+        "Because",
+        "So"
+      ],
+      "answer": "Although",
+      "explanation": "\"Although\" shows something surprising.",
+      "id": "conjunctions-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "You will miss the bus ___ you hurry.",
+      "options": [
+        "unless",
+        "because",
+        "and"
+      ],
+      "answer": "unless",
+      "explanation": "\"Unless\" means \"if not\".",
+      "id": "conjunctions-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mother was cooking ___ Father was cleaning the car.",
+      "options": [
+        "while",
+        "unless",
+        "or"
+      ],
+      "answer": "while",
+      "explanation": "\"While\" shows two things happening at the same time.",
+      "id": "conjunctions-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ he studied hard, he passed the examination with flying colours.",
+      "options": [
+        "Because",
+        "Although",
+        "Unless"
+      ],
+      "answer": "Because",
+      "explanation": "Studying hard is the reason he passed.",
+      "id": "conjunctions-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I will not go ___ you come with me.",
+      "options": [
+        "unless",
+        "so",
+        "and"
+      ],
+      "answer": "unless",
+      "explanation": "\"Unless\" means \"if ... not\".",
+      "id": "conjunctions-021"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She smiled ___ she was very tired.",
+      "options": [
+        "although",
+        "because",
+        "so"
+      ],
+      "answer": "although",
+      "explanation": "Smiling when tired is surprising, so we use \"although\".",
+      "id": "conjunctions-022"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a conjunction (a joining word)?",
+      "options": [
+        "and",
+        "dog",
+        "big",
+        "run"
+      ],
+      "answer": "and",
+      "explanation": "\"And\" joins words.",
+      "id": "conjunctions-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is a conjunction?",
+      "options": [
+        "because",
+        "beautiful",
+        "behind",
+        "bedroom"
+      ],
+      "answer": "because",
+      "explanation": "\"Because\" joins two ideas.",
+      "id": "conjunctions-024"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word joins the two ideas?",
+      "sentence": "I am tired but happy.",
+      "options": [
+        "but",
+        "tired",
+        "happy",
+        "am"
+      ],
+      "answer": "but",
+      "explanation": "\"But\" joins \"tired\" and \"happy\".",
+      "id": "conjunctions-025"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which conjunction gives a reason?",
+      "options": [
+        "because",
+        "and",
+        "or",
+        "but"
+      ],
+      "answer": "because",
+      "explanation": "\"Because\" answers \"Why?\".",
+      "id": "conjunctions-026"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which conjunction gives a choice?",
+      "options": [
+        "or",
+        "and",
+        "so",
+        "because"
+      ],
+      "answer": "or",
+      "explanation": "\"Or\" gives a choice.",
+      "id": "conjunctions-027"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which conjunction shows a result?",
+      "options": [
+        "so",
+        "or",
+        "because",
+        "and"
+      ],
+      "answer": "so",
+      "explanation": "\"So\" shows what happened next.",
+      "id": "conjunctions-028"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the best sentence.",
+      "options": [
+        "I was thirsty, so I drank some water.",
+        "I was thirsty, but I drank some water.",
+        "I was thirsty, or I drank some water.",
+        "I was thirsty, because I drank some water."
+      ],
+      "answer": "I was thirsty, so I drank some water.",
+      "explanation": "Drinking water is the result of being thirsty.",
+      "id": "conjunctions-029"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Join the sentences: \"It was late. We went home.\"",
+      "options": [
+        "It was late, so we went home.",
+        "It was late, but we went home.",
+        "It was late, or we went home.",
+        "It was late, unless we went home."
+      ],
+      "answer": "It was late, so we went home.",
+      "explanation": "Going home is the result.",
+      "id": "conjunctions-030"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Join the sentences: \"She was ill. She went to school.\"",
+      "options": [
+        "Although she was ill, she went to school.",
+        "Because she was ill, she went to school.",
+        "Unless she was ill, she went to school.",
+        "So she was ill, she went to school."
+      ],
+      "answer": "Although she was ill, she went to school.",
+      "explanation": "Going to school when ill is surprising, so we use \"although\".",
+      "id": "conjunctions-031"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I have a pen but a pencil.",
+      "answer": "but",
+      "correction": "and",
+      "explanation": "\"but\" should be \"and\". We are adding another thing, so we use \"and\".",
+      "id": "conjunctions-032"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "It was cold, because I wore a jacket.",
+      "answer": "because",
+      "correction": "so",
+      "explanation": "\"because\" should be \"so\". Wearing a jacket is the result of the cold.",
+      "id": "conjunctions-033"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I wanted to play, so it was raining.",
+      "answer": "so",
+      "correction": "but",
+      "explanation": "\"so\" should be \"but\". The rain is a problem, so we use \"but\".",
+      "id": "conjunctions-034"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She cried so she fell down.",
+      "answer": "so",
+      "correction": "because",
+      "explanation": "\"so\" should be \"because\". Falling down is the reason she cried.",
+      "id": "conjunctions-035"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Brush your teeth after you go to bed.",
+      "answer": "after",
+      "correction": "before",
+      "explanation": "\"after\" should be \"before\". We brush our teeth before going to bed.",
+      "id": "conjunctions-036"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Although the test was easy, everyone passed.",
+      "answer": "Although",
+      "correction": "Because",
+      "explanation": "\"Although\" should be \"Because\". The easy test is the reason everyone passed.",
+      "id": "conjunctions-037"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I will call you unless I reach home.",
+      "answer": "unless",
+      "correction": "when",
+      "explanation": "\"unless\" should be \"when\". The call happens at the time I reach home.",
+      "id": "conjunctions-038"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I like red and blue.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "conjunctions-039"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "We stayed inside because it was raining.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "conjunctions-040"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "Although it was late, she finished her homework.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "conjunctions-041"
+    }
+  ]
+}

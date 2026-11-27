@@ -1,0 +1,555 @@
+{
+  "id": "singular-plural",
+  "title": "Singular & Plural",
+  "lesson": {
+    "intro": "[[Singular]] means one. [[Plural]] means more than one.",
+    "points": [
+      "Most nouns add -s: cat → [[cats]], book → [[books]].",
+      "Nouns ending in s, x, sh, ch add -es: bus → [[buses]], box → [[boxes]], brush → [[brushes]], watch → [[watches]].",
+      "Some nouns ending in o add -es: tomato → [[tomatoes]], potato → [[potatoes]].",
+      "Consonant + y → change y to i and add -es: baby → [[babies]]. Vowel + y → just add -s: toy → [[toys]].",
+      "Many nouns ending in f or fe change to -ves: leaf → [[leaves]], knife → [[knives]].",
+      "Irregular plurals: child → [[children]], man → [[men]], woman → [[women]], tooth → [[teeth]], foot → [[feet]], mouse → [[mice]].",
+      "Some nouns stay the same: one [[sheep]], two sheep; one [[fish]], many fish; one [[deer]], three deer."
+    ],
+    "examples": [
+      {
+        "text": "one apple → two [[apples]]",
+        "note": "add -s"
+      },
+      {
+        "text": "one box → three [[boxes]]",
+        "note": "add -es"
+      },
+      {
+        "text": "one butterfly → many [[butterflies]]",
+        "note": "y → ies"
+      },
+      {
+        "text": "one leaf → many [[leaves]]",
+        "note": "f → ves"
+      },
+      {
+        "text": "one child → five [[children]]",
+        "note": "irregular"
+      }
+    ],
+    "tip": "Say the plural out loud. If you hear an extra \"iz\" sound (boxes, buses), you probably need -es."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one cat, two ___",
+      "options": [
+        "cats",
+        "cat",
+        "cates"
+      ],
+      "answer": "cats",
+      "explanation": "Add -s.",
+      "id": "singular-plural-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one book, three ___",
+      "options": [
+        "books",
+        "book",
+        "bookes"
+      ],
+      "answer": "books",
+      "explanation": "Add -s.",
+      "id": "singular-plural-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one apple, four ___",
+      "options": [
+        "apples",
+        "apple",
+        "appleses"
+      ],
+      "answer": "apples",
+      "explanation": "Add -s.",
+      "id": "singular-plural-003"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one box, two ___",
+      "options": [
+        "boxes",
+        "boxs",
+        "boxies"
+      ],
+      "answer": "boxes",
+      "explanation": "Words ending in x add -es.",
+      "id": "singular-plural-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one bus, three ___",
+      "options": [
+        "buses",
+        "buss",
+        "busies"
+      ],
+      "answer": "buses",
+      "explanation": "Words ending in s add -es.",
+      "id": "singular-plural-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one brush, two ___",
+      "options": [
+        "brushes",
+        "brushs",
+        "brush"
+      ],
+      "answer": "brushes",
+      "explanation": "Words ending in sh add -es.",
+      "id": "singular-plural-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one watch, two ___",
+      "options": [
+        "watches",
+        "watchs",
+        "watchies"
+      ],
+      "answer": "watches",
+      "explanation": "Words ending in ch add -es.",
+      "id": "singular-plural-007"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one baby, two ___",
+      "options": [
+        "babies",
+        "babys",
+        "babyes"
+      ],
+      "answer": "babies",
+      "explanation": "Consonant + y: change y to i and add -es.",
+      "id": "singular-plural-008"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one lady, many ___",
+      "options": [
+        "ladies",
+        "ladys",
+        "ladyes"
+      ],
+      "answer": "ladies",
+      "explanation": "Consonant + y: change y to i and add -es.",
+      "id": "singular-plural-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one toy, many ___",
+      "options": [
+        "toys",
+        "toies",
+        "toyes"
+      ],
+      "answer": "toys",
+      "explanation": "Vowel + y: just add -s.",
+      "id": "singular-plural-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one tomato, two ___",
+      "options": [
+        "tomatoes",
+        "tomatos",
+        "tomatoies"
+      ],
+      "answer": "tomatoes",
+      "explanation": "tomato → tomatoes.",
+      "id": "singular-plural-011"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one leaf, many ___",
+      "options": [
+        "leaves",
+        "leafs",
+        "leafes"
+      ],
+      "answer": "leaves",
+      "explanation": "f → ves.",
+      "id": "singular-plural-012"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one knife, two ___",
+      "options": [
+        "knives",
+        "knifes",
+        "knifs"
+      ],
+      "answer": "knives",
+      "explanation": "fe → ves.",
+      "id": "singular-plural-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one child, many ___",
+      "options": [
+        "children",
+        "childs",
+        "childrens"
+      ],
+      "answer": "children",
+      "explanation": "child → children (irregular).",
+      "id": "singular-plural-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one man, two ___",
+      "options": [
+        "men",
+        "mans",
+        "mens"
+      ],
+      "answer": "men",
+      "explanation": "man → men (irregular).",
+      "id": "singular-plural-015"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one tooth, many ___",
+      "options": [
+        "teeth",
+        "tooths",
+        "teeths"
+      ],
+      "answer": "teeth",
+      "explanation": "tooth → teeth (irregular).",
+      "id": "singular-plural-016"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one foot, two ___",
+      "options": [
+        "feet",
+        "foots",
+        "feets"
+      ],
+      "answer": "feet",
+      "explanation": "foot → feet (irregular).",
+      "id": "singular-plural-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one mouse, three ___",
+      "options": [
+        "mice",
+        "mouses",
+        "mices"
+      ],
+      "answer": "mice",
+      "explanation": "mouse → mice (irregular).",
+      "id": "singular-plural-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one sheep, ten ___",
+      "options": [
+        "sheep",
+        "sheeps",
+        "sheepes"
+      ],
+      "answer": "sheep",
+      "explanation": "\"Sheep\" stays the same.",
+      "id": "singular-plural-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one wolf, a pack of ___",
+      "options": [
+        "wolves",
+        "wolfs",
+        "wolfes"
+      ],
+      "answer": "wolves",
+      "explanation": "f → ves.",
+      "id": "singular-plural-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one person, many ___",
+      "options": [
+        "people",
+        "peoples",
+        "persones"
+      ],
+      "answer": "people",
+      "explanation": "The usual plural of person is people.",
+      "id": "singular-plural-021"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The ___ are playing in the field. (child)",
+      "options": [
+        "children",
+        "childs",
+        "child"
+      ],
+      "answer": "children",
+      "explanation": "child → children.",
+      "id": "singular-plural-022"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "one woman, two ___",
+      "options": [
+        "women",
+        "womans",
+        "womens"
+      ],
+      "answer": "women",
+      "explanation": "woman → women (irregular).",
+      "id": "singular-plural-023"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is plural (more than one)?",
+      "options": [
+        "dogs",
+        "dog",
+        "a dog"
+      ],
+      "answer": "dogs",
+      "explanation": "\"Dogs\" means more than one dog.",
+      "id": "singular-plural-024"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is singular (only one)?",
+      "options": [
+        "chair",
+        "chairs",
+        "tables",
+        "pencils"
+      ],
+      "answer": "chair",
+      "explanation": "\"Chair\" means one chair.",
+      "id": "singular-plural-025"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "There are three birds on the tree.",
+        "There are three bird on the tree.",
+        "There is three birds on the tree."
+      ],
+      "answer": "There are three birds on the tree.",
+      "explanation": "Three = plural: birds, and \"are\".",
+      "id": "singular-plural-026"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which plural is spelt correctly?",
+      "options": [
+        "cherries",
+        "cherrys",
+        "cherryes",
+        "cherris"
+      ],
+      "answer": "cherries",
+      "explanation": "cherry → cherries.",
+      "id": "singular-plural-027"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which plural is spelt correctly?",
+      "options": [
+        "wives",
+        "wifes",
+        "wifs",
+        "wivs"
+      ],
+      "answer": "wives",
+      "explanation": "wife → wives.",
+      "id": "singular-plural-028"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Which word is the same in singular and plural?",
+      "options": [
+        "fish",
+        "cat",
+        "bird",
+        "cow"
+      ],
+      "answer": "fish",
+      "explanation": "one fish, many fish.",
+      "id": "singular-plural-029"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which plural is NOT correct?",
+      "options": [
+        "gooses",
+        "geese",
+        "teeth",
+        "mice"
+      ],
+      "answer": "gooses",
+      "explanation": "The plural of goose is geese.",
+      "id": "singular-plural-030"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I have two pencil.",
+      "answer": "pencil",
+      "correction": "pencils",
+      "explanation": "\"pencil\" should be \"pencils\". Two = more than one.",
+      "id": "singular-plural-031"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "There are many boxs in the store.",
+      "answer": "boxs",
+      "correction": "boxes",
+      "explanation": "\"boxs\" should be \"boxes\". Words ending in x add -es.",
+      "id": "singular-plural-032"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The babys are sleeping.",
+      "answer": "babys",
+      "correction": "babies",
+      "explanation": "\"babys\" should be \"babies\". Change y to i and add -es.",
+      "id": "singular-plural-033"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Three ladys are waiting.",
+      "answer": "ladys",
+      "correction": "ladies",
+      "explanation": "\"ladys\" should be \"ladies\". Change y to i and add -es.",
+      "id": "singular-plural-034"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The childs are singing.",
+      "answer": "childs",
+      "correction": "children",
+      "explanation": "\"childs\" should be \"children\". child → children.",
+      "id": "singular-plural-035"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Many leafs fell from the tree.",
+      "answer": "leafs",
+      "correction": "leaves",
+      "explanation": "\"leafs\" should be \"leaves\". leaf → leaves.",
+      "id": "singular-plural-036"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I brush my tooths every night.",
+      "answer": "tooths",
+      "correction": "teeth",
+      "explanation": "\"tooths\" should be \"teeth\". tooth → teeth.",
+      "id": "singular-plural-037"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The farmer has ten sheeps.",
+      "answer": "sheeps",
+      "correction": "sheep",
+      "explanation": "\"sheeps\" should be \"sheep\". \"Sheep\" stays the same.",
+      "id": "singular-plural-038"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I have two red balls.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "singular-plural-039"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "The children are in the classroom.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "singular-plural-040"
+    }
+  ]
+}

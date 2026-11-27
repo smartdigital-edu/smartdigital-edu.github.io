@@ -1,0 +1,391 @@
+{
+  "id": "build-sentence",
+  "title": "Build Sentence",
+  "lesson": {
+    "intro": "A sentence is a group of words that makes complete sense. Words must be in the [[right order]].",
+    "points": [
+      "A sentence begins with a [[capital letter]].",
+      "It ends with a full stop ( . ), a question mark ( ? ) or an exclamation mark ( ! ).",
+      "Most sentences follow this order: [[Who / What]] + [[doing word]] + the rest. Example: The cat + drinks + milk.",
+      "Questions often start with a question word or a helping verb: Where is…? Can you…? Do you…?",
+      "Describing words come before the noun: a [[red]] ball, the [[tall]] boy."
+    ],
+    "examples": [
+      {
+        "text": "[[The boy]] [[kicks]] the ball.",
+        "note": "who + doing word + the rest"
+      },
+      {
+        "text": "[[My mother]] [[cooks]] fried rice.",
+        "note": "who + doing word + the rest"
+      },
+      {
+        "text": "[[Where]] is my blue pencil?",
+        "note": "a question ends with ?"
+      },
+      {
+        "text": "We visited the zoo [[last Saturday]].",
+        "note": "time words often go at the end"
+      }
+    ],
+    "tip": "Find the word with the capital letter – it usually starts the sentence. Find the word with the full stop – it usually ends it."
+  },
+  "questions": [
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I like to eat apples.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-001"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The cat is black.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-002"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "This is my mother.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-003"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "We go to school.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-004"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The ball is red.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-005"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I can see a bird.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-006"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "My father reads the newspaper.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-007"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "The children are playing happily.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-008"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "She has a pink bag.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-009"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "We eat rice for lunch.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-010"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "The fish swims in the pond.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-011"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "Please close the door.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-012"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "My grandmother lives in a village.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-013"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "The boys are flying kites.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-014"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "Can you help me, please?",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A question begins with a helping verb (Can) and ends with a question mark.",
+      "id": "build-sentence-015"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "There are five ducks in the pond.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-016"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "I brush my teeth every morning.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-017"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "Where is my blue pencil?",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A question begins with a question word (Where) and ends with a question mark.",
+      "id": "build-sentence-018"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "We visited the zoo last Saturday.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-019"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "The library is next to the canteen.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-020"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "Aiman is taller than his brother.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-021"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "My mother bought some fresh vegetables.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-022"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "What time does the bus arrive?",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A question begins with a question word and ends with a question mark.",
+      "id": "build-sentence-023"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "The pupils sang the school song.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-024"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "Although it was raining, we went to the park.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-025"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "The hardworking farmer planted paddy in the field.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-026"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "Malaysia is famous for its delicious food.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-027"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "Please switch off the fan before you leave.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-028"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "The firefighters put out the fire quickly.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-029"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "If you study hard, you will pass the examination.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-030"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "The museum was crowded with tourists from many countries.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-031"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "We must protect our forests for the future.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-032"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "She has been practising the piano since morning.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-033"
+    },
+    {
+      "type": "build",
+      "year": 6,
+      "answer": "The headmaster gave a speech during the assembly.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "build-sentence-034"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which sentence is in the correct order?",
+      "options": [
+        "I have a dog.",
+        "Dog a have I.",
+        "I dog a have.",
+        "Have I a dog."
+      ],
+      "answer": "I have a dog.",
+      "explanation": "Who (I) + doing word (have) + the rest (a dog).",
+      "id": "build-sentence-035"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which sentence is in the correct order?",
+      "options": [
+        "The sun is hot.",
+        "Hot is the sun.",
+        "The hot sun is.",
+        "Sun the is hot."
+      ],
+      "answer": "The sun is hot.",
+      "explanation": "What (The sun) + is + describing word (hot).",
+      "id": "build-sentence-036"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which sentence is in the correct order?",
+      "options": [
+        "My sister likes to dance.",
+        "My sister to dance likes.",
+        "Likes my sister to dance.",
+        "To dance my sister likes."
+      ],
+      "answer": "My sister likes to dance.",
+      "explanation": "Who + doing word + the rest.",
+      "id": "build-sentence-037"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which sentence is in the correct order?",
+      "options": [
+        "We are going to Penang tomorrow.",
+        "We going are to Penang tomorrow.",
+        "Tomorrow going we are to Penang.",
+        "We are to going Penang tomorrow."
+      ],
+      "answer": "We are going to Penang tomorrow.",
+      "explanation": "\"are going\" stays together.",
+      "id": "build-sentence-038"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Which sentence is in the correct order?",
+      "options": [
+        "The old man walked slowly to the mosque.",
+        "The old man slowly walked the mosque to.",
+        "Walked the old man slowly to the mosque.",
+        "The man old walked slowly to the mosque."
+      ],
+      "answer": "The old man walked slowly to the mosque.",
+      "explanation": "The describing word \"old\" comes before \"man\".",
+      "id": "build-sentence-039"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which sentence has the correct punctuation?",
+      "options": [
+        "Where are you going, Amin?",
+        "where are you going, Amin?",
+        "Where are you going Amin.",
+        "Where are you going, amin?"
+      ],
+      "answer": "Where are you going, Amin?",
+      "explanation": "Capital letter at the start, capital for the name, and a question mark at the end.",
+      "id": "build-sentence-040"
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "id": "prepositions",
+  "title": "Prepositions",
+  "lesson": {
+    "intro": "A preposition tells us [[where]] something is, [[when]] something happens, or the [[direction]] something moves.",
+    "points": [
+      "Place: in, on, under, behind, in front of, beside, between, above, below, near.",
+      "Time: [[at]] + clock time (at 7 o'clock), [[on]] + day or date (on Monday, on 31 August), [[in]] + month, year or part of the day (in May, in 2025, in the morning).",
+      "Direction: into, onto, out of, across, through, along, towards.",
+      "Between is for two things; among is for more than two.",
+      "Since + a point in time (since 2020); for + a length of time (for two years)."
+    ],
+    "examples": [
+      {
+        "text": "The cat is sleeping [[under]] the table.",
+        "note": "place"
+      },
+      {
+        "text": "Mei Ling sits [[between]] Siti and Raju.",
+        "note": "place – two people"
+      },
+      {
+        "text": "We have Art [[on]] Tuesday.",
+        "note": "time – a day"
+      },
+      {
+        "text": "The shop opens [[at]] 9 o'clock.",
+        "note": "time – clock time"
+      },
+      {
+        "text": "The children walked [[across]] the bridge.",
+        "note": "direction"
+      }
+    ],
+    "tip": "For time, remember: AT a time, ON a day, IN a month or year."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The cat is ___ the box. (inside it)",
+      "options": [
+        "in",
+        "on",
+        "under"
+      ],
+      "answer": "in",
+      "explanation": "\"In\" means inside.",
+      "id": "prepositions-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The book is ___ the table. (on top of it)",
+      "options": [
+        "on",
+        "in",
+        "under"
+      ],
+      "answer": "on",
+      "explanation": "\"On\" means on top of.",
+      "id": "prepositions-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The ball is ___ the chair. (below it)",
+      "options": [
+        "under",
+        "on",
+        "in"
+      ],
+      "answer": "under",
+      "explanation": "\"Under\" means below.",
+      "id": "prepositions-003"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The bird is flying ___ the trees. (higher than them)",
+      "options": [
+        "above",
+        "under",
+        "in"
+      ],
+      "answer": "above",
+      "explanation": "\"Above\" means higher than.",
+      "id": "prepositions-004"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mei Ling sits ___ Siti and Raju. (in the middle)",
+      "options": [
+        "between",
+        "behind",
+        "on"
+      ],
+      "answer": "between",
+      "explanation": "\"Between\" means in the middle of two people or things.",
+      "id": "prepositions-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The car is parked ___ the house. (at the back)",
+      "options": [
+        "behind",
+        "in front of",
+        "on"
+      ],
+      "answer": "behind",
+      "explanation": "\"Behind\" means at the back of.",
+      "id": "prepositions-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The teacher stands ___ the class. (facing the pupils)",
+      "options": [
+        "in front of",
+        "behind",
+        "under"
+      ],
+      "answer": "in front of",
+      "explanation": "\"In front of\" is the opposite of \"behind\".",
+      "id": "prepositions-007"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I wake up ___ 6 o'clock.",
+      "options": [
+        "at",
+        "on",
+        "in"
+      ],
+      "answer": "at",
+      "explanation": "Use \"at\" for clock times.",
+      "id": "prepositions-008"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We have Art ___ Tuesday.",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answer": "on",
+      "explanation": "Use \"on\" for days.",
+      "id": "prepositions-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My birthday is ___ March.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": "in",
+      "explanation": "Use \"in\" for months.",
+      "id": "prepositions-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The shop opens early ___ the morning.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": "in",
+      "explanation": "We say \"in the morning\".",
+      "id": "prepositions-011"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We celebrate Merdeka ___ 31 August.",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answer": "on",
+      "explanation": "Use \"on\" for dates.",
+      "id": "prepositions-012"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The frog jumped ___ the pond.",
+      "options": [
+        "into",
+        "onto",
+        "under"
+      ],
+      "answer": "into",
+      "explanation": "\"Into\" shows movement to the inside of something.",
+      "id": "prepositions-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The children walked ___ the bridge to the other side.",
+      "options": [
+        "across",
+        "into",
+        "between"
+      ],
+      "answer": "across",
+      "explanation": "\"Across\" means from one side to the other.",
+      "id": "prepositions-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The train went ___ the tunnel.",
+      "options": [
+        "through",
+        "across",
+        "above"
+      ],
+      "answer": "through",
+      "explanation": "\"Through\" means in one end and out of the other.",
+      "id": "prepositions-015"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I have lived here ___ 2019.",
+      "options": [
+        "since",
+        "for",
+        "from"
+      ],
+      "answer": "since",
+      "explanation": "Use \"since\" with a point in time.",
+      "id": "prepositions-016"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She has learnt the piano ___ three years.",
+      "options": [
+        "for",
+        "since",
+        "at"
+      ],
+      "answer": "for",
+      "explanation": "Use \"for\" with a length of time.",
+      "id": "prepositions-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The cat jumped ___ the table.",
+      "options": [
+        "onto",
+        "into",
+        "in"
+      ],
+      "answer": "onto",
+      "explanation": "\"Onto\" shows movement to the top of something.",
+      "id": "prepositions-018"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He is very good ___ mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on"
+      ],
+      "answer": "at",
+      "explanation": "We say \"good at\" something.",
+      "id": "prepositions-019"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She is afraid ___ spiders.",
+      "options": [
+        "of",
+        "from",
+        "with"
+      ],
+      "answer": "of",
+      "explanation": "We say \"afraid of\".",
+      "id": "prepositions-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The pupils were divided ___ four groups.",
+      "options": [
+        "into",
+        "in",
+        "to"
+      ],
+      "answer": "into",
+      "explanation": "We say \"divided into\".",
+      "id": "prepositions-021"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a preposition?",
+      "options": [
+        "under",
+        "cat",
+        "run",
+        "red"
+      ],
+      "answer": "under",
+      "explanation": "\"Under\" tells us where.",
+      "id": "prepositions-022"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is a preposition?",
+      "options": [
+        "beside",
+        "bed",
+        "sleep",
+        "soft"
+      ],
+      "answer": "beside",
+      "explanation": "\"Beside\" tells us where.",
+      "id": "prepositions-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the preposition?",
+      "sentence": "The keys are in my bag.",
+      "options": [
+        "in",
+        "keys",
+        "bag",
+        "my"
+      ],
+      "answer": "in",
+      "explanation": "\"In\" tells us where the keys are.",
+      "id": "prepositions-024"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is the preposition?",
+      "sentence": "We had lunch at noon.",
+      "options": [
+        "at",
+        "lunch",
+        "noon",
+        "had"
+      ],
+      "answer": "at",
+      "explanation": "\"At\" tells us when.",
+      "id": "prepositions-025"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word tells us WHEN?",
+      "sentence": "We play football after school.",
+      "options": [
+        "after",
+        "football",
+        "school",
+        "play"
+      ],
+      "answer": "after",
+      "explanation": "\"After\" is a preposition of time.",
+      "id": "prepositions-026"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "The meeting is on Monday.",
+        "The meeting is in Monday.",
+        "The meeting is at Monday.",
+        "The meeting is to Monday."
+      ],
+      "answer": "The meeting is on Monday.",
+      "explanation": "Use \"on\" for days.",
+      "id": "prepositions-027"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the correct word: \"The plane flew ___ the clouds.\"",
+      "options": [
+        "above",
+        "under",
+        "into",
+        "between"
+      ],
+      "answer": "above",
+      "explanation": "The plane was higher than the clouds.",
+      "id": "prepositions-028"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "I have waited for two hours.",
+        "I have waited since two hours.",
+        "I have waited at two hours.",
+        "I have waited on two hours."
+      ],
+      "answer": "I have waited for two hours.",
+      "explanation": "Use \"for\" with a length of time.",
+      "id": "prepositions-029"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "The pupils are interested in science.",
+        "The pupils are interested on science.",
+        "The pupils are interested at science.",
+        "The pupils are interested of science."
+      ],
+      "answer": "The pupils are interested in science.",
+      "explanation": "We say \"interested in\".",
+      "id": "prepositions-030"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The fish swims on the aquarium.",
+      "answer": "on",
+      "correction": "in",
+      "explanation": "\"on\" should be \"in\". Fish swim inside the water, so we use \"in\".",
+      "id": "prepositions-031"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "School starts in Monday.",
+      "answer": "in",
+      "correction": "on",
+      "explanation": "\"in\" should be \"on\". Use \"on\" for days.",
+      "id": "prepositions-032"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "We eat dinner on 7 o'clock.",
+      "answer": "on",
+      "correction": "at",
+      "explanation": "\"on\" should be \"at\". Use \"at\" for clock times.",
+      "id": "prepositions-033"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Hari Raya is on May this year.",
+      "answer": "on",
+      "correction": "in",
+      "explanation": "\"on\" should be \"in\". Use \"in\" for months.",
+      "id": "prepositions-034"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The cat hid between the bed.",
+      "answer": "between",
+      "correction": "under",
+      "explanation": "\"between\" should be \"under\". \"Between\" needs two things.",
+      "id": "prepositions-035"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "I have known her since five years.",
+      "answer": "since",
+      "correction": "for",
+      "explanation": "\"since\" should be \"for\". \"Five years\" is a length of time, so use \"for\".",
+      "id": "prepositions-036"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She is very good in drawing.",
+      "answer": "in",
+      "correction": "at",
+      "explanation": "\"in\" should be \"at\". We say \"good at\".",
+      "id": "prepositions-037"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He was absent in school yesterday.",
+      "answer": "in",
+      "correction": "from",
+      "explanation": "\"in\" should be \"from\". We say \"absent from\".",
+      "id": "prepositions-038"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The cat is under the table.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "prepositions-039"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "We go to school on Monday.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "prepositions-040"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "The boy jumped into the river.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "prepositions-041"
+    }
+  ]
+}

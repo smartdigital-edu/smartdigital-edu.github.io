@@ -1,0 +1,626 @@
+{
+  "id": "nouns",
+  "title": "Nouns",
+  "lesson": {
+    "intro": "A noun is a naming word. It names a [[person]], an [[animal]], a [[place]] or a [[thing]].",
+    "points": [
+      "People: teacher, doctor, baby, my mother",
+      "Animals: cat, elephant, bird, crocodile",
+      "Places: school, kitchen, park, market",
+      "Things: book, pencil, ball, table",
+      "Proper nouns are special names of people, places, days and months. They always begin with a capital letter: [[Siti]], [[Penang]], [[Monday]], [[June]].",
+      "Collective nouns name a group: a [[flock]] of birds, a [[herd]] of cows, a [[school]] of fish.",
+      "Abstract nouns name things we cannot see or touch, like feelings and ideas: [[happiness]], [[courage]], [[truth]]."
+    ],
+    "examples": [
+      {
+        "text": "The [[teacher]] is kind.",
+        "note": "teacher – a person"
+      },
+      {
+        "text": "My [[cat]] sleeps on the [[sofa]].",
+        "note": "cat – an animal; sofa – a thing"
+      },
+      {
+        "text": "We play badminton at the [[park]].",
+        "note": "park – a place"
+      },
+      {
+        "text": "[[Aiman]] lives in [[Ipoh]].",
+        "note": "proper nouns begin with capital letters"
+      },
+      {
+        "text": "A [[herd]] of elephants crossed the road.",
+        "note": "herd – a collective noun"
+      }
+    ],
+    "tip": "Ask yourself: can I put \"a\", \"an\" or \"the\" in front of the word? If yes, it is probably a noun."
+  },
+  "questions": [
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a noun?",
+      "options": [
+        "apple",
+        "run",
+        "happy",
+        "quickly"
+      ],
+      "answer": "apple",
+      "explanation": "An apple is a thing, so \"apple\" is a noun.",
+      "id": "nouns-001"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a noun?",
+      "options": [
+        "teacher",
+        "sing",
+        "tall",
+        "under"
+      ],
+      "answer": "teacher",
+      "explanation": "A teacher is a person, so \"teacher\" is a noun.",
+      "id": "nouns-002"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a noun?",
+      "options": [
+        "school",
+        "jump",
+        "big",
+        "and"
+      ],
+      "answer": "school",
+      "explanation": "A school is a place, so \"school\" is a noun.",
+      "id": "nouns-003"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is a noun?",
+      "options": [
+        "rabbit",
+        "eat",
+        "soft",
+        "slowly"
+      ],
+      "answer": "rabbit",
+      "explanation": "A rabbit is an animal, so \"rabbit\" is a noun.",
+      "id": "nouns-004"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Which word is the noun?",
+      "sentence": "The dog barks loudly.",
+      "options": [
+        "dog",
+        "barks",
+        "loudly"
+      ],
+      "answer": "dog",
+      "explanation": "\"Dog\" names an animal.",
+      "id": "nouns-005"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is NOT a noun?",
+      "options": [
+        "swim",
+        "river",
+        "fish",
+        "boat"
+      ],
+      "answer": "swim",
+      "explanation": "\"Swim\" is an action word (a verb). River, fish and boat are nouns.",
+      "id": "nouns-006"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is NOT a noun?",
+      "options": [
+        "beautiful",
+        "garden",
+        "flower",
+        "butterfly"
+      ],
+      "answer": "beautiful",
+      "explanation": "\"Beautiful\" describes something, so it is an adjective.",
+      "id": "nouns-007"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the noun?",
+      "sentence": "She drinks cold milk.",
+      "options": [
+        "milk",
+        "drinks",
+        "cold",
+        "she"
+      ],
+      "answer": "milk",
+      "explanation": "\"Milk\" names a thing.",
+      "id": "nouns-008"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is the noun?",
+      "sentence": "The bus is very late.",
+      "options": [
+        "bus",
+        "very",
+        "late",
+        "is"
+      ],
+      "answer": "bus",
+      "explanation": "\"Bus\" names a thing.",
+      "id": "nouns-009"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which is a proper noun?",
+      "options": [
+        "Malaysia",
+        "country",
+        "city",
+        "river"
+      ],
+      "answer": "Malaysia",
+      "explanation": "Malaysia is the name of a particular country, so it is a proper noun and starts with a capital letter.",
+      "id": "nouns-010"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which is a proper noun?",
+      "options": [
+        "Sunday",
+        "day",
+        "week",
+        "morning"
+      ],
+      "answer": "Sunday",
+      "explanation": "Days of the week are proper nouns.",
+      "id": "nouns-011"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is the noun?",
+      "sentence": "My brother runs fast.",
+      "options": [
+        "brother",
+        "runs",
+        "fast",
+        "my"
+      ],
+      "answer": "brother",
+      "explanation": "\"Brother\" names a person.",
+      "id": "nouns-012"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "How many nouns are in this sentence?",
+      "sentence": "The girl put her books in the bag.",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": "3",
+      "explanation": "The nouns are girl, books and bag.",
+      "id": "nouns-013"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which is a collective noun (a word for a group)?",
+      "options": [
+        "herd",
+        "cow",
+        "grass",
+        "farm"
+      ],
+      "answer": "herd",
+      "explanation": "A herd is a group of animals such as cows or elephants.",
+      "id": "nouns-014"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "How many nouns are in this sentence?",
+      "sentence": "Grandfather planted trees in the village near the river.",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": "4",
+      "explanation": "The nouns are Grandfather, trees, village and river.",
+      "id": "nouns-015"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the collective noun: \"a ___ of fish\"",
+      "options": [
+        "school",
+        "flock",
+        "herd",
+        "pack"
+      ],
+      "answer": "school",
+      "explanation": "We say a school of fish.",
+      "id": "nouns-016"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the collective noun: \"a ___ of birds\"",
+      "options": [
+        "flock",
+        "school",
+        "bunch",
+        "herd"
+      ],
+      "answer": "flock",
+      "explanation": "We say a flock of birds.",
+      "id": "nouns-017"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which word is an abstract noun (something you cannot see or touch)?",
+      "options": [
+        "happiness",
+        "happy",
+        "smile",
+        "balloon"
+      ],
+      "answer": "happiness",
+      "explanation": "Happiness is a feeling, so it is an abstract noun.",
+      "id": "nouns-018"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which word is an abstract noun?",
+      "options": [
+        "courage",
+        "brave",
+        "soldier",
+        "sword"
+      ],
+      "answer": "courage",
+      "explanation": "Courage is a quality we cannot touch.",
+      "id": "nouns-019"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I write with a ___.",
+      "options": [
+        "pencil",
+        "happy",
+        "jump"
+      ],
+      "answer": "pencil",
+      "explanation": "A pencil is a thing we write with.",
+      "id": "nouns-020"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A ___ says \"moo\".",
+      "options": [
+        "cow",
+        "cat",
+        "duck"
+      ],
+      "answer": "cow",
+      "explanation": "Cows say \"moo\".",
+      "id": "nouns-021"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We read books in the ___.",
+      "options": [
+        "library",
+        "kitchen",
+        "bathroom"
+      ],
+      "answer": "library",
+      "explanation": "A library is a place with many books.",
+      "id": "nouns-022"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The ___ flies the aeroplane.",
+      "options": [
+        "pilot",
+        "farmer",
+        "baker"
+      ],
+      "answer": "pilot",
+      "explanation": "A pilot is the person who flies an aeroplane.",
+      "id": "nouns-023"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I brush my teeth with a ___.",
+      "options": [
+        "toothbrush",
+        "spoon",
+        "comb"
+      ],
+      "answer": "toothbrush",
+      "explanation": "The complete sentence is: \"I brush my teeth with a toothbrush.\"",
+      "id": "nouns-024"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We buy bread at the ___.",
+      "options": [
+        "bakery",
+        "clinic",
+        "post office"
+      ],
+      "answer": "bakery",
+      "explanation": "A bakery is a place that sells bread.",
+      "id": "nouns-025"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We visited ___ during the school holidays.",
+      "options": [
+        "Langkawi",
+        "langkawi",
+        "LANGKAWI"
+      ],
+      "answer": "Langkawi",
+      "explanation": "Langkawi is the name of a place, so only the first letter is a capital.",
+      "id": "nouns-026"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My best friend is ___.",
+      "options": [
+        "Mei Ling",
+        "mei ling",
+        "Mei ling"
+      ],
+      "answer": "Mei Ling",
+      "explanation": "Each part of a person's name begins with a capital letter.",
+      "id": "nouns-027"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Mother bought a ___ of grapes.",
+      "options": [
+        "bunch",
+        "flock",
+        "herd"
+      ],
+      "answer": "bunch",
+      "explanation": "We say a bunch of grapes.",
+      "id": "nouns-028"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A ___ of wolves howled at night.",
+      "options": [
+        "pack",
+        "school",
+        "bunch"
+      ],
+      "answer": "pack",
+      "explanation": "We say a pack of wolves.",
+      "id": "nouns-029"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A ___ of bees flew out of the hive.",
+      "options": [
+        "swarm",
+        "pride",
+        "pack"
+      ],
+      "answer": "swarm",
+      "explanation": "We say a swarm of bees.",
+      "id": "nouns-030"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "A ___ of lions rested under the tree.",
+      "options": [
+        "pride",
+        "swarm",
+        "flock"
+      ],
+      "answer": "pride",
+      "explanation": "We say a pride of lions.",
+      "id": "nouns-031"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ahmad showed great ___ when he saved the kitten.",
+      "options": [
+        "bravery",
+        "brave",
+        "bravely"
+      ],
+      "answer": "bravery",
+      "explanation": "\"Bravery\" is the abstract noun. \"Brave\" is an adjective and \"bravely\" is an adverb.",
+      "id": "nouns-032"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We should always tell the ___.",
+      "options": [
+        "truth",
+        "true",
+        "truly"
+      ],
+      "answer": "truth",
+      "explanation": "\"Truth\" is a noun. \"True\" is an adjective.",
+      "id": "nouns-033"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Her ___ made everyone smile.",
+      "options": [
+        "kindness",
+        "kind",
+        "kindly"
+      ],
+      "answer": "kindness",
+      "explanation": "\"Kindness\" is an abstract noun.",
+      "id": "nouns-034"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "We went to penang by car.",
+      "answer": "penang",
+      "correction": "Penang",
+      "explanation": "\"penang\" should be \"Penang\". Names of places are proper nouns and need a capital letter.",
+      "id": "nouns-035"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Her name is aminah.",
+      "answer": "aminah",
+      "correction": "Aminah",
+      "explanation": "\"aminah\" should be \"Aminah\". Names of people begin with a capital letter.",
+      "id": "nouns-036"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "School starts on monday.",
+      "answer": "monday",
+      "correction": "Monday",
+      "explanation": "\"monday\" should be \"Monday\". Days of the week begin with a capital letter.",
+      "id": "nouns-037"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My birthday is in june.",
+      "answer": "june",
+      "correction": "June",
+      "explanation": "\"june\" should be \"June\". Months of the year begin with a capital letter.",
+      "id": "nouns-038"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My uncle works in kuala Lumpur.",
+      "answer": "kuala",
+      "correction": "Kuala",
+      "explanation": "\"kuala\" should be \"Kuala\". Every word in the name of a place begins with a capital letter.",
+      "id": "nouns-039"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "A flock of fish swam past the boat.",
+      "answer": "flock",
+      "correction": "school",
+      "explanation": "\"flock\" should be \"school\". We say a school of fish; a flock is for birds or sheep.",
+      "id": "nouns-040"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "A herd of bees buzzed around the flowers.",
+      "answer": "herd",
+      "correction": "swarm",
+      "explanation": "\"herd\" should be \"swarm\". We say a swarm of bees.",
+      "id": "nouns-041"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Honesty is important, so always tell the true.",
+      "answer": "true",
+      "correction": "truth",
+      "explanation": "\"true\" should be \"truth\". \"True\" is an adjective; we need the noun \"truth\".",
+      "id": "nouns-042"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "The cat is on the mat.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "nouns-043"
+    },
+    {
+      "type": "build",
+      "year": 2,
+      "answer": "My father is a doctor.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "nouns-044"
+    },
+    {
+      "type": "build",
+      "year": 4,
+      "answer": "Penang is a beautiful island.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "nouns-045"
+    }
+  ]
+}

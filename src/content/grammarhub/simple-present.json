@@ -1,0 +1,562 @@
+{
+  "id": "simple-present",
+  "title": "Simple Present Tense",
+  "lesson": {
+    "intro": "We use the simple present tense for [[habits]] (things we do again and again), [[routines]] and [[facts]] that are always true.",
+    "points": [
+      "I / you / we / they + verb: I [[walk]], they [[play]].",
+      "He / she / it + verb + s: she [[walks]], it [[plays]].",
+      "Add -es after s, sh, ch, x, o: wash → [[washes]], watch → [[watches]], go → [[goes]].",
+      "Consonant + y → change y to i and add -es: cry → [[cries]]. Vowel + y → just add -s: play → plays.",
+      "Negative: do not / does not + verb: She [[does not]] like durian.",
+      "Questions: Do / Does + subject + verb: [[Does]] he play football?",
+      "Signal words: every day, always, usually, often, sometimes, never."
+    ],
+    "examples": [
+      {
+        "text": "I [[brush]] my teeth every morning.",
+        "note": "habit"
+      },
+      {
+        "text": "My father [[goes]] to work by train.",
+        "note": "he → goes"
+      },
+      {
+        "text": "The sun [[rises]] in the east.",
+        "note": "a fact"
+      },
+      {
+        "text": "Mei Ling [[does not]] drink coffee.",
+        "note": "negative"
+      },
+      {
+        "text": "[[Do]] you like reading?",
+        "note": "question"
+      }
+    ],
+    "tip": "After \"does\" or \"does not\", the verb has NO -s: Does she play? She does not play."
+  },
+  "questions": [
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ to school every day.",
+      "options": [
+        "walk",
+        "walks",
+        "walking"
+      ],
+      "answer": "walk",
+      "explanation": "With \"I\" the verb has no -s.",
+      "id": "simple-present-001"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "She ___ milk every morning.",
+      "options": [
+        "drinks",
+        "drink",
+        "drinking"
+      ],
+      "answer": "drinks",
+      "explanation": "With \"she\" add -s.",
+      "id": "simple-present-002"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The cat ___ a lot.",
+      "options": [
+        "sleeps",
+        "sleep",
+        "sleeping"
+      ],
+      "answer": "sleeps",
+      "explanation": "\"The cat\" = it, so add -s.",
+      "id": "simple-present-003"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "We ___ our teacher.",
+      "options": [
+        "love",
+        "loves",
+        "loving"
+      ],
+      "answer": "love",
+      "explanation": "With \"we\" the verb has no -s.",
+      "id": "simple-present-004"
+    },
+    {
+      "type": "fill",
+      "year": 1,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "They ___ in the river every Sunday.",
+      "options": [
+        "swim",
+        "swims",
+        "swimming"
+      ],
+      "answer": "swim",
+      "explanation": "With \"they\" the verb has no -s.",
+      "id": "simple-present-005"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He ___ his teeth twice a day.",
+      "options": [
+        "brushes",
+        "brush",
+        "brushs"
+      ],
+      "answer": "brushes",
+      "explanation": "Verbs ending in -sh add -es.",
+      "id": "simple-present-006"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My mother ___ the clothes on Saturday.",
+      "options": [
+        "washes",
+        "wash",
+        "washs"
+      ],
+      "answer": "washes",
+      "explanation": "Verbs ending in -sh add -es.",
+      "id": "simple-present-007"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The baby ___ at night.",
+      "options": [
+        "cries",
+        "crys",
+        "cry"
+      ],
+      "answer": "cries",
+      "explanation": "Consonant + y: change y to i and add -es.",
+      "id": "simple-present-008"
+    },
+    {
+      "type": "fill",
+      "year": 2,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Birds ___ nests.",
+      "options": [
+        "build",
+        "builds",
+        "building"
+      ],
+      "answer": "build",
+      "explanation": "\"Birds\" are many, so the verb has no -s.",
+      "id": "simple-present-009"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Ali ___ football every evening.",
+      "options": [
+        "plays",
+        "play",
+        "plaies"
+      ],
+      "answer": "plays",
+      "explanation": "Vowel + y: just add -s.",
+      "id": "simple-present-010"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The shop ___ at 9 a.m. every day.",
+      "options": [
+        "opens",
+        "open",
+        "opening"
+      ],
+      "answer": "opens",
+      "explanation": "\"The shop\" = it, so add -s.",
+      "id": "simple-present-011"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Water ___ at 100 degrees Celsius.",
+      "options": [
+        "boils",
+        "boil",
+        "boiling"
+      ],
+      "answer": "boils",
+      "explanation": "This is a fact, so we use the simple present.",
+      "id": "simple-present-012"
+    },
+    {
+      "type": "fill",
+      "year": 3,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My sister ___ her homework after dinner.",
+      "options": [
+        "does",
+        "do",
+        "dos"
+      ],
+      "answer": "does",
+      "explanation": "do → does with he/she/it.",
+      "id": "simple-present-013"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "I ___ like spicy food.",
+      "options": [
+        "do not",
+        "does not",
+        "am not"
+      ],
+      "answer": "do not",
+      "explanation": "With \"I\" use \"do not\".",
+      "id": "simple-present-014"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "He ___ eat meat.",
+      "options": [
+        "does not",
+        "do not",
+        "not"
+      ],
+      "answer": "does not",
+      "explanation": "With \"he\" use \"does not\".",
+      "id": "simple-present-015"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ you like reading?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answer": "Do",
+      "explanation": "With \"you\" use \"do\".",
+      "id": "simple-present-016"
+    },
+    {
+      "type": "fill",
+      "year": 4,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "___ she live near the school?",
+      "options": [
+        "Does",
+        "Do",
+        "Is"
+      ],
+      "answer": "Does",
+      "explanation": "With \"she\" use \"does\".",
+      "id": "simple-present-017"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The Earth ___ around the Sun.",
+      "options": [
+        "moves",
+        "move",
+        "moving"
+      ],
+      "answer": "moves",
+      "explanation": "A fact, and \"the Earth\" = it.",
+      "id": "simple-present-018"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "My grandparents ___ in Kelantan.",
+      "options": [
+        "live",
+        "lives",
+        "living"
+      ],
+      "answer": "live",
+      "explanation": "\"My grandparents\" are two people, so no -s.",
+      "id": "simple-present-019"
+    },
+    {
+      "type": "fill",
+      "year": 5,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Everyone in my family ___ up early.",
+      "options": [
+        "gets",
+        "get",
+        "getting"
+      ],
+      "answer": "gets",
+      "explanation": "\"Everyone\" is singular.",
+      "id": "simple-present-020"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "Neither Amin nor his brothers ___ coffee.",
+      "options": [
+        "drink",
+        "drinks",
+        "drinking"
+      ],
+      "answer": "drink",
+      "explanation": "With \"neither ... nor\", the verb agrees with the nearer subject, \"brothers\".",
+      "id": "simple-present-021"
+    },
+    {
+      "type": "fill",
+      "year": 6,
+      "prompt": "Choose the correct word to complete the sentence.",
+      "sentence": "The train ___ at 8.15 every morning.",
+      "options": [
+        "leaves",
+        "leave",
+        "left"
+      ],
+      "answer": "leaves",
+      "explanation": "A timetable uses the simple present.",
+      "id": "simple-present-022"
+    },
+    {
+      "type": "mc",
+      "year": 1,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "He likes bananas.",
+        "He like bananas.",
+        "He liking bananas."
+      ],
+      "answer": "He likes bananas.",
+      "explanation": "With \"he\" add -s.",
+      "id": "simple-present-023"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "They play in the park.",
+        "They plays in the park.",
+        "They playing in the park."
+      ],
+      "answer": "They play in the park.",
+      "explanation": "With \"they\" no -s.",
+      "id": "simple-present-024"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which verb goes with \"he\"?",
+      "options": [
+        "runs",
+        "run",
+        "running"
+      ],
+      "answer": "runs",
+      "explanation": "He runs.",
+      "id": "simple-present-025"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word tells us it is a habit?",
+      "sentence": "I always eat breakfast.",
+      "options": [
+        "always",
+        "eat",
+        "breakfast",
+        "I"
+      ],
+      "answer": "always",
+      "explanation": "\"Always\" is a signal word for habits.",
+      "id": "simple-present-026"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "The dog chases the ball.",
+        "The dog chase the ball.",
+        "The dog chasing the ball."
+      ],
+      "answer": "The dog chases the ball.",
+      "explanation": "\"The dog\" = it, so add -s: chases.",
+      "id": "simple-present-027"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Choose the correct question.",
+      "options": [
+        "Does he go to school by bus?",
+        "Do he go to school by bus?",
+        "Does he goes to school by bus?",
+        "Is he go to school by bus?"
+      ],
+      "answer": "Does he go to school by bus?",
+      "explanation": "Does + he + verb (no -s).",
+      "id": "simple-present-028"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Choose the correct negative sentence.",
+      "options": [
+        "She does not watch TV at night.",
+        "She do not watch TV at night.",
+        "She does not watches TV at night.",
+        "She not watch TV at night."
+      ],
+      "answer": "She does not watch TV at night.",
+      "explanation": "does not + verb (no -s).",
+      "id": "simple-present-029"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which sentence is a fact (always true)?",
+      "options": [
+        "The sun rises in the east.",
+        "I went to the beach yesterday.",
+        "We will go to Melaka.",
+        "She is singing now."
+      ],
+      "answer": "The sun rises in the east.",
+      "explanation": "Facts use the simple present tense.",
+      "id": "simple-present-030"
+    },
+    {
+      "type": "spot",
+      "year": 1,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She eat rice every day.",
+      "answer": "eat",
+      "correction": "eats",
+      "explanation": "\"eat\" should be \"eats\". With \"she\" add -s.",
+      "id": "simple-present-031"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "My brother go to school by bus.",
+      "answer": "go",
+      "correction": "goes",
+      "explanation": "\"go\" should be \"goes\". \"My brother\" = he, so go → goes.",
+      "id": "simple-present-032"
+    },
+    {
+      "type": "spot",
+      "year": 2,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The birds sings in the morning.",
+      "answer": "sings",
+      "correction": "sing",
+      "explanation": "\"sings\" should be \"sing\". \"The birds\" are many, so no -s.",
+      "id": "simple-present-033"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "He watchs cartoons on Sunday.",
+      "answer": "watchs",
+      "correction": "watches",
+      "explanation": "\"watchs\" should be \"watches\". Verbs ending in -ch add -es.",
+      "id": "simple-present-034"
+    },
+    {
+      "type": "spot",
+      "year": 3,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "The baby crys loudly.",
+      "answer": "crys",
+      "correction": "cries",
+      "explanation": "\"crys\" should be \"cries\". Change y to i and add -es.",
+      "id": "simple-present-035"
+    },
+    {
+      "type": "spot",
+      "year": 4,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "She does not likes durian.",
+      "answer": "likes",
+      "correction": "like",
+      "explanation": "\"likes\" should be \"like\". After \"does not\", the verb has no -s.",
+      "id": "simple-present-036"
+    },
+    {
+      "type": "spot",
+      "year": 5,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Do your father work in an office?",
+      "answer": "Do",
+      "correction": "Does",
+      "explanation": "\"Do\" should be \"Does\". \"Your father\" = he, so use \"does\".",
+      "id": "simple-present-037"
+    },
+    {
+      "type": "spot",
+      "year": 6,
+      "prompt": "Spot the mistake: tap the word that is wrong.",
+      "sentence": "Each pupil bring a book every Friday.",
+      "answer": "bring",
+      "correction": "brings",
+      "explanation": "\"bring\" should be \"brings\". \"Each pupil\" is singular.",
+      "id": "simple-present-038"
+    },
+    {
+      "type": "build",
+      "year": 1,
+      "answer": "I eat bread every morning.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-present-039"
+    },
+    {
+      "type": "build",
+      "year": 3,
+      "answer": "She goes to school by bus.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-present-040"
+    },
+    {
+      "type": "build",
+      "year": 5,
+      "answer": "He does not drink coffee.",
+      "prompt": "Put the words in the correct order to make a sentence.",
+      "explanation": "A sentence starts with a capital letter, has a subject and a verb, and ends with a full stop, question mark or exclamation mark.",
+      "id": "simple-present-041"
+    }
+  ]
+}

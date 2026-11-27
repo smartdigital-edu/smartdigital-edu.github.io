@@ -1,0 +1,506 @@
+{
+  "id": "spelling",
+  "title": "Spelling",
+  "lesson": {
+    "intro": "Good spellers [[listen]] carefully, [[say]] the word slowly, and [[break]] long words into small parts (syllables).",
+    "points": [
+      "Listen to each sound: c-a-t, f-i-sh.",
+      "Clap the syllables: gar-den, li-bra-ry, beau-ti-ful.",
+      "Learn tricky letter groups: sh (fish), ch (chair), th (three), oo (book), ee (tree), ea (eat).",
+      "Look out for silent letters: k in [[k]]nife, w in [[w]]rite, h in [[h]]our.",
+      "Remember spelling rules: i before e except after c (fr[[ie]]nd, rec[[ei]]ve)."
+    ],
+    "examples": [
+      {
+        "text": "scis-sors → [[scissors]]",
+        "note": "double s, silent c"
+      },
+      {
+        "text": "beau-ti-ful → [[beautiful]]",
+        "note": "\"beau\" sounds like \"byoo\""
+      },
+      {
+        "text": "fa-vour-ite → [[favourite]]",
+        "note": "British/Malaysian spelling has \"our\""
+      },
+      {
+        "text": "ne-ces-sa-ry → [[necessary]]",
+        "note": "one c, double s"
+      }
+    ],
+    "tip": "Tap \"Hear Word\" as many times as you like. Say the word quietly while you spell it."
+  },
+  "questions": [
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "cat",
+      "hint": "I have a pet ___ that says \"meow\".",
+      "prompt": "Listen and spell the word.",
+      "explanation": "cat is spelt C-A-T.",
+      "id": "spelling-001"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "bag",
+      "hint": "I put my books in my school ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "bag is spelt B-A-G.",
+      "id": "spelling-002"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "red",
+      "hint": "An apple can be ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "red is spelt R-E-D.",
+      "id": "spelling-003"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "pen",
+      "hint": "I write with a ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "pen is spelt P-E-N.",
+      "id": "spelling-004"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "sun",
+      "hint": "The ___ is hot and bright.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "sun is spelt S-U-N.",
+      "id": "spelling-005"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "fish",
+      "hint": "A ___ lives in water.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "fish is spelt F-I-S-H.",
+      "id": "spelling-006"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "book",
+      "hint": "I read a story ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "book is spelt B-O-O-K.",
+      "id": "spelling-007"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "milk",
+      "hint": "Cows give us ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "milk is spelt M-I-L-K.",
+      "id": "spelling-008"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "ball",
+      "hint": "We kick the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "ball is spelt B-A-L-L.",
+      "id": "spelling-009"
+    },
+    {
+      "type": "spelling",
+      "year": 1,
+      "word": "tree",
+      "hint": "A monkey climbs the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "tree is spelt T-R-E-E.",
+      "id": "spelling-010"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "chair",
+      "hint": "Please sit on the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "chair is spelt C-H-A-I-R.",
+      "id": "spelling-011"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "school",
+      "hint": "We learn at ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "school is spelt S-C-H-O-O-L.",
+      "id": "spelling-012"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "water",
+      "hint": "Drink plenty of ___ every day.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "water is spelt W-A-T-E-R.",
+      "id": "spelling-013"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "apple",
+      "hint": "An ___ a day keeps the doctor away.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "apple is spelt A-P-P-L-E.",
+      "id": "spelling-014"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "happy",
+      "hint": "I am ___ on my birthday.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "happy is spelt H-A-P-P-Y.",
+      "id": "spelling-015"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "green",
+      "hint": "Leaves are ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "green is spelt G-R-E-E-N.",
+      "id": "spelling-016"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "flower",
+      "hint": "A rose is a beautiful ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "flower is spelt F-L-O-W-E-R.",
+      "id": "spelling-017"
+    },
+    {
+      "type": "spelling",
+      "year": 2,
+      "word": "rabbit",
+      "hint": "A ___ has long ears.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "rabbit is spelt R-A-B-B-I-T.",
+      "id": "spelling-018"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "friend",
+      "hint": "Mei Ling is my best ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "friend: remember \"i before e\" – fr-i-e-n-d.",
+      "id": "spelling-019"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "family",
+      "hint": "I love my ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "family is spelt F-A-M-I-L-Y.",
+      "id": "spelling-020"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "garden",
+      "hint": "Grandmother grows chillies in her ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "garden is spelt G-A-R-D-E-N.",
+      "id": "spelling-021"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "kitchen",
+      "hint": "Mother is cooking in the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "kitchen has a silent t: k-i-t-c-h-e-n.",
+      "id": "spelling-022"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "orange",
+      "hint": "An ___ is a juicy fruit.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "orange is spelt O-R-A-N-G-E.",
+      "id": "spelling-023"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "yellow",
+      "hint": "A banana is ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "yellow is spelt Y-E-L-L-O-W.",
+      "id": "spelling-024"
+    },
+    {
+      "type": "spelling",
+      "year": 3,
+      "word": "because",
+      "hint": "I wore a jacket ___ it was cold.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "because: be-cau-se.",
+      "id": "spelling-025"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "library",
+      "hint": "We borrow books from the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "library: li-bra-ry (do not forget the first r).",
+      "id": "spelling-026"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "beautiful",
+      "hint": "The sunset is ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "beautiful: beau-ti-ful.",
+      "id": "spelling-027"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "holiday",
+      "hint": "We went to Langkawi during the school ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "holiday is spelt H-O-L-I-D-A-Y.",
+      "id": "spelling-028"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "favourite",
+      "hint": "Blue is my ___ colour.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "favourite: fa-vour-ite.",
+      "id": "spelling-029"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "vegetable",
+      "hint": "A carrot is a ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "vegetable: ve-ge-ta-ble.",
+      "id": "spelling-030"
+    },
+    {
+      "type": "spelling",
+      "year": 4,
+      "word": "breakfast",
+      "hint": "I eat roti canai for ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "breakfast = break + fast.",
+      "id": "spelling-031"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "restaurant",
+      "hint": "We had dinner at a seafood ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "restaurant: res-tau-rant.",
+      "id": "spelling-032"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "hospital",
+      "hint": "The doctor works at the ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "hospital is spelt H-O-S-P-I-T-A-L.",
+      "id": "spelling-033"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "celebrate",
+      "hint": "We ___ Hari Raya with our family.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "celebrate is spelt C-E-L-E-B-R-A-T-E.",
+      "id": "spelling-034"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "dangerous",
+      "hint": "Playing with fire is ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "dangerous: dan-ger-ous.",
+      "id": "spelling-035"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "environment",
+      "hint": "We must keep our ___ clean.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "environment: en-vi-ron-ment (remember the n before m).",
+      "id": "spelling-036"
+    },
+    {
+      "type": "spelling",
+      "year": 5,
+      "word": "government",
+      "hint": "The ___ built a new hospital.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "government: govern + ment.",
+      "id": "spelling-037"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "necessary",
+      "hint": "It is ___ to wear a helmet when cycling.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "necessary: one c, double s.",
+      "id": "spelling-038"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "separate",
+      "hint": "Please ___ the rubbish for recycling.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "separate: there is \"a rat\" in sep-a-rat-e.",
+      "id": "spelling-039"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "knowledge",
+      "hint": "Reading books gives us ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "knowledge has a silent k and a d before ge.",
+      "id": "spelling-040"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "achievement",
+      "hint": "Winning the quiz was a great ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "achievement: i before e.",
+      "id": "spelling-041"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "responsible",
+      "hint": "A prefect must be ___.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "responsible ends in -ible.",
+      "id": "spelling-042"
+    },
+    {
+      "type": "spelling",
+      "year": 6,
+      "word": "independence",
+      "hint": "Malaysia celebrates ___ Day on 31 August.",
+      "prompt": "Listen and spell the word.",
+      "explanation": "independence ends in -ence.",
+      "id": "spelling-043"
+    },
+    {
+      "type": "mc",
+      "year": 2,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "school",
+        "scool",
+        "skool",
+        "shcool"
+      ],
+      "answer": "school",
+      "explanation": "school: s-c-h-o-o-l.",
+      "id": "spelling-044"
+    },
+    {
+      "type": "mc",
+      "year": 3,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "friend",
+        "freind",
+        "frend",
+        "frient"
+      ],
+      "answer": "friend",
+      "explanation": "friend: i before e.",
+      "id": "spelling-045"
+    },
+    {
+      "type": "mc",
+      "year": 4,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "beautiful",
+        "beutiful",
+        "beautifull",
+        "butiful"
+      ],
+      "answer": "beautiful",
+      "explanation": "beautiful: b-e-a-u-t-i-f-u-l.",
+      "id": "spelling-046"
+    },
+    {
+      "type": "mc",
+      "year": 5,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "restaurant",
+        "restaurent",
+        "resturant",
+        "restorant"
+      ],
+      "answer": "restaurant",
+      "explanation": "restaurant: res-tau-rant.",
+      "id": "spelling-047"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "necessary",
+        "neccessary",
+        "necesary",
+        "neccesary"
+      ],
+      "answer": "necessary",
+      "explanation": "necessary: one c, double s.",
+      "id": "spelling-048"
+    },
+    {
+      "type": "mc",
+      "year": 6,
+      "prompt": "Which word is spelt correctly?",
+      "options": [
+        "separate",
+        "seperate",
+        "separete",
+        "saparate"
+      ],
+      "answer": "separate",
+      "explanation": "separate: sep-a-rate.",
+      "id": "spelling-049"
+    }
+  ]
+}
