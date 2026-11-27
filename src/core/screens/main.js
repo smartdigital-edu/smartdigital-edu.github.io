@@ -35,6 +35,7 @@ function decoration(d) {
   if (!d.greet) return img;
   const bubble = el(`div.deco-bubble.${d.side}`, { role: 'status', 'aria-live': 'polite' });
   let hideTimer;
+  let greetRun = null;
   const greet = () => {
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
     const text = tx(d.greet);
@@ -43,9 +44,10 @@ function decoration(d) {
     bubble.classList.add('on');
     animate(img, 'cici-hop', 300);
     sfx.hello();
-    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio) }), 550);
     clearTimeout(hideTimer);
-    hideTimer = setTimeout(() => bubble.classList.add('gone'), 9000);
+    const run = (greetRun = {});
+    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio) })
+      .then(() => { if (run === greetRun) hideTimer = setTimeout(() => bubble.classList.add('gone'), 3000); }), 550);
   };
   img.addEventListener('click', greet);
   const who = session.profile?.id ?? session.profile?.name;

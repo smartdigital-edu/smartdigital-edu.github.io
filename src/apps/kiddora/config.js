@@ -23,8 +23,8 @@ export default {
       // Cici greets the child once per session (and again when tapped).
       greet: m('Hi! My name is Cici. Welcome to Kiddora! Ready to learn and play? Let\'s go!',
         'Hai! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!'),
-      // Recorded child-like voice (same on every device); speech is the fallback.
-      greetAudio: m('audio/kiddora/cici-hello-en.m4a', 'audio/kiddora/cici-hello-ms.m4a'),
+      // Recorded natural voices (EN: Ana, BM: Yasmin), same on every device; speech is the fallback.
+      greetAudio: m('audio/kiddora/cici-hello-en.mp3', 'audio/kiddora/cici-hello-ms.mp3'),
     },
     { src: 'images/kiddora/paws.webp', side: 'right' },
   ],
