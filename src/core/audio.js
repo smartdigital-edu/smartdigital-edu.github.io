@@ -10,6 +10,30 @@ let ctx;
 const listeners = new Set();
 
 export const isSoundOn = () => enabled;
+
+/*
+ * One shared <audio> element for recorded clips. Browsers only allow sound after the
+ * person has tapped the page; Safari/iOS also remember that per element. So on the
+ * first tap we "unlock" this element with a silent clip, and every later clip reuses it.
+ */
+const SILENT = 'data:audio/wav;base64,UklGRjQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YRAAAAAAAAAAAAAAAAAAAAAAAAAA';
+let player = null;
+const getPlayer = () => (player ||= (typeof Audio === 'function' ? new Audio() : null));
+const GESTURES = ['pointerdown', 'touchend', 'keydown'];
+function unlockOnFirstTap() {
+  const p = getPlayer();
+  if (p && !currentAudio) { p.src = SILENT; p.play().catch(() => {}); }
+  if (ctx?.state === 'suspended') ctx.resume();
+  GESTURES.forEach((g) => window.removeEventListener(g, unlockOnFirstTap, true));
+}
+if (typeof window !== 'undefined') GESTURES.forEach((g) => window.addEventListener(g, unlockOnFirstTap, true));
+
+/** Run `fn` once, on the person's next tap or key press anywhere on the page. */
+export function onNextTap(fn) {
+  const run = () => { GESTURES.forEach((g) => window.removeEventListener(g, run, true)); fn(); };
+  GESTURES.forEach((g) => window.addEventListener(g, run, true));
+  return () => GESTURES.forEach((g) => window.removeEventListener(g, run, true));
+}
 export function setSound(on) {
   enabled = !!on;
   store.set('sound', enabled);
@@ -75,7 +99,8 @@ let currentAudio = null;
 /**
  * Speak text aloud. If `audioSrc` is given (e.g. "audio/apple.mp3" in /public),
  * the MP3 is played instead and speech is used only if the file fails.
- * Resolves when finished, replaced, or immediately if sound is off.
+ * Resolves when finished, replaced, or immediately if sound is off; resolves
+ * 'blocked' when the browser refused to play the clip because nobody has tapped the page yet.
  */
 export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1.05, onStart } = {}) {
   if (!enabled || !text) return Promise.resolve();
@@ -83,12 +108,20 @@ export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1
   if (audioSrc) {
     stopSpeaking();
     return new Promise((resolve) => {
-      const a = new Audio(audioSrc);
+      const a = getPlayer();
+      if (!a) { tts(text, lang, rate, pitch, onStart).then(resolve); return; }
       currentAudio = a;
-      a.onended = () => resolve();
+      a.onended = () => { if (currentAudio === a) currentAudio = null; resolve(); };
       a.onplaying = () => { a.onplaying = null; onStart?.('audio'); };
-      a.onerror = () => { currentAudio = null; tts(text, lang, rate, pitch, onStart).then(resolve); };
-      a.play().catch(() => { tts(text, lang, rate, pitch, onStart).then(resolve); });
+      a.onerror = () => { a.onerror = null; currentAudio = null; tts(text, lang, rate, pitch, onStart).then(resolve); };
+      a.src = audioSrc;
+      a.play().catch((e) => {
+        if (currentAudio !== a) return resolve(); // replaced meanwhile
+        currentAudio = null;
+        a.onerror = null;
+        if (e?.name === 'NotAllowedError') resolve('blocked'); // device voice would be refused too
+        else tts(text, lang, rate, pitch, onStart).then(resolve);
+      });
     });
   }
   return tts(text, lang, rate, pitch, onStart);

@@ -595,6 +595,7 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
   .screen.home > :not(.home-deco, .deco-wrap) { position: relative; z-index: 1; }
   .home-deco.left { transition: translate .25s cubic-bezier(.3, 1.6, .5, 1); }
   .home-deco.cici-hop { translate: 0 -6%; }
+  .home-deco.left.waiting { animation: decoLeft .9s cubic-bezier(.2, 1.4, .4, 1) both, ciciWiggle 1.6s 1s ease-in-out infinite; }
   .deco-bubble.left {
     display: block; position: fixed; z-index: 2; left: 14px; bottom: calc(var(--cici-h) * 0.97 - 3vh + 14px);
     width: min(250px, 50vw - 380px); box-sizing: border-box; padding: .7rem .95rem;
@@ -612,6 +613,7 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
   .deco-bubble.on { opacity: 1; transform: none; }
   .deco-bubble.gone { opacity: 0; transform: scale(.9); }
 }
+@keyframes ciciWiggle { 0%, 100% { rotate: 0deg; } 50% { rotate: -4deg; } }
 @keyframes wordPop { 40% { transform: translateY(-3px) scale(1.08); } }
 @keyframes decoLeft { from { transform: translateX(-100%) rotate(8deg); } }
 @keyframes decoRight { from { transform: translate(100%, -50%); } }

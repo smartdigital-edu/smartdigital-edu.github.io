@@ -1,7 +1,7 @@
 /** Home, module menu, play, results, scores, install and help screens. */
 import { el, button, screen, loader, stars, confetti, confirmDialog, toast, clear, preloadImages, animate } from '../ui.js';
 import { t, tx, getLang } from '../i18n/index.js';
-import { speak, sfx, isSoundOn } from '../audio.js';
+import { speak, sfx, isSoundOn, onNextTap } from '../audio.js';
 import { session, setActiveProfile } from '../session.js';
 import { navigate } from '../router.js';
 import { show } from '../shell.js';
@@ -38,7 +38,11 @@ function decoration(d) {
   let greetRun = null;
   let revealTimer;
   let revealTimers = [];
+  let cancelWait = null;
+  let lastGreet = 0;
   const greet = () => {
+    cancelWait?.(); cancelWait = null;
+    lastGreet = Date.now();
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
     const text = tx(d.greet);
     // Words start blurred and turn sharp as Cici says them.
@@ -64,13 +68,19 @@ function decoration(d) {
     revealTimers.forEach(clearTimeout);
     revealTimers = timers;
     setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio), onStart: follow })
-      .then(() => {
+      .then((result) => {
         if (run !== greetRun) return;
+        if (result === 'blocked') {
+          // The browser wants a tap first: keep the bubble up and greet on the first touch anywhere.
+          img.classList.add('waiting');
+          cancelWait = onNextTap(() => { img.classList.remove('waiting'); if (img.isConnected) greet(); });
+          return;
+        }
         revealTimer = setTimeout(revealAll, 400);
         hideTimer = setTimeout(() => bubble.classList.add('gone'), 3000);
       }), 550);
   };
-  img.addEventListener('click', greet);
+  img.addEventListener('click', () => { if (Date.now() - lastGreet > 600) greet(); });
   const who = session.profile?.id ?? session.profile?.name;
   if (greetedProfile !== who) {
     greetedProfile = who;
