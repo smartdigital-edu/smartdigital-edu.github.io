@@ -6,6 +6,7 @@
 import '@fontsource/fredoka/400.css';
 import '@fontsource/fredoka/600.css';
 import { B, M } from './builders.js';
+import ciciTimes from './cici-timings.js';
 
 const m = (en, ms) => ({ en, ms });
 const act = (id, title, emoji, engine, build) => ({ id, title, emoji, engine, build });
@@ -23,8 +24,9 @@ export default {
       // Cici greets the child once per session (and again when tapped).
       greet: m('Hi! My name is Cici. Welcome to Kiddora! Ready to learn and play? Let\'s go!',
         'Hai! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!'),
-      // Recorded natural voices (EN: Ana -4%, BM: Yasmin +2%; pitch raised), same on every device; speech is the fallback.
+      // Recorded natural voices (EN: Ana, BM: Yasmin), same on every device; speech is the fallback.
       greetAudio: m('audio/kiddora/cici-hello-en.mp3', 'audio/kiddora/cici-hello-ms.mp3'),
+      greetTimes: ciciTimes, // when each word is spoken, so the bubble follows her voice
     },
     { src: 'images/kiddora/paws.webp', side: 'right' },
   ],

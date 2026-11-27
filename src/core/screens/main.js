@@ -1,7 +1,7 @@
 /** Home, module menu, play, results, scores, install and help screens. */
 import { el, button, screen, loader, stars, confetti, confirmDialog, toast, clear, preloadImages, animate } from '../ui.js';
 import { t, tx, getLang } from '../i18n/index.js';
-import { speak, sfx } from '../audio.js';
+import { speak, sfx, isSoundOn } from '../audio.js';
 import { session, setActiveProfile } from '../session.js';
 import { navigate } from '../router.js';
 import { show } from '../shell.js';
@@ -36,18 +36,39 @@ function decoration(d) {
   const bubble = el(`div.deco-bubble.${d.side}`, { role: 'status', 'aria-live': 'polite' });
   let hideTimer;
   let greetRun = null;
+  let revealTimer;
+  let revealTimers = [];
   const greet = () => {
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
     const text = tx(d.greet);
-    bubble.textContent = text;
+    // Words start blurred and turn sharp as Cici says them.
+    const words = text.split(' ').map((w) => el('span.w', w));
+    bubble.replaceChildren(...words.flatMap((w, i) => (i ? [' ', w] : [w])));
+    bubble.setAttribute('aria-label', text);
+    const revealAll = () => words.forEach((w) => w.classList.add('said'));
+    const timers = [];
+    const follow = (kind) => {
+      const times = d.greetTimes?.[getLang()];
+      // Recorded voice: exact word times. Device voice: an even pace.
+      const at = kind === 'audio' && times?.length === words.length ? times : words.map((_, i) => i * 330);
+      words.forEach((w, i) => timers.push(setTimeout(() => w.classList.add('said'), Math.max(0, at[i] - 60))));
+    };
+    if (!isSoundOn()) revealAll();
     bubble.classList.remove('gone');
     bubble.classList.add('on');
     animate(img, 'cici-hop', 300);
     sfx.hello();
     clearTimeout(hideTimer);
     const run = (greetRun = {});
-    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio) })
-      .then(() => { if (run === greetRun) hideTimer = setTimeout(() => bubble.classList.add('gone'), 3000); }), 550);
+    clearTimeout(revealTimer);
+    revealTimers.forEach(clearTimeout);
+    revealTimers = timers;
+    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio), onStart: follow })
+      .then(() => {
+        if (run !== greetRun) return;
+        revealTimer = setTimeout(revealAll, 400);
+        hideTimer = setTimeout(() => bubble.classList.add('gone'), 3000);
+      }), 550);
   };
   img.addEventListener('click', greet);
   const who = session.profile?.id ?? session.profile?.name;

@@ -77,7 +77,7 @@ let currentAudio = null;
  * the MP3 is played instead and speech is used only if the file fails.
  * Resolves when finished, replaced, or immediately if sound is off.
  */
-export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1.05 } = {}) {
+export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1.05, onStart } = {}) {
   if (!enabled || !text) return Promise.resolve();
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
   if (audioSrc) {
@@ -86,18 +86,19 @@ export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1
       const a = new Audio(audioSrc);
       currentAudio = a;
       a.onended = () => resolve();
-      a.onerror = () => { currentAudio = null; tts(text, lang, rate, pitch).then(resolve); };
-      a.play().catch(() => { tts(text, lang, rate, pitch).then(resolve); });
+      a.onplaying = () => { a.onplaying = null; onStart?.('audio'); };
+      a.onerror = () => { currentAudio = null; tts(text, lang, rate, pitch, onStart).then(resolve); };
+      a.play().catch(() => { tts(text, lang, rate, pitch, onStart).then(resolve); });
     });
   }
-  return tts(text, lang, rate, pitch);
+  return tts(text, lang, rate, pitch, onStart);
 }
 
-function tts(text, lang, rate, pitch) {
+function tts(text, lang, rate, pitch, onStart) {
   return new Promise((resolve) => {
     if (!('speechSynthesis' in window)) return resolve();
     if (queued) queued.resolve(); // superseded before it even started
-    queued = { text, lang, rate, pitch, resolve };
+    queued = { text, lang, rate, pitch, onStart, resolve };
     pump();
   });
 }
@@ -111,7 +112,7 @@ function pump() {
   const wait = 150 - (Date.now() - lastCancelAt);
   if (wait > 0) { pumpTimer = setTimeout(pump, wait); return; }
 
-  const { text, lang, rate, pitch, resolve } = queued;
+  const { text, lang, rate, pitch, onStart, resolve } = queued;
   queued = null;
   if (!voices.length) loadVoices();
   const u = new SpeechSynthesisUtterance(text);
@@ -130,6 +131,7 @@ function pump() {
   u.onstart = () => {
     c.started = true;
     if (c.killOnStart) { lastCancelAt = Date.now(); s.cancel(); return; }
+    onStart?.('tts');
     pump(); // a newer request may have been waiting for this start
   };
   u.onend = finish;

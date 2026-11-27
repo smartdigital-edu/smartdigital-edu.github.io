@@ -607,9 +607,12 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
     content: ''; position: absolute; left: 38%; bottom: -14px;
     border: 9px solid transparent; border-top: 16px solid #fff; border-bottom: 0;
   }
+  .deco-bubble .w { display: inline-block; filter: blur(3px); opacity: .3; transition: filter .25s, opacity .25s, transform .25s; }
+  .deco-bubble .w.said { filter: none; opacity: 1; animation: wordPop .3s ease; }
   .deco-bubble.on { opacity: 1; transform: none; }
   .deco-bubble.gone { opacity: 0; transform: scale(.9); }
 }
+@keyframes wordPop { 40% { transform: translateY(-3px) scale(1.08); } }
 @keyframes decoLeft { from { transform: translateX(-100%) rotate(8deg); } }
 @keyframes decoRight { from { transform: translate(100%, -50%); } }
 @media (prefers-reduced-motion: reduce) { .home-deco { animation: none; } }
