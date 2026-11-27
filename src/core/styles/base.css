@@ -523,7 +523,9 @@ body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: 
 
 /* ---------- picture module tiles (home) ---------- */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-.module-grid:has(.module-card.pic) { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.1rem 1rem; max-width: 1060px; margin-inline: auto; }
+/* compact centred grid (4 per row on wide screens) – the sides stay free for decorations */
+.module-grid:has(.module-card.pic) { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; max-width: 680px; margin-inline: auto; }
+.screen.home:has(.module-card.pic) .home-hello { max-width: 680px; margin-inline: auto; }
 .module-card.pic {
   --tint: #ffd166;
   position: relative; min-height: 0; height: auto; padding: 0; gap: .45rem; background: none; box-shadow: none;
@@ -533,9 +535,8 @@ body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: 
 /* framed tile: the picture sits a little smaller inside a rounded border in the tile's colour */
 .module-img {
   display: block; width: 100%; aspect-ratio: 1; box-sizing: border-box; object-fit: contain;
-  padding: 6%; border-radius: 24%;
-  border: 3px solid color-mix(in srgb, var(--tint) 75%, #fff);
-  background: color-mix(in srgb, var(--tint) 22%, rgba(255, 255, 255, .06));
+  padding: 7%; border-radius: 16%;
+  border: 0; background: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
   transition: box-shadow .18s ease, filter .18s ease, border-color .18s ease;
 }
@@ -553,7 +554,7 @@ body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: 
   .module-card.pic:hover .module-caption .module-sub { background: var(--tint); color: #1d1b2e; opacity: 1; }
   .module-card.soon:hover .module-img { filter: none; }
 }
-.module-caption { display: grid; justify-items: center; gap: .15rem; line-height: 1.2; }
+.module-caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .module-card.pic .module-title { font-size: 1rem; }
 .module-card.pic .module-sub { font-size: .85rem; opacity: .85; padding: .05rem .6rem; border-radius: 999px; transition: background .18s ease; }
 body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
@@ -565,7 +566,7 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
   box-shadow: 0 4px 0 #c99a2e, 0 8px 16px rgba(0, 0, 0, .3);
 }
 @media (max-width: 640px) {
-  .module-grid:has(.module-card.pic) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem .6rem; }
+  .module-grid:has(.module-card.pic) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
   .module-card.pic .module-title { font-size: .85rem; }
   .module-card.pic .module-sub { font-size: .72rem; padding-inline: .4rem; }
 }
