@@ -153,14 +153,16 @@ export function moduleScreen({ params }) {
   const m = findModule(params.module);
   if (!m || m.comingSoon) return navigate('/home', { replace: true });
   show(screen(tx(m.title), { back: '#/home', cls: 'module' },
-    el('ul.activity-grid', {}, m.activities.map((a) => el('li', {},
-      el('a.activity-card', {
+    el(`ul.activity-grid${m.activities.every((a) => a.image) ? '.pics' : ''}`, {}, m.activities.map((a) => el('li', {},
+      el(`a.activity-card${a.image ? '.pic' : ''}`, {
         href: `#/play/${m.id}/${a.id}`,
-        style: { '--card': m.color },
+        style: { '--card': m.color, '--tint': a.tint || m.tint || m.color },
         onclick: () => { sfx.tap(); speak(tx(a.title)); },
       },
-      el('span.activity-emoji', { 'aria-hidden': 'true' }, a.emoji || m.emoji),
-      el('span.activity-title', tx(a.title)))))),
+      // Picture cards already show the English title; the text stays for screen readers (and shows in BM).
+      a.image ? el('img.activity-img', { src: a.image, alt: '', decoding: 'async', draggable: 'false' })
+        : el('span.activity-emoji', { 'aria-hidden': 'true' }, a.emoji || m.emoji),
+      el(`span.activity-title${a.image && getLang() === 'en' ? '.sr-only' : ''}`, tx(a.title)))))),
     backdrop()));
 }
 

@@ -936,3 +936,26 @@ body[data-app] .pg-panel .pg-settings summary { color: var(--pg-muted); }
   .pg-try-main { align-items: flex-start; }
   .pg-panel { border-radius: 24px; margin-inline: -.25rem; }
 }
+
+/* Activity picture cards (same feel as the home tiles): 4 per row, centred. */
+.activity-grid.pics { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; max-width: 760px; margin-inline: auto; }
+.screen.module:has(.activity-grid.pics) .screen-head { max-width: 760px; margin-inline: auto; }
+.activity-card.pic {
+  position: relative; display: block; min-height: 0; padding: 0; overflow: hidden; aspect-ratio: 1;
+  background: #fff; border: 0; border-radius: 18%; box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+  --glow: 0 0 0 3px #fff, 0 0 26px 6px var(--tint);
+  transition: transform .15s, box-shadow .2s;
+}
+.activity-img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.activity-card.pic .activity-title:not(.sr-only) {
+  position: absolute; left: 6%; right: 6%; bottom: 5%; padding: .2rem .5rem; border-radius: 99px; text-align: center;
+  background: rgba(255, 255, 255, .92); color: #13214a; font-size: .95rem; line-height: 1.2;
+}
+.activity-card.pic:focus-visible, .activity-card.pic:active { box-shadow: var(--glow); outline: none; }
+@media (hover: hover) and (pointer: fine) {
+  .activity-card.pic:hover { transform: translateY(-4px) scale(1.03); box-shadow: var(--glow); }
+}
+@media (max-width: 640px) {
+  .activity-grid.pics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .activity-card.pic { min-height: 0; }
+}

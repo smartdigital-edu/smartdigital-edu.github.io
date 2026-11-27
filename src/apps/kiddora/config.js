@@ -9,7 +9,9 @@ import { B, M } from './builders.js';
 import ciciTimes from './cici-timings.js';
 
 const m = (en, ms) => ({ en, ms });
-const act = (id, title, emoji, engine, build) => ({ id, title, emoji, engine, build });
+const act = (id, title, emoji, engine, build, extra = {}) => ({ id, title, emoji, engine, build, ...extra });
+/** Picture card for an activity (the picture shows the title; `tint` = its background, for the hover glow). */
+const pic = (name, tint) => ({ image: `images/kiddora/activities/${name}.webp`, tint });
 
 export default {
   id: 'kiddora',
@@ -47,14 +49,14 @@ export default {
     {
       id: 'abc', tint: '#F25F5C', image: 'images/kiddora/modules/abc.webp', title: m('ABC', 'ABC'), emoji: '🔤', color: '#FFD166',
       activities: [
-        act('learn', m('Learn ABC', 'Belajar ABC'), '📚', 'learnCards', B.learnAbc),
-        act('match', m('Match the Letters', 'Padankan Huruf'), '🔗', 'matchLines', B.matchLetters),
-        act('find', m('Find the Letter', 'Cari Huruf'), '🔍', 'spaceFind', B.findLetter),
-        act('spell', m('Spell it Right', 'Eja dengan Betul'), '✏️', 'spelling', B.spellIt),
-        act('trace', m('ABC Tracing', 'Surih ABC'), '✍️', 'tracing', B.abcTracing),
-        act('complete', m('Complete the ABC', 'Lengkapkan ABC'), '🧩', 'dragToSlot', B.completeAbc),
-        act('sukukata', m('Bijak Suku Kata', 'Bijak Suku Kata'), '🅱️', 'dragToSlot', B.sukuKata),
-        act('train', m('Choo-Choo ABC', 'Choo-Choo ABC'), '🚂', 'dragToSlot', B.chooChooAbc),
+        act('learn', m('Learn ABC', 'Belajar ABC'), '📚', 'learnCards', B.learnAbc, pic('abc-learn', '#0087FD')),
+        act('match', m('Match the Letters', 'Padankan Huruf'), '🔗', 'matchLines', B.matchLetters, pic('abc-match', '#AE40F5')),
+        act('find', m('Find the Letter', 'Cari Huruf'), '🔍', 'spaceFind', B.findLetter, pic('abc-find', '#040E46')),
+        act('spell', m('Spell it Right', 'Eja dengan Betul'), '✏️', 'spelling', B.spellIt, pic('abc-spell', '#FB3135')),
+        act('trace', m('ABC Tracing', 'Surih ABC'), '✍️', 'tracing', B.abcTracing, pic('abc-trace', '#01CFC6')),
+        act('complete', m('Complete the ABC', 'Lengkapkan ABC'), '🧩', 'dragToSlot', B.completeAbc, pic('abc-complete', '#FDBB01')),
+        act('sukukata', m('Bijak Suku Kata', 'Bijak Suku Kata'), '🅱️', 'dragToSlot', B.sukuKata, pic('abc-sukukata', '#E90375')),
+        act('train', m('Choo-Choo ABC', 'Choo-Choo ABC'), '🚂', 'dragToSlot', B.chooChooAbc, pic('abc-train', '#0023E8')),
       ],
     },
     {
