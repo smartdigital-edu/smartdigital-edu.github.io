@@ -1,6 +1,6 @@
 /** Login, change password and admin (allowlist) screens. */
 import { el, button, screen, toast, confirmDialog, clear } from '../ui.js';
-import { t, getLang, setLang } from '../i18n/index.js';
+import { t } from '../i18n/index.js';
 import { session, authErrorKey } from '../session.js';
 import { whatsappLink } from '../config.js';
 import { show } from '../shell.js';
@@ -92,10 +92,6 @@ function splitLogin({ mascot, email, pass, submit, msg, setMsg, onsubmit }) {
         sparkle('s1'), sparkle('s2', '✧'), sparkle('s3'),
         el('img.auth-cici', { src: mascot.src, alt: '', draggable: 'false' }))),
     el('div.auth-panel', {},
-      app.bilingual ? el('button.auth-lang', {
-        type: 'button', 'aria-label': `${getLang() === 'en' ? 'BM' : 'EN'} – ${t('nav.language')}`,
-        onclick: () => setLang(getLang() === 'en' ? 'ms' : 'en'),
-      }, getLang() === 'en' ? 'BM' : 'EN') : null,
       el('form.auth-form', { novalidate: true, onsubmit },
         el('h1', { tabindex: '-1' }, t('login.welcomeBack')),
         el('p.auth-sub', t('login.subtitleKids')),
