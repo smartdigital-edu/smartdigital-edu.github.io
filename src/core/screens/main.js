@@ -159,7 +159,9 @@ export function moduleScreen({ params }) {
         onclick: () => { sfx.tap(); speak(tx(a.title)); },
       },
       el('span.activity-emoji', { 'aria-hidden': 'true' }, a.emoji || m.emoji),
-      el('span.activity-title', tx(a.title))))))));
+      el('span.activity-title', tx(a.title)))))),
+    // The home decorations again, softly blurred behind the activity list.
+    (session.app.decor || []).map((d) => el(`img.home-deco.bg.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' }))));
 }
 
 /* ---------------- play ---------------- */
