@@ -38,8 +38,17 @@ function pickVoice(lang) {
     || null;
 }
 
+let speakToken = 0;        // bumps on every stop, so stale retries give up
+let lastCancelAt = 0;
+let currentUtterance = null; // keep a reference: Chrome can garbage-collect it mid-speech
+
 export function stopSpeaking() {
-  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  speakToken += 1;
+  if ('speechSynthesis' in window) {
+    const s = window.speechSynthesis;
+    if (s.speaking || s.pending) { s.cancel(); lastCancelAt = Date.now(); }
+  }
+  currentUtterance = null;
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
 }
 
@@ -65,20 +74,56 @@ export function speak(text, { lang = getLang(), audioSrc, rate = 0.85 } = {}) {
   return tts(text, lang, rate);
 }
 
+/*
+ * Chrome quirks handled here:
+ *  - speak() right after cancel() is often dropped silently, so wait a moment
+ *    after a cancel (only then: iOS needs speak() inside the tap's call stack).
+ *  - the engine can get stuck "speaking" without sound: resume() before
+ *    speaking, and if nothing has started after a second, reset and retry once.
+ */
 function tts(text, lang, rate) {
   return new Promise((resolve) => {
     if (!('speechSynthesis' in window)) return resolve();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = speechLang(lang);
-    const v = pickVoice(u.lang);
-    if (v) u.voice = v;
-    u.rate = rate;
-    u.pitch = 1.05;
-    u.onend = () => resolve();
-    u.onerror = () => resolve();
-    window.speechSynthesis.speak(u);
+    const s = window.speechSynthesis;
+    const token = speakToken;
+    let done = false;
+    const finish = () => { if (!done) { done = true; resolve(); } };
+
+    const attempt = (canRetry) => {
+      if (token !== speakToken || done) return finish();
+      if (!voices.length) loadVoices();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = speechLang(lang);
+      const v = pickVoice(u.lang);
+      if (v) u.voice = v;
+      u.rate = rate;
+      u.pitch = 1.05;
+      let started = false;
+      u.onstart = () => { started = true; };
+      u.onend = () => { if (currentUtterance === u) finish(); };
+      u.onerror = (e) => {
+        if (currentUtterance !== u) return; // an abandoned attempt
+        if (canRetry && e.error !== 'interrupted' && e.error !== 'canceled' && e.error !== 'not-allowed') retry();
+        else finish();
+      };
+      const retry = () => {
+        currentUtterance = null;
+        s.cancel();
+        setTimeout(() => attempt(false), 150);
+      };
+      currentUtterance = u;
+      if (s.paused) s.resume();
+      s.speak(u);
+      setTimeout(() => {
+        if (!started && !done && currentUtterance === u) { if (canRetry) retry(); else finish(); }
+      }, 1200);
+    };
+
+    const wait = 150 - (Date.now() - lastCancelAt);
+    if (wait > 0) setTimeout(() => attempt(true), wait);
+    else attempt(true);
     // Safety: some browsers never fire onend.
-    setTimeout(resolve, Math.min(8000, 900 + text.length * 90));
+    setTimeout(finish, 1500 + Math.min(8000, 900 + text.length * 90));
   });
 }
 
