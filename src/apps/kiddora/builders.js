@@ -443,3 +443,14 @@ export const B = {
 };
 
 export { article };
+
+/* ---------- money (shop scene) ---------- */
+const age = (ctx) => Number(ctx?.profile?.level) || 4;
+const shop = (subtitle) => ({ title: both('Little Money Explorer', 'Penjelajah Duit Cilik'), subtitle });
+async function money() { return import('../../games/money.js'); }
+export const M = {
+  async know(ctx) { const g = await money(); return { scene: shop(both('Know Your Money', 'Kenali Duit')), questions: g.knowQuestions({ n: 10, age: age(ctx) }) }; },
+  async more(ctx) { const g = await money(); return { scene: shop(both('Which Is More?', 'Mana Lebih Banyak?')), questions: g.moreQuestions({ n: 10, age: age(ctx) }) }; },
+  async count(ctx) { const g = await money(); return { scene: shop(both('Count the Money', 'Kira Duit')), questions: g.countQuestions({ n: 8, age: age(ctx) }) }; },
+  async pay(ctx) { const g = await money(); return { scene: shop(both('Pay the Shopkeeper', 'Bayar Penjual')), questions: g.payQuestions({ n: 6, age: age(ctx) }) }; },
+};

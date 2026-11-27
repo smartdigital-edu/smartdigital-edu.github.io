@@ -5,7 +5,7 @@
  */
 import '@fontsource/fredoka/400.css';
 import '@fontsource/fredoka/600.css';
-import { B } from './builders.js';
+import { B, M } from './builders.js';
 
 const m = (en, ms) => ({ en, ms });
 const act = (id, title, emoji, engine, build) => ({ id, title, emoji, engine, build });
@@ -98,6 +98,15 @@ export default {
         act('match', m('Match', 'Padankan'), '🔗', 'matchLines', B.matchShapes),
         act('draw', m('Draw the Shape', 'Lukis Bentuk'), '✍️', 'tracing', B.drawShape),
         act('matchme', m('Match Me', 'Padankan Saya'), '🎯', 'matchLines', B.matchMe),
+      ],
+    },
+    {
+      id: 'money', title: m('Money', 'Duit'), emoji: '💰', color: '#FFE08A',
+      activities: [
+        act('know', m('Know Your Money', 'Kenali Duit'), '💵', 'shopScene', M.know),
+        act('more', m('Which Is More?', 'Mana Lebih Banyak?'), '⚖️', 'shopScene', M.more),
+        act('count', m('Count the Money', 'Kira Duit'), '🧮', 'shopScene', M.count),
+        act('pay', m('Pay the Shopkeeper', 'Bayar Penjual'), '🛒', 'shopScene', M.pay),
       ],
     },
     {

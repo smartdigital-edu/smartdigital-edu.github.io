@@ -16,6 +16,7 @@ const ENGINES = {
   arithmetic: () => import('./arithmetic.js'),
   lessonPage: () => import('./lessonPage.js'),
   quiz: () => import('./quiz.js'),
+  shopScene: () => import('./shopScene.js'),
 };
 
 export const engineNames = Object.keys(ENGINES);
