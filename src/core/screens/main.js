@@ -1,7 +1,7 @@
 /** Home, module menu, play, results, scores, install and help screens. */
 import { el, button, screen, loader, stars, confetti, confirmDialog, toast, clear, preloadImages, animate } from '../ui.js';
 import { t, tx, getLang } from '../i18n/index.js';
-import { speak, sfx, isSoundOn, onNextTap } from '../audio.js';
+import { speak, sfx, isSoundOn } from '../audio.js';
 import { session, setActiveProfile } from '../session.js';
 import { navigate } from '../router.js';
 import { show } from '../shell.js';
@@ -29,6 +29,13 @@ export function homeScreen() {
 
 let greetedProfile = null;
 
+/** Ignore every click on the page for `ms` (stops a late iPad "ghost" click from opening a tile). */
+function swallowClicks(ms) {
+  const stop = (e) => { e.preventDefault(); e.stopPropagation(); };
+  document.addEventListener('click', stop, true);
+  setTimeout(() => document.removeEventListener('click', stop, true), ms);
+}
+
 /** A side decoration; one with `greet` speaks in a bubble on arrival (once per session) and when tapped. */
 function decoration(d) {
   const img = el(`img.home-deco.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' });
@@ -42,7 +49,6 @@ function decoration(d) {
   let lastGreet = 0;
   const greet = () => {
     cancelWait?.(); cancelWait = null;
-    document.querySelector('.tap-start')?.remove();
     lastGreet = Date.now();
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
     const text = tx(d.greet);
@@ -78,9 +84,17 @@ function decoration(d) {
           const card = el('div.tap-start', { role: 'dialog', 'aria-label': t('home.tapStart') },
             el('img.tap-start-cici', { src: d.src, alt: '', draggable: 'false' }),
             el('button.btn.tap-start-btn', { type: 'button' }, el('span.btn-icon', { 'aria-hidden': 'true' }, '▶'), t('home.tapStart')));
+          // Close on the finished tap (click), not on touch-down: on iPad the click that follows a
+          // touch would otherwise land on the tile underneath and open an activity.
+          card.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            card.remove();
+            swallowClicks(500); // and ignore any late, stray click
+            if (img.isConnected) greet();
+          });
           document.body.append(card);
           card.querySelector('button').focus();
-          cancelWait = onNextTap(() => { card.remove(); if (img.isConnected) greet(); });
+          cancelWait = () => card.remove();
           return;
         }
         revealTimer = setTimeout(revealAll, 400);
