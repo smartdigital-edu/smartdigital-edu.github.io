@@ -530,14 +530,18 @@ body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: 
   border: 0; font: inherit; color: inherit; cursor: pointer; justify-content: flex-start; -webkit-tap-highlight-color: transparent;
   transition: transform .18s ease;
 }
+/* framed tile: the picture sits a little smaller inside a rounded border in the tile's colour */
 .module-img {
-  display: block; width: 100%; aspect-ratio: 1; border-radius: 21%; background: var(--tint);
+  display: block; width: 100%; aspect-ratio: 1; box-sizing: border-box; object-fit: contain;
+  padding: 6%; border-radius: 24%;
+  border: 3px solid color-mix(in srgb, var(--tint) 75%, #fff);
+  background: color-mix(in srgb, var(--tint) 22%, rgba(255, 255, 255, .06));
   box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
-  transition: box-shadow .18s ease, filter .18s ease;
+  transition: box-shadow .18s ease, filter .18s ease, border-color .18s ease;
 }
 /* colour glow in the tile's own colour: focus (keyboard), press (touch), hover (mouse only:
    on phones :hover "sticks" to the last tapped tile, so it is limited to real pointers) */
-.module-card.pic { --glow: 0 0 0 4px #fff, 0 0 0 8px var(--tint), 0 0 28px 10px color-mix(in srgb, var(--tint) 70%, transparent); }
+.module-card.pic { --glow: 0 0 0 3px #fff, 0 0 26px 8px color-mix(in srgb, var(--tint) 75%, transparent); }
 .module-card.pic:hover { transform: none; }
 .module-card.pic:focus-visible { transform: translateY(-5px) scale(1.03); box-shadow: none; outline: none; }
 .module-card.pic:active { transform: scale(.97); }

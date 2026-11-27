@@ -32,7 +32,7 @@ function moduleTile(m, app) {
     : m.subtitle ? tx(m.subtitle) : (m.activities.length > 1 ? t('home.activities', { n: m.activities.length }) : '');
   if (m.image) {
     const body = [
-      el('img.module-img', { src: m.image, alt: '', loading: 'lazy', decoding: 'async', draggable: 'false' }),
+      el('img.module-img', { src: m.image, alt: '', decoding: 'async', draggable: 'false' }),
       m.comingSoon ? el('span.soon-ribbon', { 'aria-hidden': 'true' }, t('home.comingSoon')) : null,
       // The picture already shows the English name; show the title in other languages.
       el('span.module-caption', {}, el(`span.module-title${getLang() === 'en' ? '.sr-only' : ''}`, tx(m.title)), sub ? el('span.module-sub', sub) : null),
