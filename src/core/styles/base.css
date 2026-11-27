@@ -123,6 +123,7 @@ img { max-width: 100%; }
 .net-banner, .demo-banner { padding: .5rem 1rem; text-align: center; font-size: .9rem; font-weight: 600; }
 .net-banner { background: #fff3c4; color: #5c4400; }
 .demo-banner { background: var(--secondary); color: var(--secondary-ink); }
+.stage-banner { padding: .4rem 1rem; text-align: center; font-size: .85rem; font-weight: 700; letter-spacing: .02em; background: #6b21a8; color: #fff; }
 
 /* ---------- layout ---------- */
 .app-main { max-width: 1100px; margin: 0 auto; padding: 1rem max(1rem, env(safe-area-inset-right)) calc(2rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); outline: none; }

@@ -2,7 +2,8 @@
  * Namespaced localStorage helpers (safe when storage is unavailable,
  * e.g. Safari private mode). Each app gets its own namespace.
  */
-const NS = typeof __APP__ !== 'undefined' ? __APP__ : 'app';
+const STAGE = import.meta.env?.VITE_STAGE;
+const NS = (typeof __APP__ !== 'undefined' ? __APP__ : 'app') + (STAGE ? `-${STAGE}` : '');
 
 function safe(fn, fallback) {
   try { return fn(); } catch { return fallback; }

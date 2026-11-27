@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import { APPS } from './src/apps/meta.js';
 
 /**
@@ -11,8 +11,9 @@ import { APPS } from './src/apps/meta.js';
  * `base: './'` keeps every URL relative so the output works under any
  * GitHub Pages sub-path (e.g. /KIDDORA/ or /Grammarhub./).
  */
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   const app = process.env.APP || 'kiddora';
+  const stage = loadEnv(mode, process.cwd(), 'VITE_').VITE_STAGE || '';
   const meta = APPS[app];
   if (!meta) throw new Error(`Unknown APP "${app}". Use one of: ${Object.keys(APPS).join(', ')}`);
   return {
@@ -42,7 +43,7 @@ export default defineConfig(() => {
           const version = createHash('sha256').update(files.join('\n')).digest('hex').slice(0, 10);
           const swPath = join(dir, 'sw.js');
           const sw = readFileSync(swPath, 'utf8')
-            .replace("const APP = 'dev';", `const APP = ${JSON.stringify(app)};`)
+            .replace("const APP = 'dev';", `const APP = ${JSON.stringify(stage ? `${app}-${stage}` : app)};`)
             .replace("const VERSION = 'dev';", `const VERSION = ${JSON.stringify(version)};`)
             .replace('const PRECACHE = [];', `const PRECACHE = ${JSON.stringify(files.map((f) => `./${f}`))};`);
           if (!sw.includes(`const VERSION = "${version}"`)) throw new Error('sw-precache: placeholders not found in sw.js');

@@ -1,15 +1,22 @@
 # Test, build and deploy to GitHub Pages.
 #
-# One repository, one Pages site, both apps:
-#   /            -> site/index.html (landing page linking to both apps)
-#   /kiddora/    -> dist/kiddora
-#   /grammarhub/ -> dist/grammarhub
-# Firebase config comes from repository secrets (VITE_FIREBASE_*), the
-# WhatsApp number from the repository variable VITE_WHATSAPP_NUMBER.
+# One Pages site serves production AND staging:
+#   /                      landing page          (from main)
+#   /kiddora/, /grammarhub/  PRODUCTION apps     (from main, Firebase: kiddora-grammarhub)
+#   /staging/...           STAGING copy          (from dev,  Firebase: kiddora-grammarhub-dev)
+# A push to either branch runs the tests for that branch, then rebuilds BOTH
+# branches and publishes them together (Pages hosts one site per repo).
+# Rebuilding unchanged main code produces identical files, so a dev push never
+# changes what production users get. A broken dev build is skipped, never
+# blocking production.
+#
+# Secrets: VITE_FIREBASE_* (production) and STAGING_VITE_FIREBASE_* (staging).
 name: Test & Deploy
 
 on:
   push:
+    branches: [main, dev]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -19,7 +26,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
   cancel-in-progress: true
 
 jobs:
@@ -39,33 +46,63 @@ jobs:
 
   deploy:
     needs: test
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.pages.outputs.page_url }}
-    env:
-      VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
-      VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
-      VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
-      VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
-      VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
-      VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
-      VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
     steps:
       - uses: actions/checkout@v4
+        with: { ref: main, path: prod }
       - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - name: Fail if Firebase secrets are missing (would silently ship demo mode)
-        run: test -n "$VITE_FIREBASE_API_KEY" && test -n "$VITE_FIREBASE_PROJECT_ID"
-      - run: npm run build
-      - name: Assemble site
+        with: { node-version: 22, cache: npm, cache-dependency-path: prod/package-lock.json }
+
+      - name: Build production (main)
+        working-directory: prod
+        env:
+          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
         run: |
-          mkdir -p _site
-          cp site/index.html _site/
-          cp -r dist/kiddora _site/kiddora
-          cp -r dist/grammarhub _site/grammarhub
-          touch _site/.nojekyll
+          test -n "$VITE_FIREBASE_API_KEY" && test -n "$VITE_FIREBASE_PROJECT_ID"   # never ship demo mode
+          npm ci
+          npm run build
+          mkdir -p ../_site
+          cp site/index.html ../_site/
+          cp -r dist/kiddora dist/grammarhub ../_site/
+
+      - name: Check out dev
+        id: dev
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with: { ref: dev, path: stg }
+
+      - name: Build staging (dev)
+        if: steps.dev.outcome == 'success'
+        continue-on-error: true
+        working-directory: stg
+        env:
+          VITE_STAGE: staging
+          VITE_FIREBASE_API_KEY: ${{ secrets.STAGING_VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.STAGING_VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.STAGING_VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.STAGING_VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.STAGING_VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.STAGING_VITE_FIREBASE_APP_ID }}
+          VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
+        run: |
+          test -n "$VITE_FIREBASE_API_KEY" && test -n "$VITE_FIREBASE_PROJECT_ID"
+          npm ci
+          npm run build
+          mkdir -p ../_site/staging
+          cp site/index.html ../_site/staging/
+          cp -r dist/kiddora dist/grammarhub ../_site/staging/
+
+      - run: touch _site/.nojekyll && ls _site _site/staging 2>/dev/null || true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: _site }

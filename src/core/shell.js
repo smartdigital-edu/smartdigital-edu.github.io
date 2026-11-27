@@ -6,7 +6,7 @@ import { el, clear } from './ui.js';
 import { t, getLang, setLang, onLangChange } from './i18n/index.js';
 import { isSoundOn, setSound, onSoundChange, stopSpeaking } from './audio.js';
 import { session } from './session.js';
-import { whatsappLink, DEMO_MODE } from './config.js';
+import { whatsappLink, DEMO_MODE, STAGE } from './config.js';
 import { navigate, resolve } from './router.js';
 
 let outlet;
@@ -27,7 +27,8 @@ export function mountShell(root) {
     banner.textContent = t('app.backOnline');
     setTimeout(() => { banner.hidden = true; }, 2500);
   });
-  root.append(...[header, banner, DEMO_MODE ? el('div.demo-banner', { role: 'note' }, t('app.demoBanner')) : null, menu, outlet].filter(Boolean));
+  const stage = STAGE ? el('div.stage-banner', { role: 'note' }, t('app.stageBanner')) : null;
+  root.append(...[header, banner, stage, DEMO_MODE ? el('div.demo-banner', { role: 'note' }, t('app.demoBanner')) : null, menu, outlet].filter(Boolean));
   renderHeader();
   onLangChange(() => { renderHeader(); resolve(); });
   onSoundChange(renderHeader);

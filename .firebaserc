@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "kiddora-grammarhub"
+    "default": "kiddora-grammarhub-dev",
+    "dev": "kiddora-grammarhub-dev",
+    "prod": "kiddora-grammarhub"
   }
 }

@@ -1,6 +1,7 @@
 {
   "app.loading": "Memuatkan…",
   "app.ready": "Menyediakan aktiviti…",
+  "app.stageBanner": "LAMAN UJIAN: untuk menyemak perubahan sahaja. Data di sini berasingan daripada aplikasi sebenar.",
   "app.demoBanner": "Mod demo: Firebase belum disediakan, jadi data disimpan pada peranti ini sahaja.",
   "app.offline": "Anda di luar talian. Markah akan diselaraskan apabila disambung semula.",
   "app.backOnline": "Kembali dalam talian. Menyelaraskan markah anda.",

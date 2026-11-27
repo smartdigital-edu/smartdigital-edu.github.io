@@ -1,6 +1,7 @@
 {
   "app.loading": "Loading…",
   "app.ready": "Getting the activity ready…",
+  "app.stageBanner": "TEST SITE: for checking changes only. Data here is separate from the live app.",
   "app.demoBanner": "Demo mode: Firebase is not configured, so data is saved on this device only.",
   "app.offline": "You are offline. Your scores will sync when you reconnect.",
   "app.backOnline": "Back online. Syncing your scores.",

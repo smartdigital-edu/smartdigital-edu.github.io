@@ -13,6 +13,9 @@ export const firebaseConfig = {
 /** Demo mode = no Firebase keys, or explicitly forced. Data stays on device. */
 export const DEMO_MODE = env.VITE_DEMO_MODE === 'true' || !firebaseConfig.apiKey || !firebaseConfig.projectId;
 
+/** Deployment stage: '' for production, 'staging' for the test site (set by the workflow). */
+export const STAGE = env.VITE_STAGE || '';
+
 export const WHATSAPP_NUMBER = (env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 
 export function whatsappLink(message = '') {

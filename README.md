@@ -104,27 +104,33 @@ Question types: `mc` (multiple choice), `fill` (sentence with `___`), `spot` (`s
 
 The banks were generated from the compact tables in `scripts/build-grammar.mjs` (`npm run content:grammar`); you can keep using that script **or** edit the JSON directly – but not both, since running the script overwrites the JSON. `npm test` checks every bank (≥ 40 questions, answer in options, explanation present, no placeholder text).
 
-## 4. Deploy to GitHub Pages
+## 4. Environments and deployment
 
-Live at **https://smartdigital-edu.github.io/** (repo `smartdigital-edu/smartdigital-edu.github.io`):
+| | Development / staging | Production |
+|---|---|---|
+| Git branch | `dev` | `main` (protected: changes arrive by pull request from `dev`, tests must pass) |
+| Website | https://smartdigital-edu.github.io/staging/ (purple **TEST SITE** banner) | https://smartdigital-edu.github.io/ |
+| Firebase project | `kiddora-grammarhub-dev` | `kiddora-grammarhub` |
+| Local `npm run dev` | uses `.env` → dev project | never |
 
-| Path | Content |
-|---|---|
-| `/` | landing page ([`site/index.html`](site/index.html)) |
-| `/kiddora/` | Kiddora |
-| `/grammarhub/` | Grammar Hub |
+**Workflow for a change**
 
-The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs unit + e2e tests, builds both apps, assembles the site and deploys it on every push to `main` (or **Actions → Test & Deploy → Run workflow**).
+1. Commit to `dev` and push → tests run → staging site updates (~3 min).
+2. Check it on staging (phone, both languages).
+3. Release: open a pull request `dev → main` (`gh pr create -B main -H dev`), wait for the tests, merge. Production updates.
 
-One-time repository setup (already done for `smartdigital-edu`):
+The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds **both** branches on every push and publishes them as one Pages site (`/` + `/kiddora/` + `/grammarhub/` from `main`, `/staging/…` from `dev`). Rebuilding unchanged `main` code gives identical files, so a `dev` push never changes production; a broken `dev` build is skipped and never blocks production.
 
-1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. **Settings → Secrets and variables → Actions → Secrets**: the six `VITE_FIREBASE_*` values from `.env`
-   (`gh secret set -f .env` sets them all; the deploy fails rather than shipping demo mode if they are missing).
-3. **…→ Variables**: `VITE_WHATSAPP_NUMBER` (optional).
-4. Firebase console → **Authentication → Settings → Authorised domains**: `smartdigital-edu.github.io`.
+Staging is kept apart from production on the shared origin: its own Firebase project, its own localStorage namespace (`kiddora-staging:…`) and its own service-worker caches (`kiddora-staging-<hash>`).
 
-All asset URLs are relative (`base: './'`) and routing is hash-based, so each app works under any sub-path. Both apps share one origin, so a login carries over between them; their service-worker caches are kept separate per app.
+**Configuration**
+
+- Repository secrets: `VITE_FIREBASE_*` (production) and `STAGING_VITE_FIREBASE_*` (staging); variable `VITE_WHATSAPP_NUMBER` (optional).
+- Local files (git-ignored): `.env` = dev project, `.env.prod` = backup of the production values.
+- Firestore rules: `npx firebase-tools deploy --only firestore:rules -P dev` and `-P prod` (aliases in `.firebaserc`).
+- Both Firebase projects list `smartdigital-edu.github.io` under **Authentication → Settings → Authorised domains**.
+
+All asset URLs are relative (`base: './'`) and routing is hash-based, so each app works under any sub-path.
 
 ## 5. Project layout
 
