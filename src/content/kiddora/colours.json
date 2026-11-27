@@ -1,0 +1,20 @@
+{
+  "_doc": "Colours with hex value, names and example emoji objects of that colour (used by Find the Colour / Match the Crayon).",
+  "colours": [
+    { "key": "red", "color": "#E53935", "en": "red", "ms": "merah", "things": ["🍎", "🍓", "🌹", "🚒"] },
+    { "key": "blue", "color": "#1E88E5", "en": "blue", "ms": "biru", "things": ["🫐", "🦋", "💙", "🧢"] },
+    { "key": "yellow", "color": "#FDD835", "en": "yellow", "ms": "kuning", "things": ["🍌", "🌻", "🐥", "🌽"] },
+    { "key": "green", "color": "#43A047", "en": "green", "ms": "hijau", "things": ["🥦", "🐸", "🥒", "🍀"] },
+    { "key": "orange", "color": "#FB8C00", "en": "orange", "ms": "oren", "things": ["🍊", "🥕", "🎃", "🦊"] },
+    { "key": "purple", "color": "#8E24AA", "en": "purple", "ms": "ungu", "things": ["🍇", "🍆", "☂️", "🔮"] },
+    { "key": "pink", "color": "#F06292", "en": "pink", "ms": "merah jambu", "things": ["🌸", "🦩", "🎀", "🌷"] },
+    { "key": "brown", "color": "#6D4C41", "en": "brown", "ms": "coklat", "things": ["🐻", "🥥", "🍫", "🪵"] },
+    { "key": "black", "color": "#212121", "en": "black", "ms": "hitam", "things": ["🎩", "🐈‍⬛", "🎱", "🕷️"] },
+    { "key": "white", "color": "#FAFAFA", "en": "white", "ms": "putih", "things": ["🥛", "☁️", "🐑", "⛄"] },
+    { "key": "grey", "color": "#9E9E9E", "en": "grey", "ms": "kelabu", "things": ["🐘", "🐭", "🪨", "🐺"] },
+    { "key": "gold", "color": "#D4A017", "en": "gold", "ms": "emas", "things": ["🏆", "👑", "🥇", "🔔"] },
+    { "key": "silver", "color": "#BDC3C7", "en": "silver", "ms": "perak", "things": ["🥈", "🔑", "🥄", "🔩"] },
+    { "key": "lightblue", "color": "#81D4FA", "en": "light blue", "ms": "biru muda", "things": ["💧", "🧊", "🩵", "🐳"] },
+    { "key": "darkgreen", "color": "#1B5E20", "en": "dark green", "ms": "hijau tua", "things": ["🌲", "🐢", "🌵", "🥬"] }
+  ]
+}

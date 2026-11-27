@@ -1,0 +1,35 @@
+{
+  "_doc": "Body parts. 'figure' slots are positions (in %) on the figure SVG used by Label the Body Part.",
+  "parts": [
+    { "id": "head", "emoji": "🙂", "en": "head", "ms": "kepala" },
+    { "id": "hair", "emoji": "💇", "en": "hair", "ms": "rambut" },
+    { "id": "eye", "emoji": "👁️", "en": "eye", "ms": "mata" },
+    { "id": "ear", "emoji": "👂", "en": "ear", "ms": "telinga" },
+    { "id": "nose", "emoji": "👃", "en": "nose", "ms": "hidung" },
+    { "id": "mouth", "emoji": "👄", "en": "mouth", "ms": "mulut" },
+    { "id": "tongue", "emoji": "👅", "en": "tongue", "ms": "lidah" },
+    { "id": "teeth", "emoji": "🦷", "en": "teeth", "ms": "gigi" },
+    { "id": "hand", "emoji": "✋", "en": "hand", "ms": "tangan" },
+    { "id": "finger", "emoji": "☝️", "en": "finger", "ms": "jari" },
+    { "id": "nail", "emoji": "💅", "en": "nail", "ms": "kuku" },
+    { "id": "arm", "emoji": "💪", "en": "arm", "ms": "lengan" },
+    { "id": "leg", "emoji": "🦵", "en": "leg", "ms": "kaki" },
+    { "id": "foot", "emoji": "🦶", "en": "foot", "ms": "tapak kaki" },
+    { "id": "brain", "emoji": "🧠", "en": "brain", "ms": "otak" },
+    { "id": "heart", "emoji": "🫀", "en": "heart", "ms": "jantung" }
+  ],
+  "figure": {
+    "svg": "<svg viewBox='0 0 300 400' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'><path d='M110 52c0-30 80-30 80 0' fill='#5d4037'/><circle cx='150' cy='70' r='42' fill='#ffcc99' stroke='#333' stroke-width='3'/><path d='M108 60c10-30 74-30 84 0c-20-12-60-12-84 0z' fill='#5d4037'/><circle cx='135' cy='68' r='5'/><circle cx='165' cy='68' r='5'/><path d='M148 74l-4 10h8' fill='none' stroke='#333' stroke-width='2'/><path d='M136 92q14 10 28 0' fill='none' stroke='#c62828' stroke-width='3' stroke-linecap='round'/><ellipse cx='107' cy='72' rx='6' ry='10' fill='#ffcc99' stroke='#333' stroke-width='2'/><ellipse cx='193' cy='72' rx='6' ry='10' fill='#ffcc99' stroke='#333' stroke-width='2'/><rect x='140' y='110' width='20' height='14' fill='#ffcc99'/><path d='M105 124h90l10 120h-110z' fill='#4d96ff' stroke='#333' stroke-width='3'/><path d='M105 130l-40 90' stroke='#ffcc99' stroke-width='18' stroke-linecap='round'/><path d='M195 130l40 90' stroke='#ffcc99' stroke-width='18' stroke-linecap='round'/><circle cx='62' cy='228' r='13' fill='#ffcc99' stroke='#333' stroke-width='2'/><circle cx='238' cy='228' r='13' fill='#ffcc99' stroke='#333' stroke-width='2'/><path d='M125 244v110' stroke='#ffcc99' stroke-width='22' stroke-linecap='round'/><path d='M175 244v110' stroke='#ffcc99' stroke-width='22' stroke-linecap='round'/><path d='M105 244h90v40h-90z' fill='#1b5e20'/><ellipse cx='118' cy='370' rx='22' ry='10' fill='#6d4c41'/><ellipse cx='182' cy='370' rx='22' ry='10' fill='#6d4c41'/></svg>",
+    "slots": [
+      { "id": "hair", "x": 50, "y": 4 },
+      { "id": "eye", "x": 84, "y": 15 },
+      { "id": "ear", "x": 16, "y": 18 },
+      { "id": "nose", "x": 84, "y": 26 },
+      { "id": "mouth", "x": 22, "y": 30 },
+      { "id": "arm", "x": 14, "y": 44 },
+      { "id": "hand", "x": 86, "y": 62 },
+      { "id": "leg", "x": 25, "y": 78 },
+      { "id": "foot", "x": 78, "y": 95 }
+    ]
+  }
+}

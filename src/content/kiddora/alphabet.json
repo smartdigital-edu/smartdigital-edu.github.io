@@ -1,0 +1,51 @@
+{
+  "_doc": "One entry per letter. 'en' and 'ms' each have a word that starts with the letter and an emoji picture.",
+  "letters": [
+    { "letter": "A", "en": { "word": "Apple", "emoji": "🍎" }, "ms": { "word": "Ayam", "emoji": "🐔" } },
+    { "letter": "B", "en": { "word": "Ball", "emoji": "⚽" }, "ms": { "word": "Bola", "emoji": "⚽" } },
+    { "letter": "C", "en": { "word": "Cat", "emoji": "🐱" }, "ms": { "word": "Cawan", "emoji": "☕" } },
+    { "letter": "D", "en": { "word": "Dog", "emoji": "🐶" }, "ms": { "word": "Daun", "emoji": "🍃" } },
+    { "letter": "E", "en": { "word": "Egg", "emoji": "🥚" }, "ms": { "word": "Epal", "emoji": "🍎" } },
+    { "letter": "F", "en": { "word": "Fish", "emoji": "🐟" }, "ms": { "word": "Feri", "emoji": "⛴️" } },
+    { "letter": "G", "en": { "word": "Grapes", "emoji": "🍇" }, "ms": { "word": "Gajah", "emoji": "🐘" } },
+    { "letter": "H", "en": { "word": "Hat", "emoji": "👒" }, "ms": { "word": "Harimau", "emoji": "🐯" } },
+    { "letter": "I", "en": { "word": "Ice cream", "emoji": "🍦" }, "ms": { "word": "Ikan", "emoji": "🐟" } },
+    { "letter": "J", "en": { "word": "Juice", "emoji": "🧃" }, "ms": { "word": "Jam", "emoji": "⏰" } },
+    { "letter": "K", "en": { "word": "Kite", "emoji": "🪁" }, "ms": { "word": "Kucing", "emoji": "🐱" } },
+    { "letter": "L", "en": { "word": "Lion", "emoji": "🦁" }, "ms": { "word": "Lembu", "emoji": "🐄" } },
+    { "letter": "M", "en": { "word": "Moon", "emoji": "🌙" }, "ms": { "word": "Monyet", "emoji": "🐒" } },
+    { "letter": "N", "en": { "word": "Nest", "emoji": "🪺" }, "ms": { "word": "Nanas", "emoji": "🍍" } },
+    { "letter": "O", "en": { "word": "Orange", "emoji": "🍊" }, "ms": { "word": "Oren", "emoji": "🍊" } },
+    { "letter": "P", "en": { "word": "Pencil", "emoji": "✏️" }, "ms": { "word": "Pisang", "emoji": "🍌" } },
+    { "letter": "Q", "en": { "word": "Queen", "emoji": "👸" }, "ms": { "word": "Quran", "emoji": "📖" } },
+    { "letter": "R", "en": { "word": "Rabbit", "emoji": "🐰" }, "ms": { "word": "Roti", "emoji": "🍞" } },
+    { "letter": "S", "en": { "word": "Sun", "emoji": "☀️" }, "ms": { "word": "Sudu", "emoji": "🥄" } },
+    { "letter": "T", "en": { "word": "Tiger", "emoji": "🐯" }, "ms": { "word": "Telur", "emoji": "🥚" } },
+    { "letter": "U", "en": { "word": "Umbrella", "emoji": "☂️" }, "ms": { "word": "Ular", "emoji": "🐍" } },
+    { "letter": "V", "en": { "word": "Van", "emoji": "🚐" }, "ms": { "word": "Van", "emoji": "🚐" } },
+    { "letter": "W", "en": { "word": "Watermelon", "emoji": "🍉" }, "ms": { "word": "Wau", "emoji": "🪁" } },
+    { "letter": "X", "en": { "word": "Xylophone", "emoji": "🎹" }, "ms": { "word": "X-ray", "emoji": "🩻" } },
+    { "letter": "Y", "en": { "word": "Yo-yo", "emoji": "🪀" }, "ms": { "word": "Yoyo", "emoji": "🪀" } },
+    { "letter": "Z", "en": { "word": "Zebra", "emoji": "🦓" }, "ms": { "word": "Zirafah", "emoji": "🦒" } }
+  ],
+  "spellWords": {
+    "en": [
+      { "word": "cat", "emoji": "🐱" }, { "word": "dog", "emoji": "🐶" }, { "word": "sun", "emoji": "☀️" },
+      { "word": "bus", "emoji": "🚌" }, { "word": "hat", "emoji": "👒" }, { "word": "egg", "emoji": "🥚" },
+      { "word": "cup", "emoji": "🥤" }, { "word": "bed", "emoji": "🛏️" }, { "word": "pen", "emoji": "🖊️" },
+      { "word": "fish", "emoji": "🐟" }, { "word": "frog", "emoji": "🐸" }, { "word": "duck", "emoji": "🦆" },
+      { "word": "ball", "emoji": "⚽" }, { "word": "milk", "emoji": "🥛" }, { "word": "cake", "emoji": "🍰" },
+      { "word": "star", "emoji": "⭐" }, { "word": "moon", "emoji": "🌙" }, { "word": "tree", "emoji": "🌳" },
+      { "word": "lion", "emoji": "🦁" }, { "word": "book", "emoji": "📖" }
+    ],
+    "ms": [
+      { "word": "buku", "emoji": "📖" }, { "word": "bola", "emoji": "⚽" }, { "word": "baju", "emoji": "👕" },
+      { "word": "kaki", "emoji": "🦶" }, { "word": "mata", "emoji": "👁️" }, { "word": "susu", "emoji": "🥛" },
+      { "word": "roti", "emoji": "🍞" }, { "word": "ikan", "emoji": "🐟" }, { "word": "kuda", "emoji": "🐴" },
+      { "word": "gigi", "emoji": "🦷" }, { "word": "madu", "emoji": "🍯" }, { "word": "bulan", "emoji": "🌙" },
+      { "word": "itik", "emoji": "🦆" }, { "word": "ular", "emoji": "🐍" }, { "word": "kek", "emoji": "🍰" },
+      { "word": "topi", "emoji": "👒" }, { "word": "pokok", "emoji": "🌳" }, { "word": "bas", "emoji": "🚌" },
+      { "word": "kucing", "emoji": "🐱" }, { "word": "pisang", "emoji": "🍌" }
+    ]
+  }
+}

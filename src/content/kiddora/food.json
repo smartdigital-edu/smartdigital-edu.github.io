@@ -1,0 +1,23 @@
+{
+  "_doc": "Fruits and vegetables.",
+  "fruits": [
+    { "emoji": "🍎", "en": "apple", "ms": "epal" }, { "emoji": "🍌", "en": "banana", "ms": "pisang" },
+    { "emoji": "🍇", "en": "grapes", "ms": "anggur" }, { "emoji": "🍊", "en": "orange", "ms": "oren" },
+    { "emoji": "🍉", "en": "watermelon", "ms": "tembikai" }, { "emoji": "🍍", "en": "pineapple", "ms": "nanas" },
+    { "emoji": "🥭", "en": "mango", "ms": "mangga" }, { "emoji": "🍓", "en": "strawberry", "ms": "strawberi" },
+    { "emoji": "🥥", "en": "coconut", "ms": "kelapa" }, { "emoji": "🍐", "en": "pear", "ms": "pear" },
+    { "emoji": "🍒", "en": "cherry", "ms": "ceri" }, { "emoji": "🥝", "en": "kiwi", "ms": "kiwi" },
+    { "emoji": "🍑", "en": "peach", "ms": "pic" }, { "emoji": "🍋", "en": "lemon", "ms": "lemon" },
+    { "emoji": "🍈", "en": "melon", "ms": "tembikai susu" }, { "emoji": "🫐", "en": "blueberry", "ms": "beri biru" }
+  ],
+  "vegetables": [
+    { "emoji": "🥕", "en": "carrot", "ms": "lobak merah" }, { "emoji": "🥦", "en": "broccoli", "ms": "brokoli" },
+    { "emoji": "🌽", "en": "corn", "ms": "jagung" }, { "emoji": "🥒", "en": "cucumber", "ms": "timun" },
+    { "emoji": "🍆", "en": "eggplant", "ms": "terung" }, { "emoji": "🥔", "en": "potato", "ms": "kentang" },
+    { "emoji": "🌶️", "en": "chilli", "ms": "cili" }, { "emoji": "🧅", "en": "onion", "ms": "bawang" },
+    { "emoji": "🧄", "en": "garlic", "ms": "bawang putih" }, { "emoji": "🥬", "en": "lettuce", "ms": "salad" },
+    { "emoji": "🍠", "en": "sweet potato", "ms": "ubi keledek" }, { "emoji": "🫛", "en": "peas", "ms": "kacang pis" },
+    { "emoji": "🫑", "en": "capsicum", "ms": "lada benggala" }, { "emoji": "🫚", "en": "ginger", "ms": "halia" },
+    { "emoji": "🍄", "en": "mushroom", "ms": "cendawan" }
+  ]
+}

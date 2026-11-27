@@ -1,0 +1,25 @@
+{
+  "_doc": "Jobs & professions with a short sentence about what each person does.",
+  "jobs": [
+    { "emoji": "🧑‍⚕️", "en": "doctor", "ms": "doktor", "info": { "en": "A doctor helps sick people get better.", "ms": "Doktor merawat orang yang sakit." } },
+    { "emoji": "🧑‍🏫", "en": "teacher", "ms": "guru", "info": { "en": "A teacher helps children learn.", "ms": "Guru mengajar murid di sekolah." } },
+    { "emoji": "🧑‍🚒", "en": "firefighter", "ms": "ahli bomba", "info": { "en": "A firefighter puts out fires.", "ms": "Ahli bomba memadam kebakaran." } },
+    { "emoji": "👮", "en": "police officer", "ms": "polis", "info": { "en": "A police officer keeps us safe.", "ms": "Polis menjaga keselamatan kita." } },
+    { "emoji": "🧑‍🌾", "en": "farmer", "ms": "petani", "info": { "en": "A farmer grows rice and vegetables.", "ms": "Petani menanam padi dan sayur." } },
+    { "emoji": "🧑‍🍳", "en": "chef", "ms": "tukang masak", "info": { "en": "A chef cooks tasty food.", "ms": "Tukang masak memasak makanan yang sedap." } },
+    { "emoji": "🧑‍✈️", "en": "pilot", "ms": "juruterbang", "info": { "en": "A pilot flies an aeroplane.", "ms": "Juruterbang menerbangkan kapal terbang." } },
+    { "emoji": "🧑‍🚀", "en": "astronaut", "ms": "angkasawan", "info": { "en": "An astronaut travels to space.", "ms": "Angkasawan pergi ke angkasa lepas." } },
+    { "emoji": "🧑‍🔧", "en": "mechanic", "ms": "mekanik", "info": { "en": "A mechanic fixes cars.", "ms": "Mekanik membaiki kereta." } },
+    { "emoji": "🧑‍🔬", "en": "scientist", "ms": "saintis", "info": { "en": "A scientist does experiments.", "ms": "Saintis membuat eksperimen." } },
+    { "emoji": "🧑‍🎨", "en": "artist", "ms": "pelukis", "info": { "en": "An artist paints pictures.", "ms": "Pelukis melukis gambar." } },
+    { "emoji": "🧑‍⚖️", "en": "judge", "ms": "hakim", "info": { "en": "A judge decides in a court.", "ms": "Hakim membuat keputusan di mahkamah." } },
+    { "emoji": "🧑‍🎤", "en": "singer", "ms": "penyanyi", "info": { "en": "A singer sings songs.", "ms": "Penyanyi menyanyikan lagu." } },
+    { "emoji": "👷", "en": "builder", "ms": "pekerja binaan", "info": { "en": "A builder builds houses.", "ms": "Pekerja binaan membina rumah." } },
+    { "emoji": "🧑‍💻", "en": "programmer", "ms": "pengaturcara", "info": { "en": "A programmer writes computer code.", "ms": "Pengaturcara menulis kod komputer." } },
+    { "emoji": "🧑‍💼", "en": "office worker", "ms": "pekerja pejabat", "info": { "en": "An office worker works at a desk.", "ms": "Pekerja pejabat bekerja di meja." } },
+    { "emoji": "🦷", "en": "dentist", "ms": "doktor gigi", "info": { "en": "A dentist looks after our teeth.", "ms": "Doktor gigi menjaga gigi kita." } },
+    { "emoji": "🎣", "en": "fisherman", "ms": "nelayan", "info": { "en": "A fisherman catches fish at sea.", "ms": "Nelayan menangkap ikan di laut." } },
+    { "emoji": "💂", "en": "guard", "ms": "pengawal", "info": { "en": "A guard watches over a building.", "ms": "Pengawal menjaga bangunan." } },
+    { "emoji": "📮", "en": "postman", "ms": "posmen", "info": { "en": "A postman delivers letters.", "ms": "Posmen menghantar surat." } }
+  ]
+}

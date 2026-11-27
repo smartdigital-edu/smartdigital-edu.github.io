@@ -1,0 +1,20 @@
+{
+  "_doc": "Shapes as SVG paths in a 0 0 100 100 box. 'things' are real objects with that shape.",
+  "shapes": [
+    { "id": "circle", "en": "circle", "ms": "bulatan", "fill": "#E53935", "path": "M50 10a40 40 0 1 1 0 80a40 40 0 1 1 0-80z", "things": ["⚽", "🍩", "🕒"] },
+    { "id": "square", "en": "square", "ms": "segi empat sama", "fill": "#1E88E5", "path": "M14 14h72v72h-72z", "things": ["🎁", "🧇", "🔲"] },
+    { "id": "triangle", "en": "triangle", "ms": "segi tiga", "fill": "#43A047", "path": "M50 10l42 76h-84z", "things": ["🍕", "⛺", "🔺"] },
+    { "id": "rectangle", "en": "rectangle", "ms": "segi empat tepat", "fill": "#FB8C00", "path": "M6 26h88v48h-88z", "things": ["🚪", "📱", "🧱"] },
+    { "id": "star", "en": "star", "ms": "bintang", "fill": "#FDD835", "path": "M50 6l12 30h32l-26 19l10 32l-28-19l-28 19l10-32l-26-19h32z", "things": ["⭐", "🌟", "✨"] },
+    { "id": "heart", "en": "heart", "ms": "hati", "fill": "#F06292", "path": "M50 88C20 66 6 50 6 32C6 18 17 8 30 8c9 0 16 5 20 12c4-7 11-12 20-12c13 0 24 10 24 24c0 18-14 34-44 56z", "things": ["❤️", "💝", "🫶"] },
+    { "id": "oval", "en": "oval", "ms": "bujur", "fill": "#8E24AA", "path": "M50 8c22 0 34 19 34 42s-12 42-34 42s-34-19-34-42s12-42 34-42z", "things": ["🥚", "🏉", "🪞"] },
+    { "id": "diamond", "en": "diamond", "ms": "rombus", "fill": "#00ACC1", "path": "M50 6l36 44l-36 44l-36-44z", "things": ["🪁", "♦️", "💎"] },
+    { "id": "pentagon", "en": "pentagon", "ms": "pentagon", "fill": "#6D4C41", "path": "M50 8l40 29l-15 47h-50l-15-47z", "things": ["🏠"] },
+    { "id": "hexagon", "en": "hexagon", "ms": "heksagon", "fill": "#FFB300", "path": "M28 12h44l22 38l-22 38h-44l-22-38z", "things": ["🐝", "🍯"] },
+    { "id": "octagon", "en": "octagon", "ms": "oktagon", "fill": "#C62828", "path": "M34 8h32l26 26v32l-26 26h-32l-26-26v-32z", "things": ["🛑"] },
+    { "id": "crescent", "en": "crescent", "ms": "bulan sabit", "fill": "#FDD835", "path": "M62 8a42 42 0 1 0 0 84a34 34 0 1 1 0-84z", "things": ["🌙"] },
+    { "id": "semicircle", "en": "semicircle", "ms": "separuh bulatan", "fill": "#7CB342", "path": "M8 64a42 42 0 0 1 84 0z", "things": ["🌈", "🍉"] },
+    { "id": "cross", "en": "cross", "ms": "pangkah", "fill": "#5E35B1", "path": "M38 8h24v30h30v24h-30v30h-24v-30h-30v-24h30z", "things": ["➕", "🏥"] },
+    { "id": "arrow", "en": "arrow", "ms": "anak panah", "fill": "#039BE5", "path": "M8 38h50v-22l34 34l-34 34v-22h-50z", "things": ["➡️", "⬆️"] }
+  ]
+}

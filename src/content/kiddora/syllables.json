@@ -1,0 +1,31 @@
+{
+  "_doc": "Bijak Suku Kata (Malay only). Each word is split into syllables; one is hidden and the child drags the right syllable in.",
+  "families": {
+    "b": ["ba", "bi", "bu", "be", "bo"], "c": ["ca", "ci", "cu", "ce", "co"], "d": ["da", "di", "du", "de", "do"],
+    "g": ["ga", "gi", "gu", "ge", "go"], "j": ["ja", "ji", "ju", "je", "jo"], "k": ["ka", "ki", "ku", "ke", "ko"],
+    "l": ["la", "li", "lu", "le", "lo"], "m": ["ma", "mi", "mu", "me", "mo"], "p": ["pa", "pi", "pu", "pe", "po"],
+    "r": ["ra", "ri", "ru", "re", "ro"], "s": ["sa", "si", "su", "se", "so"], "t": ["ta", "ti", "tu", "te", "to"]
+  },
+  "words": [
+    { "word": "buku", "parts": ["bu", "ku"], "emoji": "📖" },
+    { "word": "baju", "parts": ["ba", "ju"], "emoji": "👕" },
+    { "word": "bola", "parts": ["bo", "la"], "emoji": "⚽" },
+    { "word": "kuda", "parts": ["ku", "da"], "emoji": "🐴" },
+    { "word": "kaki", "parts": ["ka", "ki"], "emoji": "🦶" },
+    { "word": "mata", "parts": ["ma", "ta"], "emoji": "👁️" },
+    { "word": "gigi", "parts": ["gi", "gi"], "emoji": "🦷" },
+    { "word": "roti", "parts": ["ro", "ti"], "emoji": "🍞" },
+    { "word": "susu", "parts": ["su", "su"], "emoji": "🥛" },
+    { "word": "madu", "parts": ["ma", "du"], "emoji": "🍯" },
+    { "word": "batu", "parts": ["ba", "tu"], "emoji": "🪨" },
+    { "word": "sapu", "parts": ["sa", "pu"], "emoji": "🧹" },
+    { "word": "topi", "parts": ["to", "pi"], "emoji": "👒" },
+    { "word": "duit", "parts": ["du", "it"], "emoji": "💵" },
+    { "word": "lidah", "parts": ["li", "dah"], "emoji": "👅" },
+    { "word": "gajah", "parts": ["ga", "jah"], "emoji": "🐘" },
+    { "word": "kereta", "parts": ["ke", "re", "ta"], "emoji": "🚗" },
+    { "word": "kelapa", "parts": ["ke", "la", "pa"], "emoji": "🥥" },
+    { "word": "sepatu", "parts": ["se", "pa", "tu"], "emoji": "👟" },
+    { "word": "kamera", "parts": ["ka", "me", "ra"], "emoji": "📷" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_doc": "Numbers 0–20 with English and Malay names. 'objects' are emoji used for counting games.",
+  "numbers": [
+    { "n": 0, "en": "zero", "ms": "kosong" }, { "n": 1, "en": "one", "ms": "satu" }, { "n": 2, "en": "two", "ms": "dua" },
+    { "n": 3, "en": "three", "ms": "tiga" }, { "n": 4, "en": "four", "ms": "empat" }, { "n": 5, "en": "five", "ms": "lima" },
+    { "n": 6, "en": "six", "ms": "enam" }, { "n": 7, "en": "seven", "ms": "tujuh" }, { "n": 8, "en": "eight", "ms": "lapan" },
+    { "n": 9, "en": "nine", "ms": "sembilan" }, { "n": 10, "en": "ten", "ms": "sepuluh" }, { "n": 11, "en": "eleven", "ms": "sebelas" },
+    { "n": 12, "en": "twelve", "ms": "dua belas" }, { "n": 13, "en": "thirteen", "ms": "tiga belas" }, { "n": 14, "en": "fourteen", "ms": "empat belas" },
+    { "n": 15, "en": "fifteen", "ms": "lima belas" }, { "n": 16, "en": "sixteen", "ms": "enam belas" }, { "n": 17, "en": "seventeen", "ms": "tujuh belas" },
+    { "n": 18, "en": "eighteen", "ms": "lapan belas" }, { "n": 19, "en": "nineteen", "ms": "sembilan belas" }, { "n": 20, "en": "twenty", "ms": "dua puluh" }
+  ],
+  "objects": ["🍎", "🐥", "⭐", "🍓", "🐟", "🎈", "🌸", "🍪", "🚗", "🐞", "🍌", "⚽", "🧁", "🦋", "🍊"]
+}

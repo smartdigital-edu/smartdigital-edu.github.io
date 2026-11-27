@@ -1,0 +1,32 @@
+{
+  "_doc": "Transport grouped by land, air and water.",
+  "categories": [
+    { "id": "land", "visual": "🛣️", "label": { "en": "Land", "ms": "Darat" } },
+    { "id": "air", "visual": "☁️", "label": { "en": "Air", "ms": "Udara" } },
+    { "id": "water", "visual": "🌊", "label": { "en": "Water", "ms": "Air" } }
+  ],
+  "items": [
+    { "emoji": "🚗", "category": "land", "en": "car", "ms": "kereta" },
+    { "emoji": "🚌", "category": "land", "en": "bus", "ms": "bas" },
+    { "emoji": "🚲", "category": "land", "en": "bicycle", "ms": "basikal" },
+    { "emoji": "🏍️", "category": "land", "en": "motorcycle", "ms": "motosikal" },
+    { "emoji": "🚆", "category": "land", "en": "train", "ms": "kereta api" },
+    { "emoji": "🚚", "category": "land", "en": "lorry", "ms": "lori" },
+    { "emoji": "🚕", "category": "land", "en": "taxi", "ms": "teksi" },
+    { "emoji": "🚑", "category": "land", "en": "ambulance", "ms": "ambulans" },
+    { "emoji": "🚒", "category": "land", "en": "fire engine", "ms": "kereta bomba" },
+    { "emoji": "🚓", "category": "land", "en": "police car", "ms": "kereta polis" },
+    { "emoji": "🚜", "category": "land", "en": "tractor", "ms": "traktor" },
+    { "emoji": "✈️", "category": "air", "en": "aeroplane", "ms": "kapal terbang" },
+    { "emoji": "🚁", "category": "air", "en": "helicopter", "ms": "helikopter" },
+    { "emoji": "🚀", "category": "air", "en": "rocket", "ms": "roket" },
+    { "emoji": "🪂", "category": "air", "en": "parachute", "ms": "payung terjun" },
+    { "emoji": "🛸", "category": "air", "en": "flying saucer", "ms": "piring terbang" },
+    { "emoji": "🚢", "category": "water", "en": "ship", "ms": "kapal" },
+    { "emoji": "⛵", "category": "water", "en": "sailboat", "ms": "perahu layar" },
+    { "emoji": "🚤", "category": "water", "en": "speedboat", "ms": "bot laju" },
+    { "emoji": "⛴️", "category": "water", "en": "ferry", "ms": "feri" },
+    { "emoji": "🛶", "category": "water", "en": "canoe", "ms": "kanu" },
+    { "emoji": "🛳️", "category": "water", "en": "cruise ship", "ms": "kapal pesiar" }
+  ]
+}

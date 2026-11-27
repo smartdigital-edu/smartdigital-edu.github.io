@@ -1,0 +1,36 @@
+{
+  "_doc": "Animals grouped by where they live: farm, jungle, sea.",
+  "categories": [
+    { "id": "farm", "visual": "🚜", "label": { "en": "Farm", "ms": "Ladang" } },
+    { "id": "jungle", "visual": "🌴", "label": { "en": "Jungle", "ms": "Hutan" } },
+    { "id": "sea", "visual": "🌊", "label": { "en": "Sea", "ms": "Laut" } }
+  ],
+  "animals": [
+    { "id": "cow", "emoji": "🐄", "category": "farm", "en": "cow", "ms": "lembu", "info": { "en": "A cow gives us milk.", "ms": "Lembu memberi kita susu." } },
+    { "id": "chicken", "emoji": "🐔", "category": "farm", "en": "chicken", "ms": "ayam", "info": { "en": "A hen lays eggs.", "ms": "Ayam betina bertelur." } },
+    { "id": "goat", "emoji": "🐐", "category": "farm", "en": "goat", "ms": "kambing", "info": { "en": "A goat says 'meh-eh'.", "ms": "Kambing suka makan rumput." } },
+    { "id": "sheep", "emoji": "🐑", "category": "farm", "en": "sheep", "ms": "biri-biri", "info": { "en": "A sheep has soft wool.", "ms": "Biri-biri ada bulu yang lembut." } },
+    { "id": "duck", "emoji": "🦆", "category": "farm", "en": "duck", "ms": "itik", "info": { "en": "A duck can swim.", "ms": "Itik pandai berenang." } },
+    { "id": "horse", "emoji": "🐴", "category": "farm", "en": "horse", "ms": "kuda", "info": { "en": "A horse runs fast.", "ms": "Kuda berlari laju." } },
+    { "id": "rabbit", "emoji": "🐰", "category": "farm", "en": "rabbit", "ms": "arnab", "info": { "en": "A rabbit loves carrots.", "ms": "Arnab suka makan lobak merah." } },
+    { "id": "cat", "emoji": "🐱", "category": "farm", "en": "cat", "ms": "kucing", "info": { "en": "A cat says 'meow'.", "ms": "Kucing berbunyi 'meow'." } },
+    { "id": "tiger", "emoji": "🐯", "category": "jungle", "en": "tiger", "ms": "harimau", "info": { "en": "The Malayan tiger has stripes.", "ms": "Harimau Malaya berbelang." } },
+    { "id": "elephant", "emoji": "🐘", "category": "jungle", "en": "elephant", "ms": "gajah", "info": { "en": "An elephant has a long trunk.", "ms": "Gajah ada belalai yang panjang." } },
+    { "id": "monkey", "emoji": "🐒", "category": "jungle", "en": "monkey", "ms": "monyet", "info": { "en": "A monkey climbs trees.", "ms": "Monyet memanjat pokok." } },
+    { "id": "lion", "emoji": "🦁", "category": "jungle", "en": "lion", "ms": "singa", "info": { "en": "A lion roars loudly.", "ms": "Singa mengaum dengan kuat." } },
+    { "id": "orangutan", "emoji": "🦧", "category": "jungle", "en": "orangutan", "ms": "orang utan", "info": { "en": "Orangutans live in Borneo.", "ms": "Orang utan tinggal di Borneo." } },
+    { "id": "snake", "emoji": "🐍", "category": "jungle", "en": "snake", "ms": "ular", "info": { "en": "A snake has no legs.", "ms": "Ular tidak berkaki." } },
+    { "id": "giraffe", "emoji": "🦒", "category": "jungle", "en": "giraffe", "ms": "zirafah", "info": { "en": "A giraffe has a long neck.", "ms": "Zirafah ada leher yang panjang." } },
+    { "id": "zebra", "emoji": "🦓", "category": "jungle", "en": "zebra", "ms": "kuda belang", "info": { "en": "A zebra is black and white.", "ms": "Kuda belang berwarna hitam dan putih." } },
+    { "id": "fish", "emoji": "🐟", "category": "sea", "en": "fish", "ms": "ikan", "info": { "en": "A fish swims with its fins.", "ms": "Ikan berenang dengan siripnya." } },
+    { "id": "octopus", "emoji": "🐙", "category": "sea", "en": "octopus", "ms": "sotong kurita", "info": { "en": "An octopus has eight arms.", "ms": "Sotong kurita ada lapan lengan." } },
+    { "id": "crab", "emoji": "🦀", "category": "sea", "en": "crab", "ms": "ketam", "info": { "en": "A crab walks sideways.", "ms": "Ketam berjalan mengiring." } },
+    { "id": "whale", "emoji": "🐋", "category": "sea", "en": "whale", "ms": "ikan paus", "info": { "en": "A whale is very, very big.", "ms": "Ikan paus sangat besar." } },
+    { "id": "shark", "emoji": "🦈", "category": "sea", "en": "shark", "ms": "ikan jerung", "info": { "en": "A shark has sharp teeth.", "ms": "Ikan jerung ada gigi yang tajam." } },
+    { "id": "turtle", "emoji": "🐢", "category": "sea", "en": "turtle", "ms": "penyu", "info": { "en": "Turtles lay eggs on the beach.", "ms": "Penyu bertelur di pantai." } },
+    { "id": "dolphin", "emoji": "🐬", "category": "sea", "en": "dolphin", "ms": "ikan lumba-lumba", "info": { "en": "A dolphin is clever and friendly.", "ms": "Ikan lumba-lumba bijak dan peramah." } },
+    { "id": "shrimp", "emoji": "🦐", "category": "sea", "en": "prawn", "ms": "udang", "info": { "en": "A prawn is small.", "ms": "Udang bersaiz kecil." } }
+  ],
+  "_halves": "Animals that look good split in half for Complete the Animal.",
+  "halves": ["cow", "tiger", "elephant", "monkey", "lion", "cat", "rabbit", "fish", "octopus", "crab", "whale", "turtle", "horse", "giraffe", "zebra", "sheep"]
+}
