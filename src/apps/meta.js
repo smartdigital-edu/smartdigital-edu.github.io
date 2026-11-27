@@ -9,7 +9,7 @@ export const APPS = {
     title: 'Kiddora – Learn & Play (English / Bahasa Melayu)',
     description: 'Bilingual early-learning games for kids aged 3–6: ABC, 123, colours, shapes, animals and more.',
     theme: '#FF7A59',
-    bg: '#FFF8EC',
+    bg: '#0F2A5C',
     lang: 'en',
   },
   grammarhub: {

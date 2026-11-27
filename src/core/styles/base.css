@@ -490,3 +490,33 @@ body[data-app='grammarhub'] .choice { flex-direction: row; justify-content: flex
 @media (min-width: 900px) {
   .module-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 }
+
+/* ---------- Kiddora: dark blue background ----------
+   Text placed directly on the blue is light; white surfaces (cards, header,
+   menu, dialogs, game stage, tiles, inputs) keep the normal dark text. */
+body[data-app='kiddora'] {
+  --bg: #0f2a5c;
+  --on-bg: #f2f6ff;
+  --on-bg-muted: #c3d0ee;
+  background:
+    radial-gradient(circle at 10% 0%, #1d4b94 0, transparent 45%),
+    radial-gradient(circle at 100% 30%, #173e7d 0, transparent 40%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--on-bg);
+}
+body[data-app='kiddora'] .muted,
+body[data-app='kiddora'] .empty { color: var(--on-bg-muted); }
+/* plain text links on the blue (tiles and header links keep their own colours) */
+body[data-app='kiddora'] .app-main a:not([class]) { color: #ffd98a; }
+body[data-app='kiddora'] .btn.ghost { color: var(--on-bg); border-color: rgba(255, 255, 255, .45); }
+body[data-app='kiddora'] .link-btn { color: #ffd98a; }
+body[data-app='kiddora'] :is(.card, .dialog, .app-header, .app-menu, .stage, .game-counter, .profile-card, .canvas-wrap) {
+  color: var(--text);
+  --bg: #fff8ec; /* trays, piles and examples inside white surfaces stay light */
+}
+body[data-app='kiddora'] :is(.card, .dialog, .app-menu, .stage, .profile-card) :is(.muted, .empty) { color: var(--muted); }
+body[data-app='kiddora'] :is(.card, .dialog, .app-menu, .stage) a,
+body[data-app='kiddora'] :is(.card, .dialog, .app-menu, .stage) .link-btn { color: var(--primary); }
+body[data-app='kiddora'] :is(.card, .dialog, .stage) .btn.ghost { color: var(--text); border-color: var(--border); }
+body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: rgba(255, 255, 255, .55); }
