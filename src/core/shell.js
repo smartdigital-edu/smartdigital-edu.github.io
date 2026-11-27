@@ -64,6 +64,7 @@ export function renderHeader() {
 }
 
 function renderMenu() {
+  if (session.app.menuArt) { renderArtMenu(); return; }
   const items = [
     ['🏠', 'nav.home', '#/home'],
     ['👧', 'nav.profiles', '#/profiles'],
@@ -85,9 +86,52 @@ function renderMenu() {
   );
 }
 
+/** Illustrated menu (apps with `menuArt`): brand header with the mascot, coloured "Explore" items, account tools. */
+function renderArtMenu() {
+  const app = session.app;
+  const icon = (ch) => el('span.mi-icon', { 'aria-hidden': 'true' }, ch);
+  const link = (cls, ch, key, href) => el('li', el(`a.mi.${cls}`, { href, onclick: closeMenu, 'data-route': href }, icon(ch), el('span.mi-label', t(key)), el('span.mi-dot', { 'aria-hidden': 'true' })));
+  const tool = (ch, key, attrs, cls = '') => el('li', el(`${attrs.href ? 'a' : 'button'}.mi.tool${cls}`, { ...attrs, ...(attrs.href ? {} : { type: 'button' }) }, icon(ch), el('span.mi-label', t(key))));
+  clear(menu).append(
+    el('div.mh', {},
+      el('div.mh-brand', {},
+        el('div.mh-logo', {}, el('img', { src: `./icons/${app.id}-192.png`, alt: '', width: 44, height: 44 }), el('span', app.name)),
+        el('span.mh-sub', t('nav.learningMenu'))),
+      el('img.mh-art', { src: app.menuArt, alt: '', draggable: 'false' }),
+      el('button.mh-close', { type: 'button', 'aria-label': t('nav.close'), onclick: closeMenu }, '✕')),
+    el('div.mb', {},
+      el('p.mb-label', t('nav.explore')),
+      el('ul.mb-list', {},
+        link('home', '🏠', 'nav.home', '#/home'),
+        link('profiles', '👧', 'nav.profiles', '#/profiles'),
+        link('scores', '🏆', 'nav.scores', '#/scores')),
+      el('p.mb-label', t('nav.accountTools')),
+      session.user?.email ? el('p.mb-account', session.user.email) : null,
+      el('ul.mb-list.tools', {},
+        tool('📲', 'nav.install', { href: '#/install', onclick: closeMenu }),
+        tool('🔑', 'nav.password', { href: '#/password', onclick: closeMenu }),
+        session.role === 'admin' ? tool('🛡️', 'nav.admin', { href: '#/admin', onclick: closeMenu }) : null),
+      el('hr.mb-rule'),
+      el('ul.mb-list.tools', {},
+        tool('💬', 'nav.whatsapp', { href: whatsappLink(`Hi ${app.name}`), target: '_blank', rel: 'noopener' }, '.wa'),
+        tool('🚪', 'nav.logout', { onclick: logout }))),
+  );
+}
+
+/** Mark the menu item for the current page. */
+function markActive() {
+  const here = location.hash.split('?')[0] || '#/home';
+  menu.querySelectorAll('[data-route]').forEach((a) => {
+    const on = here === a.dataset.route || (a.dataset.route === '#/home' && /^#\/(m|play)\//.test(here));
+    a.classList.toggle('active', on);
+    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+}
+
 function toggleMenu() { if (menu.hidden) openMenu(); else closeMenu(); }
 function openMenu() {
   menu.hidden = false;
+  markActive();
   header.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'true');
   menu.querySelector('a, button')?.focus();
   document.addEventListener('keydown', escClose);

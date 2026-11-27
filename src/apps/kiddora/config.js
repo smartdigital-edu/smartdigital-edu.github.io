@@ -18,6 +18,8 @@ export default {
   kids: true,
   heroEmoji: '🦄',
   /** Home-screen decorations beside the grid (wide screens only): waving cat on the left, paws reaching in on the right. */
+  /** Flying Cici in the slide-in menu header. */
+  menuArt: 'images/kiddora/cici-fly.webp',
   decor: [
     {
       src: 'images/kiddora/mascot.webp', side: 'left',
