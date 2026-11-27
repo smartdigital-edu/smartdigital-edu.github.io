@@ -577,8 +577,8 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
 .home-mascot { display: none; }
 @media (min-width: 1100px) and (min-height: 560px) {
   .home-mascot {
-    display: block; position: fixed; left: 0; bottom: 4vh; z-index: 0;
-    height: min(62vh, 560px); width: auto; transform: translateX(-42%) rotate(8deg); transform-origin: 50% 100%;
+    display: block; position: fixed; left: 0; bottom: -3vh; z-index: 0;
+    height: min(52vh, 470px); width: auto; transform: translateX(-42%) rotate(8deg); transform-origin: 50% 100%;
     pointer-events: none; user-select: none; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, .35));
     animation: mascotPeek .9s cubic-bezier(.2, 1.4, .4, 1) both;
   }
