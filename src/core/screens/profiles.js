@@ -7,8 +7,11 @@ import { show } from '../shell.js';
 
 let managing = false;
 
+const TILE_COLOURS = ['#fdf0c2', '#dff3e6', '#e3e8fb', '#fde3ea', '#dcf0fb', '#efe5fb'];
+
 export function profilesScreen() {
   const app = session.app;
+  if (app.mascotFly) { kidProfilesScreen(); return; }
   const cards = session.profiles.map((p) => el('li', {},
     el('button.profile-card', {
       'aria-label': `${p.name}, ${levelLabel(p.level)}`,
@@ -49,6 +52,57 @@ export function profilesScreen() {
     const l = app.levels.find((x) => String(x.value) === String(level));
     return l ? tx(l.label) : '';
   }
+}
+
+/** Illustrated version (apps with a flying mascot): banner, big learner cards with pastel avatar tiles. */
+function kidProfilesScreen() {
+  const app = session.app;
+  const levelLabel = (level) => { const l = app.levels.find((x) => String(x.value) === String(level)); return l ? tx(l.label) : ''; };
+  const cards = session.profiles.map((p, i) => {
+    const current = session.profile?.id === p.id;
+    return el('li', {},
+      el('button.profile-card.pf-card', {
+        'aria-label': `${p.name}, ${levelLabel(p.level)}`,
+        'aria-pressed': String(current),
+        onclick: () => {
+          if (managing) { editProfile(p); return; }
+          setActiveProfile(p);
+          session.greetOnHome = true; // the home mascot says hello every time a learner is picked
+          navigate('/home');
+        },
+      },
+      current ? el('span.pf-check', { 'aria-hidden': 'true' }, '✓') : null,
+      el('span.pf-avatar', { 'aria-hidden': 'true', style: { '--tile': TILE_COLOURS[i % TILE_COLOURS.length] } }, p.avatar),
+      el('span.profile-name', p.name),
+      el('span.profile-level', levelLabel(p.level))),
+      managing ? el('div.profile-tools', {},
+        button(t('profiles.edit'), { variant: 'secondary small', onClick: () => editProfile(p) }),
+        button(t('profiles.delete'), {
+          variant: 'danger small',
+          onClick: async () => {
+            if (!(await confirmDialog(t('profiles.confirmDelete', { name: p.name })))) return;
+            await deleteProfile(p.id);
+            profilesScreen();
+          },
+        })) : null);
+  });
+  show(el('section.screen.profiles.kid-profiles', {},
+    el('div.pf-hero', {},
+      el('div.pf-text', {},
+        el('h1', { tabindex: '-1' }, t('profiles.heroTitle')),
+        el('p', t('profiles.heroSub'))),
+      el('span.pf-sparkle', { 'aria-hidden': 'true' }, '✦'),
+      el('img.pf-cici', { src: app.mascotFly, alt: '', draggable: 'false' })),
+    session.profiles.length ? null : el('p.empty', t('profiles.empty')),
+    el('ul.profile-grid.pf-grid', {}, cards,
+      el('li', el('button.profile-card.pf-card.add', { onclick: () => editProfile(null) },
+        el('span.pf-avatar.plus', { 'aria-hidden': 'true' }, '+'),
+        el('span.profile-name', t('profiles.add'))))),
+    session.profiles.length
+      ? el('div.pf-actions', {}, button(managing ? t('profiles.done') : t('profiles.manage'), {
+        variant: 'ghost small', icon: managing ? '✔' : '✏️', onClick: () => { managing = !managing; profilesScreen(); },
+      }))
+      : null));
 }
 
 /** Add/edit form inside a dialog. */

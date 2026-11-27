@@ -58,6 +58,8 @@
   "profiles.switch": "Tukar",
   "profiles.manage": "Urus",
   "profiles.done": "Siap",
+  "profiles.heroTitle": "Siapa belajar hari ini?",
+  "profiles.heroSub": "Pilih haiwan anda untuk bermula.",
   "home.hello": "Hai, {name}!",
   "home.pick": "Apa yang kita mahu belajar hari ini?",
   "home.comingSoon": "Akan datang",

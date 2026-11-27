@@ -64,7 +64,7 @@ export function renderHeader() {
 }
 
 function renderMenu() {
-  if (session.app.menuArt) { renderArtMenu(); return; }
+  if (session.app.mascotFly) { renderArtMenu(); return; }
   const items = [
     ['🏠', 'nav.home', '#/home'],
     ['👧', 'nav.profiles', '#/profiles'],
@@ -86,7 +86,7 @@ function renderMenu() {
   );
 }
 
-/** Illustrated menu (apps with `menuArt`): brand header with the mascot, coloured "Explore" items, account tools. */
+/** Illustrated menu (apps with `mascotFly`): brand header with the mascot, coloured "Explore" items, account tools. */
 function renderArtMenu() {
   const app = session.app;
   const icon = (ch) => el('span.mi-icon', { 'aria-hidden': 'true' }, ch);
@@ -97,7 +97,7 @@ function renderArtMenu() {
       el('div.mh-brand', {},
         el('div.mh-logo', {}, el('img', { src: `./icons/${app.id}-192.png`, alt: '', width: 44, height: 44 }), el('span', app.name)),
         el('span.mh-sub', t('nav.learningMenu'))),
-      el('img.mh-art', { src: app.menuArt, alt: '', draggable: 'false' }),
+      el('img.mh-art', { src: app.mascotFly, alt: '', draggable: 'false' }),
       el('button.mh-close', { type: 'button', 'aria-label': t('nav.close'), onclick: closeMenu }, '✕')),
     el('div.mb', {},
       el('p.mb-label', t('nav.explore')),

@@ -737,7 +737,7 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
 @keyframes tapPulse { 0%, 100% { scale: 1; } 50% { scale: 1.07; } }
 @media (prefers-reduced-motion: reduce) { .tap-start-cici, .tap-start-btn { animation: none; } }
 
-/* ---------- Illustrated slide-in menu (apps with menuArt) ---------- */
+/* ---------- Illustrated slide-in menu (apps with mascotFly) ---------- */
 .app-menu:has(.mh) { width: min(390px, 92vw); padding: 0; background: #f8faff; color: #13214a; border-radius: 0 28px 28px 0; }
 .mh {
   position: relative; overflow: hidden; min-height: 132px; padding: max(1.6rem, env(safe-area-inset-top)) 1.4rem 1.3rem;
@@ -781,3 +781,45 @@ body[data-app] .app-menu .mi { color: #13214a; }
 .mi.tool:hover { background: #eef2fa; }
 .mb-rule { border: 0; border-top: 1.5px solid #e1e6f0; margin: 1rem .2rem .6rem; }
 @media (prefers-reduced-motion: reduce) { .mh-art { animation: none; } }
+
+/* ---------- "Who's learning today?" (apps with mascotFly) ---------- */
+.pf-hero {
+  position: relative; overflow: hidden; display: flex; align-items: center; min-height: clamp(170px, 24vw, 250px);
+  margin: .4rem 0 1.4rem; padding: clamp(1.4rem, 4vw, 3rem) clamp(1.3rem, 5vw, 4rem); border-radius: 32px;
+  background: linear-gradient(100deg, #1f3b7a 0%, #2b4d98 55%, #4068bb 100%); color: #fff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .28), inset 0 0 0 1px rgba(255, 255, 255, .08);
+}
+.pf-text { position: relative; z-index: 1; max-width: 62%; }
+.pf-hero h1 { margin: 0 0 .5rem; font-size: clamp(1.9rem, 4.6vw, 3.5rem); line-height: 1.05; letter-spacing: -.03em; color: #fff; outline: none; }
+.pf-hero p { margin: 0; font-weight: 600; font-size: clamp(1rem, 1.7vw, 1.3rem); color: #e3ebff; }
+.pf-cici { position: absolute; right: 2%; bottom: -9%; height: 116%; width: auto; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .3)); animation: mhFly 3s ease-in-out infinite; }
+.pf-sparkle { position: absolute; right: 31%; top: 20%; color: #f6c453; font-size: clamp(1.6rem, 3vw, 2.4rem); text-shadow: 0 0 12px rgba(246, 196, 83, .5); animation: twinkle 2.6s ease-in-out infinite; }
+.pf-grid { grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 1.2rem; }
+.profile-card.pf-card {
+  position: relative; min-height: 220px; gap: .35rem; padding: 1.5rem 1rem; border-radius: 28px;
+  background: #fff; color: #13214a; border: 2.5px solid #c9d3ea; box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+  transition: transform .12s, border-color .15s;
+}
+.profile-card.pf-card:hover { transform: translateY(-3px); }
+.profile-card.pf-card[aria-pressed=true] { border: 3px solid #2f4f9c; box-shadow: 0 5px 0 #2f4f9c, 0 10px 24px rgba(0, 0, 0, .2); }
+.pf-check { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #2f4f9c; color: #fff; font-weight: 800; font-size: 1.1rem; }
+.pf-avatar { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 26px; margin-bottom: .5rem; background: var(--tile, #f1f3f9); font-family: var(--emoji); font-size: 3.4rem; line-height: 1; }
+.pf-card .profile-name { font-size: 1.6rem; color: #13214a; }
+.pf-card .profile-level { font-size: 1.15rem; font-weight: 600; color: #5a6688; }
+body[data-app] .profile-card.pf-card.add { background: rgba(255, 255, 255, .07); border: 2.5px dashed rgba(255, 255, 255, .5); box-shadow: none; color: #fff; }
+.pf-card.add .profile-name { color: #fff; }
+.pf-avatar.plus { background: #e6e0fb; color: #5b3fb0; font-family: inherit; font-weight: 800; font-size: 3rem; }
+.pf-actions { display: flex; justify-content: flex-end; margin-top: 1.2rem; }
+@media (max-width: 640px) {
+  .pf-hero { min-height: 160px; padding: 1.3rem 1.1rem; }
+  .pf-text { max-width: 58%; }
+  .pf-hero h1 { font-size: 1.65rem; }
+  .pf-hero p { font-size: .95rem; }
+  .pf-cici { right: -10%; height: 96%; bottom: -6%; }
+  .pf-sparkle { right: 8%; top: 8%; font-size: 1.3rem; }
+  .pf-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+  .profile-card.pf-card { min-height: 180px; padding: 1.1rem .6rem; border-radius: 22px; }
+  .pf-avatar { width: 76px; height: 76px; border-radius: 20px; font-size: 2.7rem; }
+  .pf-card .profile-name { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) { .pf-cici, .pf-sparkle { animation: none; } }
