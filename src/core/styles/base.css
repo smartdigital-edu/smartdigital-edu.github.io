@@ -573,16 +573,26 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
 @media (max-width: 340px) { .module-grid:has(.module-card.pic) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .module-card.pic, .module-img { transition: none; } .module-card.pic:hover { transform: none; } }
 
-/* Home mascot: peeks in half-hidden from the left edge, only where there is room beside the grid. */
-.home-mascot { display: none; }
+/* Home decorations: cat peeks in from the left edge, paws reach in from the right edge.
+   Only where there is room beside the grid, and sized to the free space so they never cover a tile. */
+.home-deco { display: none; }
 @media (min-width: 1180px) and (min-height: 560px) {
-  .home-mascot {
-    display: block; position: fixed; left: 0; bottom: -3vh; z-index: 0;
-    height: min(52vh, 470px, (50vw - 360px) * 1.25); width: auto; transform: translateX(-18%) rotate(8deg); transform-origin: 50% 100%;
+  .home-deco {
+    display: block; position: fixed; z-index: 0; width: auto;
     pointer-events: none; user-select: none; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, .35));
-    animation: mascotPeek .9s cubic-bezier(.2, 1.4, .4, 1) both;
   }
-  .screen.home > :not(.home-mascot) { position: relative; z-index: 1; }
+  .home-deco.left {
+    left: 0; bottom: -3vh; height: min(52vh, 470px, (50vw - 360px) * 1.25);
+    transform: translateX(-18%) rotate(8deg); transform-origin: 50% 100%;
+    animation: decoLeft .9s cubic-bezier(.2, 1.4, .4, 1) both;
+  }
+  .home-deco.right {
+    right: 0; top: 50%; height: min(40vh, 360px, (50vw - 380px) * 1.6);
+    transform: translateY(-50%);
+    animation: decoRight .9s .15s cubic-bezier(.2, 1.4, .4, 1) both;
+  }
+  .screen.home > :not(.home-deco) { position: relative; z-index: 1; }
 }
-@keyframes mascotPeek { from { transform: translateX(-100%) rotate(8deg); } }
-@media (prefers-reduced-motion: reduce) { .home-mascot { animation: none; } }
+@keyframes decoLeft { from { transform: translateX(-100%) rotate(8deg); } }
+@keyframes decoRight { from { transform: translate(100%, -50%); } }
+@media (prefers-reduced-motion: reduce) { .home-deco { animation: none; } }

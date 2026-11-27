@@ -16,8 +16,11 @@ export default {
   bilingual: true,
   kids: true,
   heroEmoji: '🦄',
-  /** Waving cat that peeks in from the left edge of the home screen (wide screens only). */
-  mascot: 'images/kiddora/mascot.webp',
+  /** Home-screen decorations beside the grid (wide screens only): waving cat on the left, paws reaching in on the right. */
+  decor: [
+    { src: 'images/kiddora/mascot.webp', side: 'left' },
+    { src: 'images/kiddora/paws.webp', side: 'right' },
+  ],
   avatars: ['🦁', '🐼', '🐰', '🦊', '🐯', '🐨', '🐸', '🐵', '🦄', '🐙', '🐥', '🐶'],
   levels: [3, 4, 5, 6].map((n) => ({ value: n, label: m(`Age ${n}`, `Umur ${n}`) })),
   modules: [
