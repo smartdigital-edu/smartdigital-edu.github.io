@@ -8,7 +8,8 @@
  *  - Firebase / Google APIs are never cached here (Firestore has its own offline cache).
  * APP and VERSION are injected at build time; VERSION changes whenever any
  * built file changes, so each deploy gets a fresh cache and old chunks are dropped.
- * Both apps share one origin on GitHub Pages, so caches are prefixed per app.
+ * Both apps (and the staging copies) share one origin on GitHub Pages, so caches
+ * are prefixed per app and stage, and cleanup only touches this prefix + a hash.
  */
 const APP = 'dev';
 const VERSION = 'dev';
@@ -31,7 +32,8 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k.startsWith(PREFIX) && k !== CACHE).map((k) => caches.delete(k))))
+      // Only this app's own old versions: "kiddora-<hash>" must not match "kiddora-staging-<hash>".
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k.startsWith(PREFIX) && /^[0-9a-f]{10}$/.test(k.slice(PREFIX.length))).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });

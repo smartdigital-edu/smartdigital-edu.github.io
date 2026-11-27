@@ -20,12 +20,15 @@
     a.app img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
     a.app strong { display: block; font-size: 1.25rem; color: var(--c); }
     a.app span { font-size: .95rem; color: #555c6b; }
+    .stage { display: none; margin: 0 0 16px; padding: 8px 12px; border-radius: 10px; background: #6b21a8; color: #fff; font-weight: 700; font-size: .9rem; }
+    .is-staging .stage { display: block; }
     footer { margin-top: 28px; font-size: .85rem; color: #7a8090; }
     @media (prefers-reduced-motion: reduce) { a.app { transition: none; } }
   </style>
 </head>
 <body>
   <main>
+    <p class="stage">TEST SITE (staging) · Laman ujian. Data here is separate from the live apps.</p>
     <h1>Smart Digital Edu</h1>
     <p class="lead">Choose an app · Pilih aplikasi</p>
     <div class="apps">
@@ -40,5 +43,6 @@
     </div>
     <footer>Each app works offline and can be added to your home screen.</footer>
   </main>
+  <script>if (location.pathname.includes('/staging/')) document.body.classList.add('is-staging');</script>
 </body>
 </html>
