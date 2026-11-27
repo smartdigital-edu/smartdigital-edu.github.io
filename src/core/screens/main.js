@@ -177,7 +177,7 @@ export async function playScreen({ params, query }) {
   const back = m.direct ? '#/home' : `#/m/${m.id}`;
   const stage = el('div.play-stage');
   const title = tx(a.title);
-  show(screen(title, { back, cls: `play engine-${a.engine}` }, stage, backdrop()));
+  show(screen(title, { back, cls: `play.engine-${a.engine}` }, stage, backdrop()));
   stage.append(loader());
 
   let config;

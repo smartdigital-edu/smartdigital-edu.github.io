@@ -89,6 +89,18 @@ const TRAIN_ART = {
   panels: [[28.84, 35.28, 38.88, 62.83], [42.89, 34.91, 53.27, 64.34], [57.34, 35.28, 67.37, 64.53], [71.85, 35.28, 82.17, 64.34], [86.93, 35.47, 96.5, 64.53]],
 };
 
+/** Letter Space Rescue: astronaut Cici's moon scene; `windows` = the rocket's 3 windows as [cx, cy, w, h] in %. */
+const SPACE_SCENE = {
+  src: 'images/kiddora/space-scene.webp',
+  ratio: '1672 / 941',
+  windows: [[34.2, 52.3, 4.5, 7.9], [34.2, 60.6, 4.5, 7.9], [34.2, 69.1, 4.5, 7.9]],
+};
+/** Letters that look alike, used as tricky stars. */
+const LOOKALIKE = {
+  B: 'DPRE', C: 'GOQ', D: 'BOP', E: 'FB', F: 'EP', G: 'CQO', I: 'LJT', J: 'IL', K: 'XR', L: 'IT', M: 'NW', N: 'MZH',
+  O: 'QCD', P: 'RBF', Q: 'OGC', R: 'PBK', S: 'Z', T: 'IL', U: 'VW', V: 'UY', W: 'MV', X: 'KY', Y: 'VX', Z: 'SN', H: 'NA', A: 'H',
+};
+
 /** Consecutive sequence with gaps (Complete the ABC / Choo-Choo). */
 export function sequence(list, { n = 10, len = 5, gaps = 2, layout = 'row', prompt, distract = 2, art }) {
   return {
@@ -144,11 +156,21 @@ export const B = {
     const { letters } = await load('alphabet');
     const L = letters.map((l) => l.letter);
     return {
-      questions: sample(L, 15).map((c) => ({
-        prompt: both(`Find the letter ${c}`, `Cari huruf ${c}`),
-        answer: c,
-        items: shuffle([c, ...sample(L.filter((x) => x !== c), 5)]).map((x) => ({ id: x, text: x, label: x })),
-      })),
+      questions: sample(L, 15).map((c) => {
+        // 3 copies of the letter among 8 stars; up to 2 look-alike letters make it a real search.
+        const alike = [...(LOOKALIKE[c] || '')].filter((x) => x !== c);
+        const tricky = sample(alike, Math.min(2, alike.length));
+        const rest = sample(L.filter((x) => x !== c && !tricky.includes(x)), 5 - tricky.length);
+        return {
+          target: c,
+          items: [c, c, c, ...tricky, ...rest],
+          title: both('Letter Space Rescue', 'Misi Angkasa Huruf'),
+          prompt: both(`Find all the ${c}s`, `Cari semua huruf ${c}`),
+          say: both(`Find all the letter ${c}!`, `Cari semua huruf ${c}!`),
+          foundText: both('{n} of {total} found', '{n} daripada {total} dijumpai'),
+          scene: SPACE_SCENE,
+        };
+      }),
     };
   },
   async spellIt({ lang }) {

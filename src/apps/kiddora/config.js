@@ -49,7 +49,7 @@ export default {
       activities: [
         act('learn', m('Learn ABC', 'Belajar ABC'), '📚', 'learnCards', B.learnAbc),
         act('match', m('Match the Letters', 'Padankan Huruf'), '🔗', 'matchLines', B.matchLetters),
-        act('find', m('Find the Letter', 'Cari Huruf'), '🔍', 'findIt', B.findLetter),
+        act('find', m('Find the Letter', 'Cari Huruf'), '🔍', 'spaceFind', B.findLetter),
         act('spell', m('Spell it Right', 'Eja dengan Betul'), '✏️', 'spelling', B.spellIt),
         act('trace', m('ABC Tracing', 'Surih ABC'), '✍️', 'tracing', B.abcTracing),
         act('complete', m('Complete the ABC', 'Lengkapkan ABC'), '🧩', 'dragToSlot', B.completeAbc),

@@ -17,6 +17,7 @@ const ENGINES = {
   lessonPage: () => import('./lessonPage.js'),
   quiz: () => import('./quiz.js'),
   shopScene: () => import('./shopScene.js'),
+  spaceFind: () => import('./spaceFind.js'),
 };
 
 export const engineNames = Object.keys(ENGINES);
