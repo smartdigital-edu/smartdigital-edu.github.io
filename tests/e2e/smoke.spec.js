@@ -12,7 +12,7 @@ test('login → pick profile → finish a quiz → score appears', async ({ page
   // Log in
   await page.getByLabel('Email').fill(EMAIL);
   await page.getByLabel('Password').fill(PASSWORD);
-  await page.getByRole('button', { name: 'Log In' }).click();
+  await page.getByRole('button', { name: /^(Log In|Sign in)$/ }).click();
   await expect(page.getByRole('heading', { name: 'Who is Learning?' })).toBeVisible();
 
   // Add and pick a profile

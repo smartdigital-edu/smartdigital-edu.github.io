@@ -7,7 +7,7 @@ test('service worker caches every activity: app works offline after one online v
   await page.goto(BASE);
   await page.getByLabel('Email').fill('demo@kiddora.test');
   await page.getByLabel('Password').fill('demo123');
-  await page.getByRole('button', { name: 'Log In' }).click();
+  await page.getByRole('button', { name: /^(Log In|Sign in)$/ }).click();
   await page.getByRole('button', { name: 'Add Learner' }).click();
   await page.getByLabel('Name').fill('Offline');
   await page.getByRole('button', { name: 'Save' }).click();

@@ -1,6 +1,6 @@
 /** Login, change password and admin (allowlist) screens. */
 import { el, button, screen, toast, confirmDialog, clear } from '../ui.js';
-import { t } from '../i18n/index.js';
+import { t, getLang, setLang } from '../i18n/index.js';
 import { session, authErrorKey } from '../session.js';
 import { whatsappLink } from '../config.js';
 import { show } from '../shell.js';
@@ -17,21 +17,20 @@ export function loginScreen() {
   const submit = button(t('login.submit'), { type: 'submit', icon: '➜' });
   const setMsg = (text, type = 'error') => { msg.textContent = text; msg.className = `form-msg ${type}`; };
 
-  const form = el('form.card.auth-card', {
-    novalidate: true,
-    onsubmit: async (e) => {
-      e.preventDefault();
-      if (!email.value || !pass.value) { setMsg(t('login.wrong')); return; }
-      submit.disabled = true;
-      setMsg('', 'info');
-      try {
-        await session.backend.signIn(email.value, pass.value);
-        // Auth listener (app.js) verifies the allowlist and routes onward.
-      } catch (err) {
-        setMsg(t(authErrorKey(err)));
-      } finally { submit.disabled = false; }
-    },
-  },
+  const onsubmit = async (e) => {
+    e.preventDefault();
+    if (!email.value || !pass.value) { setMsg(t('login.wrong')); return; }
+    submit.disabled = true;
+    setMsg('', 'info');
+    try {
+      await session.backend.signIn(email.value, pass.value);
+      // Auth listener (app.js) verifies the allowlist and routes onward.
+    } catch (err) {
+      setMsg(t(authErrorKey(err)));
+    } finally { submit.disabled = false; }
+  };
+
+  const form = el('form.card.auth-card', { novalidate: true, onsubmit },
   el('div.auth-hero', { 'aria-hidden': 'true' }, session.app.heroEmoji),
   el('h1', { tabindex: '-1' }, t('login.title')),
   el('p.muted', t('login.subtitle')),
@@ -52,11 +51,62 @@ export function loginScreen() {
   el('a.btn.whatsapp', { href: whatsappLink(`Hi ${session.app.name}, I need access.`), target: '_blank', rel: 'noopener' },
     el('span.btn-icon', { 'aria-hidden': 'true' }, '💬'), t('login.contact')));
 
-  // Wide screens: the app's mascot waves on the left and the login card sits on the right.
+  // Apps with a mascot get the split design: illustrated panel on the left, form on the right.
   const mascot = (session.app.decor || []).find((d) => d.side === 'left');
-  show(el('section.screen.auth', {},
-    mascot ? el('div.auth-art', { 'aria-hidden': 'true' }, el('img', { src: mascot.src, alt: '', draggable: 'false' })) : null,
-    form));
+  if (mascot) { show(splitLogin({ mascot, email, pass, submit, msg, setMsg, onsubmit })); return; }
+  show(el('section.screen.auth', {}, form));
+}
+
+/** Split login: brand + mascot panel, and a clean form panel. */
+function splitLogin({ mascot, email, pass, submit, msg, setMsg, onsubmit }) {
+  const app = session.app;
+  submit.className = 'auth-submit';
+  submit.textContent = t('login.signIn');
+  const reveal = el('button.pass-toggle', {
+    type: 'button', 'aria-controls': 'password', 'aria-pressed': 'false',
+    onclick: () => {
+      const showing = pass.type === 'text';
+      pass.type = showing ? 'password' : 'text';
+      reveal.textContent = t(showing ? 'login.show' : 'login.hide');
+      reveal.setAttribute('aria-pressed', String(!showing));
+    },
+  }, t('login.show'));
+  const forgot = el('button.auth-link', {
+    type: 'button',
+    onclick: async () => {
+      if (!email.value.includes('@')) { setMsg(t('login.needEmail')); email.focus(); return; }
+      try {
+        await session.backend.resetPassword(email.value);
+        setMsg(t('login.resetSent', { email: email.value }), 'success');
+      } catch (err) { setMsg(t(authErrorKey(err))); }
+    },
+  }, t('login.forgot'));
+  const sparkle = (cls, ch = '✦') => el(`span.sparkle.${cls}`, { 'aria-hidden': 'true' }, ch);
+  return el('section.screen.auth.auth-split', {},
+    el('div.auth-art', {},
+      el('a.auth-brand', { href: '#/login', 'aria-label': app.name },
+        el('img', { src: `./icons/${app.id}-192.png`, alt: '', width: 48, height: 48 }),
+        el('span', app.name)),
+      el('div.auth-stage', { 'aria-hidden': 'true' },
+        el('span.ring.r1'), el('span.ring.r2'),
+        sparkle('s1'), sparkle('s2', '✧'), sparkle('s3'),
+        el('img.auth-cici', { src: mascot.src, alt: '', draggable: 'false' }))),
+    el('div.auth-panel', {},
+      app.bilingual ? el('button.auth-lang', {
+        type: 'button', 'aria-label': `${getLang() === 'en' ? 'BM' : 'EN'} – ${t('nav.language')}`,
+        onclick: () => setLang(getLang() === 'en' ? 'ms' : 'en'),
+      }, getLang() === 'en' ? 'BM' : 'EN') : null,
+      el('form.auth-form', { novalidate: true, onsubmit },
+        el('h1', { tabindex: '-1' }, t('login.welcomeBack')),
+        el('p.auth-sub', t('login.subtitleKids')),
+        el('label', { for: 'email' }, t('login.email')), email,
+        el('label', { for: 'password' }, t('login.password')),
+        el('div.pass-wrap', {}, pass, reveal),
+        forgot,
+        msg,
+        submit,
+        el('hr'),
+        el('a.auth-link.center', { href: whatsappLink(`Hi ${app.name}, I need access.`), target: '_blank', rel: 'noopener' }, t('login.help')))));
 }
 
 export function passwordScreen() {
