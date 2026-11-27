@@ -1,0 +1,32 @@
+{
+  "name": "bijak-learning-platform",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared platform powering Kiddora and Grammar Hub",
+  "scripts": {
+    "dev": "cross-env APP=kiddora vite",
+    "dev:kiddora": "cross-env APP=kiddora vite",
+    "dev:grammarhub": "cross-env APP=grammarhub vite --port 5174",
+    "build": "npm run build:kiddora && npm run build:grammarhub",
+    "build:kiddora": "cross-env APP=kiddora vite build",
+    "build:grammarhub": "cross-env APP=grammarhub vite build",
+    "preview:kiddora": "cross-env APP=kiddora vite preview --port 4173",
+    "preview:grammarhub": "cross-env APP=grammarhub vite preview --port 4174",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "content:grammar": "node scripts/build-grammar.mjs",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.1.0",
+    "@fontsource/nunito": "^5.1.0",
+    "firebase": "^11.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "cross-env": "^7.0.3",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.0"
+  }
+}
