@@ -59,7 +59,7 @@
   "profiles.manage": "Manage",
   "profiles.done": "Done",
   "profiles.heroTitle": "Who’s learning today?",
-  "profiles.heroSub": "Choose your animal to get started.",
+  "profiles.heroSub": "Choose your name to get started.",
   "home.hello": "Hi, {name}!",
   "home.pick": "What shall we learn today?",
   "home.comingSoon": "Coming soon",
