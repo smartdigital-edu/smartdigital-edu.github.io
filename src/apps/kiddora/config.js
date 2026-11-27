@@ -135,8 +135,8 @@ export default {
       ],
     },
     {
-      id: 'jobs', tint: '#4A8FE6', image: 'images/kiddora/modules/jobs.webp', title: m('Jobs & Profession', 'Pekerjaan'), emoji: '🧑‍🚒', color: '#FFD6A5',
-      activities: [act('learn', m('Jobs & Profession', 'Pekerjaan'), '📚', 'learnCards', B.jobs)],
+      id: 'jobs', tint: '#4A8FE6', image: 'images/kiddora/modules/jobs.webp', title: m('Jobs & Professions', 'Pekerjaan'), emoji: '🧑‍🚒', color: '#FFD6A5',
+      activities: [act('learn', m('Jobs & Professions', 'Pekerjaan'), '📚', 'learnCards', B.jobs)],
       direct: 'learn',
     },
     {

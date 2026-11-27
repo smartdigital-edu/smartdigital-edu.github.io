@@ -64,7 +64,8 @@ export function runQuestions(root, config, render, api) {
     const end = (res, result) => {
       if (finished) return;
       finished = true;
-      const label = res.answerText || q.target || q.item || promptText;
+      const plain = typeof q.answer === 'string' ? q.answer : null; // letter/number ids (not option indexes)
+      const label = res.answerText || q.target || plain || q.item || promptText;
       items.push({ label: String(api.tx(label) ?? '').slice(0, 60), result });
       correct += res.correct;
       total += res.total;

@@ -33,6 +33,14 @@ const T = {
   price: { en: 'Price', ms: 'Harga' },
 };
 
+/** Short skill label for the parent's progress page: "RM5", "20 sen", "RM1 vs 50 sen". */
+function skillOf(q) {
+  if (q.type === 'pay') return formatAmount(q.price);
+  const vals = q.options.map((o) => o.sen ?? o.money.reduce((a, b) => a + b, 0));
+  if (q.options.length === 2 && !q.show) return vals.map(formatAmount).join(' vs '); // which is more?
+  return formatAmount(vals[q.answer]);
+}
+
 const moneyNode = (sen, cls = '') => el(`span.money${cls}`, { html: moneySVG(sen) });
 
 export default function shopScene(root, config, api) {
@@ -104,7 +112,7 @@ export default function shopScene(root, config, api) {
   function done(firstTry, message) {
     if (firstTry) correct += 1;
     const q = questions[index];
-    items.push({ label: String(q.type === 'pay' ? `${tx(q.item)} ${formatAmount(q.price)}` : tx(q.say)).slice(0, 60), result: firstTry ? 'first' : 'retry' });
+    items.push({ label: skillOf(q), result: firstTry ? 'first' : 'retry' });
     mood('happy');
     api.sfx.correct();
     say(message);
