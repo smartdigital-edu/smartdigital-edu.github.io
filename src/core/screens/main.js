@@ -36,7 +36,7 @@ function swallowClicks(ms) {
   setTimeout(() => document.removeEventListener('click', stop, true), ms);
 }
 
-/** A side decoration; one with `greet` speaks in a bubble on arrival (once per session) and when tapped. */
+/** A side decoration; one with `greet` says it in a bubble on arrival, and says `tap` (or `greet`) when tapped. */
 function decoration(d) {
   const img = el(`img.home-deco.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' });
   if (!d.greet) return img;
@@ -47,11 +47,11 @@ function decoration(d) {
   let revealTimers = [];
   let cancelWait = null;
   let lastGreet = 0;
-  const greet = () => {
+  const greet = (line = d.greet) => {
     cancelWait?.(); cancelWait = null;
     lastGreet = Date.now();
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
-    const text = tx(d.greet);
+    const text = tx(line.text);
     // Words start blurred and turn sharp as Cici says them.
     const words = text.split(' ').map((w) => el('span.w', w));
     bubble.replaceChildren(...words.flatMap((w, i) => (i ? [' ', w] : [w])));
@@ -59,7 +59,7 @@ function decoration(d) {
     const revealAll = () => words.forEach((w) => w.classList.add('said'));
     const timers = [];
     const follow = (kind) => {
-      const times = d.greetTimes?.[getLang()];
+      const times = line.times?.[getLang()];
       // Recorded voice: exact word times. Device voice: an even pace.
       const at = kind === 'audio' && times?.length === words.length ? times : words.map((_, i) => i * 330);
       words.forEach((w, i) => timers.push(setTimeout(() => w.classList.add('said'), Math.max(0, at[i] - 60))));
@@ -74,7 +74,7 @@ function decoration(d) {
     clearTimeout(revealTimer);
     revealTimers.forEach(clearTimeout);
     revealTimers = timers;
-    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: d.greetAudio && tx(d.greetAudio), onStart: follow })
+    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5, audioSrc: line.audio && tx(line.audio), onStart: follow })
       .then((result) => {
         if (run !== greetRun) return;
         if (result === 'blocked') {
@@ -101,14 +101,14 @@ function decoration(d) {
         hideTimer = setTimeout(() => bubble.classList.add('gone'), 3000);
       }), 550);
   };
-  img.addEventListener('click', () => { if (Date.now() - lastGreet > 600) greet(); });
+  img.addEventListener('click', () => { if (Date.now() - lastGreet > 600) greet(d.tap || d.greet); });
   const who = session.profile?.id ?? session.profile?.name;
   // Greet when a learner was just picked, or on the first home visit of the session
   // (not every time the child comes back from an activity).
   if (session.greetOnHome || greetedProfile !== who) {
     session.greetOnHome = false;
     greetedProfile = who;
-    setTimeout(greet, 900); // after the slide-in
+    setTimeout(() => greet(), 900); // after the slide-in
   }
   return el('div.deco-wrap', {}, img, bubble);
 }
