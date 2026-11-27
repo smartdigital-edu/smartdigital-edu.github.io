@@ -176,6 +176,21 @@ form .btn[type=submit] { width: 100%; margin-top: 1rem; }
 .auth-hero { font-size: 4rem; text-align: center; font-family: var(--emoji); }
 .auth-card h1 { text-align: center; }
 .auth-card .muted { text-align: center; }
+.auth-art { display: none; }
+@media (min-width: 900px) {
+  .screen.auth:has(.auth-art) {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 3rem; align-items: center;
+    max-width: 1040px; margin-inline: auto;
+  }
+  .screen.auth:has(.auth-art) .auth-card { margin-inline: 0; width: 100%; }
+  .auth-art { display: grid; place-items: center; }
+  .auth-art img {
+    width: auto; height: min(62vh, 520px); max-width: 100%; object-fit: contain;
+    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, .4)); animation: authWave 2.4s ease-in-out infinite; transform-origin: 50% 95%;
+  }
+}
+@keyframes authWave { 0%, 100% { rotate: 0deg; } 50% { rotate: -3deg; translate: 0 -1.5%; } }
+@media (prefers-reduced-motion: reduce) { .auth-art img { animation: none; } }
 
 /* ---------- dialogs / toast ---------- */
 .overlay { position: fixed; inset: 0; z-index: 50; background: rgba(20, 15, 40, .45); display: grid; place-items: center; padding: 1rem; animation: fadeIn .15s; }

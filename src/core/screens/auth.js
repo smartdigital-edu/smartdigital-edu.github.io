@@ -52,7 +52,11 @@ export function loginScreen() {
   el('a.btn.whatsapp', { href: whatsappLink(`Hi ${session.app.name}, I need access.`), target: '_blank', rel: 'noopener' },
     el('span.btn-icon', { 'aria-hidden': 'true' }, '💬'), t('login.contact')));
 
-  show(el('section.screen.auth', {}, form));
+  // Wide screens: the app's mascot waves on the left and the login card sits on the right.
+  const mascot = (session.app.decor || []).find((d) => d.side === 'left');
+  show(el('section.screen.auth', {},
+    mascot ? el('div.auth-art', { 'aria-hidden': 'true' }, el('img', { src: mascot.src, alt: '', draggable: 'false' })) : null,
+    form));
 }
 
 export function passwordScreen() {
