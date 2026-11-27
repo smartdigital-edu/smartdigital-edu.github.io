@@ -106,22 +106,25 @@ The banks were generated from the compact tables in `scripts/build-grammar.mjs` 
 
 ## 4. Deploy to GitHub Pages
 
-The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs unit + e2e tests, builds, and deploys on every push to `main`.
+Live at **https://smartdigital-edu.github.io/** (repo `smartdigital-edu/smartdigital-edu.github.io`):
 
-**Option A – one repository per app (simplest).** Push this code to both `KIDDORA` and `Grammarhub.`:
+| Path | Content |
+|---|---|
+| `/` | landing page ([`site/index.html`](site/index.html)) |
+| `/kiddora/` | Kiddora |
+| `/grammarhub/` | Grammar Hub |
 
-1. In each repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. **Settings → Secrets and variables → Actions → Secrets**: add the six `VITE_FIREBASE_*` values.
-3. **…→ Variables**: add `VITE_WHATSAPP_NUMBER`, and in the Grammar Hub repo add `APP` = `grammarhub` (Kiddora is the default).
-4. Push to `main` (or **Actions → Test & Deploy → Run workflow**).
+The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs unit + e2e tests, builds both apps, assembles the site and deploys it on every push to `main` (or **Actions → Test & Deploy → Run workflow**).
 
-**Option B – single source repo deploys both.** Keep the code only in `KIDDORA` and additionally set:
+One-time repository setup (already done for `smartdigital-edu`):
 
-- Variables: `SECOND_APP` = `grammarhub`, `SECOND_REPO` = `<owner>/Grammarhub.`
-- Secret: `SECOND_REPO_TOKEN` = a fine-grained personal access token with **Contents: Read and write** on the Grammar Hub repo.
-- In the Grammar Hub repo: **Settings → Pages → Source: Deploy from a branch → `gh-pages` / root**.
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. **Settings → Secrets and variables → Actions → Secrets**: the six `VITE_FIREBASE_*` values from `.env`
+   (`gh secret set -f .env` sets them all; the deploy fails rather than shipping demo mode if they are missing).
+3. **…→ Variables**: `VITE_WHATSAPP_NUMBER` (optional).
+4. Firebase console → **Authentication → Settings → Authorised domains**: `smartdigital-edu.github.io`.
 
-All asset URLs are relative (`base: './'`) and routing is hash-based, so the apps work under any sub-path such as `/KIDDORA/` or `/Grammarhub./`.
+All asset URLs are relative (`base: './'`) and routing is hash-based, so each app works under any sub-path. Both apps share one origin, so a login carries over between them; their service-worker caches are kept separate per app.
 
 ## 5. Project layout
 

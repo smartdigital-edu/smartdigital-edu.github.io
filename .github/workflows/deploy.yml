@@ -1,11 +1,11 @@
 # Test, build and deploy to GitHub Pages.
 #
-# This repository deploys ONE app to its own GitHub Pages site, chosen by the
-# repository variable APP (kiddora | grammarhub; default kiddora).
-# Optionally it also builds the OTHER app and pushes it to a second repository's
-# gh-pages branch, so one codebase can power both sites:
-#   repo variables : SECOND_APP=grammarhub   SECOND_REPO=owner/Grammarhub.
-#   repo secret    : SECOND_REPO_TOKEN  (fine-grained PAT with Contents: read & write on SECOND_REPO)
+# One repository, one Pages site, both apps:
+#   /            -> site/index.html (landing page linking to both apps)
+#   /kiddora/    -> dist/kiddora
+#   /grammarhub/ -> dist/grammarhub
+# Firebase config comes from repository secrets (VITE_FIREBASE_*), the
+# WhatsApp number from the repository variable VITE_WHATSAPP_NUMBER.
 name: Test & Deploy
 
 on:
@@ -21,15 +21,6 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
-
-env:
-  VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
-  VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
-  VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
-  VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
-  VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
-  VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
-  VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
 
 jobs:
   test:
@@ -53,35 +44,30 @@ jobs:
       name: github-pages
       url: ${{ steps.pages.outputs.page_url }}
     env:
-      APP: ${{ vars.APP || 'kiddora' }}
+      VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+      VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+      VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+      VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+      VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+      VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+      VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - run: npm ci
-      - run: npm run build:${{ env.APP }}
+      - name: Fail if Firebase secrets are missing (would silently ship demo mode)
+        run: test -n "$VITE_FIREBASE_API_KEY" && test -n "$VITE_FIREBASE_PROJECT_ID"
+      - run: npm run build
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp site/index.html _site/
+          cp -r dist/kiddora _site/kiddora
+          cp -r dist/grammarhub _site/grammarhub
+          touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: { path: dist/${{ env.APP }} }
+        with: { path: _site }
       - id: pages
         uses: actions/deploy-pages@v4
-
-  deploy-second:
-    needs: test
-    if: ${{ vars.SECOND_APP != '' && vars.SECOND_REPO != '' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - run: npm run build:${{ vars.SECOND_APP }}
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.SECOND_REPO_TOKEN }}
-          external_repository: ${{ vars.SECOND_REPO }}
-          publish_branch: gh-pages
-          publish_dir: dist/${{ vars.SECOND_APP }}
-          force_orphan: true

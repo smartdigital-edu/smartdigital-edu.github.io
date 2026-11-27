@@ -8,3 +8,4 @@ playwright-report
 .claude/
 dist-e2e
 firebase-debug.log
+_site
