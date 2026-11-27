@@ -4,8 +4,8 @@
 import asyncio, json, sys, edge_tts
 out_audio, out_js = sys.argv[1], sys.argv[2]
 LINES = {
-    'en': ('en-US-AnaNeural', '-4%', '+15Hz', "Hi!! My name is Cici! Welcome to Kiddora!! Ready to learn and play?! Let's go!!"),
-    'ms': ('ms-MY-YasminNeural', '+2%', '+40Hz', "Hai! Nama saya Cici! Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!"),
+    'en': ('en-US-AnaNeural', '+6%', '+15Hz', "Hi!! My name is Cici! Welcome to Kiddora!! Ready to learn and play?! Let's go!!"),
+    'ms': ('ms-MY-YasminNeural', '+10%', '+40Hz', "Hai! Nama saya Cici! Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!"),
 }
 async def main():
     times = {}
