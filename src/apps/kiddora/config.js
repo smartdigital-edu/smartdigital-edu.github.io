@@ -16,6 +16,8 @@ export default {
   bilingual: true,
   kids: true,
   heroEmoji: '🦄',
+  /** Waving cat that peeks in from the left edge of the home screen (wide screens only). */
+  mascot: 'images/kiddora/mascot.webp',
   avatars: ['🦁', '🐼', '🐰', '🦊', '🐯', '🐨', '🐸', '🐵', '🦄', '🐙', '🐥', '🐶'],
   levels: [3, 4, 5, 6].map((n) => ({ value: n, label: m(`Age ${n}`, `Umur ${n}`) })),
   modules: [

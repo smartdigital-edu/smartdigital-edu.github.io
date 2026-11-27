@@ -23,7 +23,8 @@ export function homeScreen() {
         el('h1', { tabindex: '-1' }, t('home.hello', { name: p.name })),
         el('p.muted', t('home.pick'))),
       el('a.btn.secondary.small', { href: '#/profiles' }, el('span.btn-icon', { 'aria-hidden': 'true' }, '🔄'), t('profiles.switch'))),
-    el('ul.module-grid', {}, app.modules.map((m) => el('li', {}, moduleTile(m, app))))));
+    el('ul.module-grid', {}, app.modules.map((m) => el('li', {}, moduleTile(m, app)))),
+    app.mascot ? el('img.home-mascot', { src: app.mascot, alt: '', 'aria-hidden': 'true', draggable: 'false' }) : null));
 }
 
 /** Home tile: a picture tile when the module has an image, else the emoji card. */
