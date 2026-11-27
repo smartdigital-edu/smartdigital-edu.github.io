@@ -595,7 +595,6 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
   .screen.home > :not(.home-deco, .deco-wrap) { position: relative; z-index: 1; }
   .home-deco.left { transition: translate .25s cubic-bezier(.3, 1.6, .5, 1); }
   .home-deco.cici-hop { translate: 0 -6%; }
-  .home-deco.left.waiting { animation: decoLeft .9s cubic-bezier(.2, 1.4, .4, 1) both, ciciWiggle 1.6s 1s ease-in-out infinite; }
   .deco-bubble.left {
     display: block; position: fixed; z-index: 2; left: 14px; bottom: calc(var(--cici-h) * 0.97 - 3vh + 14px);
     width: min(250px, 50vw - 380px); box-sizing: border-box; padding: .7rem .95rem;
@@ -613,8 +612,24 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
   .deco-bubble.on { opacity: 1; transform: none; }
   .deco-bubble.gone { opacity: 0; transform: scale(.9); }
 }
-@keyframes ciciWiggle { 0%, 100% { rotate: 0deg; } 50% { rotate: -4deg; } }
 @keyframes wordPop { 40% { transform: translateY(-3px) scale(1.08); } }
 @keyframes decoLeft { from { transform: translateX(-100%) rotate(8deg); } }
 @keyframes decoRight { from { transform: translate(100%, -50%); } }
 @media (prefers-reduced-motion: reduce) { .home-deco { animation: none; } }
+
+/* "Let's play!" start card: shown only when the browser blocks sound until the first tap. */
+.tap-start {
+  position: fixed; inset: 0; z-index: 60; display: grid; place-content: center; justify-items: center; gap: 1.2rem;
+  background: rgba(8, 22, 56, .78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  cursor: pointer; animation: tapStartIn .35s ease both;
+}
+.tap-start-cici { height: min(42vh, 340px); width: auto; filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .4)); animation: ciciWave 1.4s ease-in-out infinite; transform-origin: 50% 90%; }
+.tap-start-btn {
+  font-size: clamp(1.4rem, 3.5vw, 2rem); padding: .8rem 2.4rem; border-radius: 999px; border: 0;
+  background: linear-gradient(#ffe48f, #ffc93c); color: #0e2457; box-shadow: 0 6px 0 #d99a1e, 0 14px 28px rgba(0, 0, 0, .35);
+  animation: tapPulse 1.4s ease-in-out infinite;
+}
+@keyframes tapStartIn { from { opacity: 0; } }
+@keyframes ciciWave { 0%, 100% { rotate: 0deg; } 50% { rotate: -5deg; translate: 0 -2%; } }
+@keyframes tapPulse { 0%, 100% { scale: 1; } 50% { scale: 1.07; } }
+@media (prefers-reduced-motion: reduce) { .tap-start-cici, .tap-start-btn { animation: none; } }

@@ -42,6 +42,7 @@ function decoration(d) {
   let lastGreet = 0;
   const greet = () => {
     cancelWait?.(); cancelWait = null;
+    document.querySelector('.tap-start')?.remove();
     lastGreet = Date.now();
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
     const text = tx(d.greet);
@@ -71,9 +72,15 @@ function decoration(d) {
       .then((result) => {
         if (run !== greetRun) return;
         if (result === 'blocked') {
-          // The browser wants a tap first: keep the bubble up and greet on the first touch anywhere.
-          img.classList.add('waiting');
-          cancelWait = onNextTap(() => { img.classList.remove('waiting'); if (img.isConnected) greet(); });
+          // The browser allows sound only after a tap: show a big "Let's play!" start card;
+          // one tap anywhere and Cici speaks straight away.
+          bubble.classList.remove('on');
+          const card = el('div.tap-start', { role: 'dialog', 'aria-label': t('home.tapStart') },
+            el('img.tap-start-cici', { src: d.src, alt: '', draggable: 'false' }),
+            el('button.btn.tap-start-btn', { type: 'button' }, el('span.btn-icon', { 'aria-hidden': 'true' }, '▶'), t('home.tapStart')));
+          document.body.append(card);
+          card.querySelector('button').focus();
+          cancelWait = onNextTap(() => { card.remove(); if (img.isConnected) greet(); });
           return;
         }
         revealTimer = setTimeout(revealAll, 400);

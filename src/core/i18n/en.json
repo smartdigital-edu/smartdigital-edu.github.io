@@ -52,6 +52,7 @@
   "home.hello": "Hi, {name}!",
   "home.pick": "What shall we learn today?",
   "home.comingSoon": "Coming soon",
+  "home.tapStart": "Let's play!",
   "home.activities": "{n} activities",
   "scores.title": "Scores",
   "scores.no": "No.",
