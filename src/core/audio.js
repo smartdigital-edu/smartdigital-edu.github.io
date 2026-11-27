@@ -38,17 +38,35 @@ function pickVoice(lang) {
     || null;
 }
 
-let speakToken = 0;        // bumps on every stop, so stale retries give up
+/*
+ * Speech queue. Chrome (macOS especially) jams – reports speaking=true but
+ * stays silent – if cancel() hits an utterance that is still starting up, and
+ * often drops a speak() issued right after cancel(). So:
+ *  - never cancel an utterance before its 'start' event; a newer request waits
+ *    for that start (usually < 0.5 s) and then replaces it
+ *  - wait 150 ms after a cancel before speaking again
+ *  - speak synchronously when nothing is playing (iOS needs the tap's call stack)
+ *  - keep a reference to the utterance (Chrome can garbage-collect it mid-speech)
+ */
+let cur = null;      // { u, started, done, resolve, killOnStart }
+let queued = null;   // newest waiting request { text, lang, rate, resolve }
 let lastCancelAt = 0;
-let currentUtterance = null; // keep a reference: Chrome can garbage-collect it mid-speech
+let pumpTimer = null;
+
+function cancelCurrent() {
+  if (!cur) return;
+  const c = cur;
+  cur = null;
+  if (!c.done) { c.done = true; c.resolve(); }
+  // Record the time BEFORE cancel(): it can fire onerror synchronously, re-entering pump().
+  if (c.started) { lastCancelAt = Date.now(); window.speechSynthesis.cancel(); }
+  else c.killOnStart = true; // cancel the moment it starts, never before
+}
 
 export function stopSpeaking() {
-  speakToken += 1;
-  if ('speechSynthesis' in window) {
-    const s = window.speechSynthesis;
-    if (s.speaking || s.pending) { s.cancel(); lastCancelAt = Date.now(); }
-  }
-  currentUtterance = null;
+  if (queued) { queued.resolve(); queued = null; }
+  clearTimeout(pumpTimer);
+  if ('speechSynthesis' in window) cancelCurrent();
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
 }
 
@@ -57,12 +75,13 @@ let currentAudio = null;
 /**
  * Speak text aloud. If `audioSrc` is given (e.g. "audio/apple.mp3" in /public),
  * the MP3 is played instead and speech is used only if the file fails.
- * Resolves when finished (or immediately if sound is off).
+ * Resolves when finished, replaced, or immediately if sound is off.
  */
 export function speak(text, { lang = getLang(), audioSrc, rate = 0.85 } = {}) {
   if (!enabled || !text) return Promise.resolve();
-  stopSpeaking();
+  if (currentAudio) { currentAudio.pause(); currentAudio = null; }
   if (audioSrc) {
+    stopSpeaking();
     return new Promise((resolve) => {
       const a = new Audio(audioSrc);
       currentAudio = a;
@@ -74,57 +93,53 @@ export function speak(text, { lang = getLang(), audioSrc, rate = 0.85 } = {}) {
   return tts(text, lang, rate);
 }
 
-/*
- * Chrome quirks handled here:
- *  - speak() right after cancel() is often dropped silently, so wait a moment
- *    after a cancel (only then: iOS needs speak() inside the tap's call stack).
- *  - the engine can get stuck "speaking" without sound: resume() before
- *    speaking, and if nothing has started after a second, reset and retry once.
- */
 function tts(text, lang, rate) {
   return new Promise((resolve) => {
     if (!('speechSynthesis' in window)) return resolve();
-    const s = window.speechSynthesis;
-    const token = speakToken;
-    let done = false;
-    const finish = () => { if (!done) { done = true; resolve(); } };
-
-    const attempt = (canRetry) => {
-      if (token !== speakToken || done) return finish();
-      if (!voices.length) loadVoices();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = speechLang(lang);
-      const v = pickVoice(u.lang);
-      if (v) u.voice = v;
-      u.rate = rate;
-      u.pitch = 1.05;
-      let started = false;
-      u.onstart = () => { started = true; };
-      u.onend = () => { if (currentUtterance === u) finish(); };
-      u.onerror = (e) => {
-        if (currentUtterance !== u) return; // an abandoned attempt
-        if (canRetry && e.error !== 'interrupted' && e.error !== 'canceled' && e.error !== 'not-allowed') retry();
-        else finish();
-      };
-      const retry = () => {
-        currentUtterance = null;
-        s.cancel();
-        setTimeout(() => attempt(false), 150);
-      };
-      currentUtterance = u;
-      if (s.paused) s.resume();
-      s.speak(u);
-      setTimeout(() => {
-        if (!started && !done && currentUtterance === u) { if (canRetry) retry(); else finish(); }
-      }, 1200);
-    };
-
-    const wait = 150 - (Date.now() - lastCancelAt);
-    if (wait > 0) setTimeout(() => attempt(true), wait);
-    else attempt(true);
-    // Safety: some browsers never fire onend.
-    setTimeout(finish, 1500 + Math.min(8000, 900 + text.length * 90));
+    if (queued) queued.resolve(); // superseded before it even started
+    queued = { text, lang, rate, resolve };
+    pump();
   });
+}
+
+function pump() {
+  clearTimeout(pumpTimer);
+  if (!queued) return;
+  const s = window.speechSynthesis;
+  if (cur && !cur.done && !cur.started) return; // wait for its start (see above)
+  if (cur) cancelCurrent();
+  const wait = 150 - (Date.now() - lastCancelAt);
+  if (wait > 0) { pumpTimer = setTimeout(pump, wait); return; }
+
+  const { text, lang, rate, resolve } = queued;
+  queued = null;
+  if (!voices.length) loadVoices();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = speechLang(lang);
+  const v = pickVoice(u.lang);
+  if (v) u.voice = v;
+  u.rate = rate;
+  u.pitch = 1.05;
+  const c = { u, started: false, done: false, resolve, killOnStart: false };
+  cur = c;
+  const finish = () => {
+    if (!c.done) { c.done = true; resolve(); }
+    if (cur === c) cur = null;
+    pump();
+  };
+  u.onstart = () => {
+    c.started = true;
+    if (c.killOnStart) { lastCancelAt = Date.now(); s.cancel(); return; }
+    pump(); // a newer request may have been waiting for this start
+  };
+  u.onend = finish;
+  u.onerror = finish;
+  if (s.paused) s.resume();
+  s.speak(u);
+  // If it never starts, stop waiting on it (but don't cancel: that jams Chrome).
+  setTimeout(() => { if (!c.started) finish(); }, 2500);
+  // Safety: some browsers never fire onend.
+  setTimeout(finish, 2500 + Math.min(8000, 900 + text.length * 90));
 }
 
 /* ---------------- feedback sounds ---------------- */
