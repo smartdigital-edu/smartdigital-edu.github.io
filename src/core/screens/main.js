@@ -51,9 +51,20 @@ function decoration(d) {
     cancelWait?.(); cancelWait = null;
     lastGreet = Date.now();
     if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
-    const text = tx(d.greet);
+    // "{name}" becomes the learner's name. The recording doesn't say it, so it lights up with the word before it.
+    const name = session.profile?.name?.trim();
+    const tokens = [];
+    const timedIndex = []; // for each shown word: which recorded word it belongs to
+    let k = -1;
+    for (const w of tx(d.greet).split(' ')) {
+      if (!w.includes('{name}')) { tokens.push(w); timedIndex.push(++k); continue; }
+      if (name) { tokens.push(w.replace('{name}', name)); timedIndex.push(Math.max(k, 0)); }
+      else if (tokens.length) tokens[tokens.length - 1] += w.replace('{name}', ''); // "Hi {name}!" -> "Hi!"
+    }
+    const unnamed = k + 1;
+    const text = tokens.join(' ');
     // Words start blurred and turn sharp as Cici says them.
-    const words = text.split(' ').map((w) => el('span.w', w));
+    const words = tokens.map((w) => el('span.w', w));
     bubble.replaceChildren(...words.flatMap((w, i) => (i ? [' ', w] : [w])));
     bubble.setAttribute('aria-label', text);
     const revealAll = () => words.forEach((w) => w.classList.add('said'));
@@ -61,7 +72,7 @@ function decoration(d) {
     const follow = (kind) => {
       const times = d.greetTimes?.[getLang()];
       // Recorded voice: exact word times. Device voice: an even pace.
-      const at = kind === 'audio' && times?.length === words.length ? times : words.map((_, i) => i * 330);
+      const at = kind === 'audio' && times?.length === unnamed ? timedIndex.map((k) => times[k]) : words.map((_, i) => i * 330);
       words.forEach((w, i) => timers.push(setTimeout(() => w.classList.add('said'), Math.max(0, at[i] - 60))));
     };
     if (!isSoundOn()) revealAll();

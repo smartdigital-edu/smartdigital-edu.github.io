@@ -24,8 +24,9 @@ export default {
     {
       src: 'images/kiddora/mascot.webp', side: 'left',
       // Cici greets the child once per session (and again when tapped).
-      greet: m('Hi! My name is Cici. Welcome to Kiddora! Ready to learn and play? Let\'s go!',
-        'Hai! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!'),
+      // {name} = the learner's name (shown in the bubble; the recording just says "Hi!").
+      greet: m('Hi {name}! My name is Cici. Welcome to Kiddora! Ready to learn and play? Let\'s go!',
+        'Hai {name}! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!'),
       // Recorded natural voices (EN: Ana, BM: Yasmin), same on every device; speech is the fallback.
       greetAudio: m('audio/kiddora/cici-hello-en.mp3', 'audio/kiddora/cici-hello-ms.mp3'),
       greetTimes: ciciTimes, // when each word is spoken, so the bubble follows her voice
