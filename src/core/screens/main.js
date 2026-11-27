@@ -39,11 +39,12 @@ function moduleTile(m, app) {
     ];
     if (m.comingSoon) {
       return el('button.module-card.pic.soon', {
-        type: 'button', 'aria-label': `${tx(m.title)}, ${t('home.comingSoon')}`,
+        type: 'button', style: { '--tint': m.tint || m.color }, 'aria-label': `${tx(m.title)}, ${t('home.comingSoon')}`,
         onclick: (e) => { sfx.pop(); animate(e.currentTarget, 'shake', 500); speak(`${tx(m.title)}. ${t('home.comingSoon')}!`); },
       }, ...body);
     }
     return el('a.module-card.pic', {
+      style: { '--tint': m.tint || m.color },
       href: m.direct ? `#/play/${m.id}/${m.direct}` : `#/m/${m.id}`,
       'aria-label': sub ? `${tx(m.title)}, ${sub}` : tx(m.title),
       onclick: () => { sfx.tap(); if (app.bilingual) speak(tx(m.title)); },

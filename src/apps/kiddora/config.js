@@ -20,7 +20,7 @@ export default {
   levels: [3, 4, 5, 6].map((n) => ({ value: n, label: m(`Age ${n}`, `Umur ${n}`) })),
   modules: [
     {
-      id: 'abc', image: 'images/kiddora/modules/abc.webp', title: m('ABC', 'ABC'), emoji: '🔤', color: '#FFD166',
+      id: 'abc', tint: '#F25F5C', image: 'images/kiddora/modules/abc.webp', title: m('ABC', 'ABC'), emoji: '🔤', color: '#FFD166',
       activities: [
         act('learn', m('Learn ABC', 'Belajar ABC'), '📚', 'learnCards', B.learnAbc),
         act('match', m('Match the Letters', 'Padankan Huruf'), '🔗', 'matchLines', B.matchLetters),
@@ -33,7 +33,7 @@ export default {
       ],
     },
     {
-      id: 'numbers', image: 'images/kiddora/modules/numbers.webp', title: m('123', '123'), emoji: '🔢', color: '#8EECF5',
+      id: 'numbers', tint: '#FBB92F', image: 'images/kiddora/modules/numbers.webp', title: m('123', '123'), emoji: '🔢', color: '#8EECF5',
       activities: [
         act('learn', m('Learn 123', 'Belajar 123'), '📚', 'learnCards', B.learn123),
         act('trace', m('123 Tracing', 'Surih 123'), '✍️', 'tracing', B.tracing123),
@@ -47,7 +47,7 @@ export default {
       ],
     },
     {
-      id: 'colour', image: 'images/kiddora/modules/colour.webp', title: m('Colour', 'Warna'), emoji: '🌈', color: '#FFADAD',
+      id: 'colour', tint: '#4AA8F0', image: 'images/kiddora/modules/colour.webp', title: m('Colour', 'Warna'), emoji: '🌈', color: '#FFADAD',
       activities: [
         act('learn', m('Learn Colour', 'Belajar Warna'), '📚', 'learnCards', B.learnColour),
         act('balloon', m('Pop the Balloon', 'Pecahkan Belon'), '🎈', 'popBalloon', B.popBalloon),
@@ -59,7 +59,7 @@ export default {
       ],
     },
     {
-      id: 'body', image: 'images/kiddora/modules/body.webp', title: m('Body Parts', 'Anggota Badan'), emoji: '🧒', color: '#FFC6FF',
+      id: 'body', tint: '#9B6BEA', image: 'images/kiddora/modules/body.webp', title: m('Body Parts', 'Anggota Badan'), emoji: '🧒', color: '#FFC6FF',
       activities: [
         act('learn', m('Learn', 'Belajar'), '📚', 'learnCards', B.learnBody),
         act('choose', m('Choose', 'Pilih'), '👆', 'multipleChoice', B.chooseBody),
@@ -68,7 +68,7 @@ export default {
       ],
     },
     {
-      id: 'animals', image: 'images/kiddora/modules/animals.webp', title: m('Animals', 'Haiwan'), emoji: '🐘', color: '#CAFFBF',
+      id: 'animals', tint: '#6CBF3A', image: 'images/kiddora/modules/animals.webp', title: m('Animals', 'Haiwan'), emoji: '🐘', color: '#CAFFBF',
       activities: [
         act('learn', m('Learn', 'Belajar'), '📚', 'learnCards', B.learnAnimals),
         act('match', m('Match', 'Padankan'), '🔗', 'matchLines', B.matchAnimals),
@@ -77,14 +77,14 @@ export default {
       ],
     },
     {
-      id: 'food', image: 'images/kiddora/modules/food.webp', title: m('Fruit & Vegetable', 'Buah & Sayur'), emoji: '🍎', color: '#FDFFB6',
+      id: 'food', tint: '#F06292', image: 'images/kiddora/modules/food.webp', title: m('Fruit & Vegetable', 'Buah & Sayur'), emoji: '🍎', color: '#FDFFB6',
       activities: [
         act('fruit', m('Learn Fruit', 'Belajar Buah'), '📚', 'learnCards', B.learnFruit),
         act('sort', m('Fruit or Vegetable', 'Buah atau Sayur'), '🧺', 'sortBuckets', B.fruitOrVeg),
       ],
     },
     {
-      id: 'transport', image: 'images/kiddora/modules/transport.webp', title: m('Transport', 'Pengangkutan'), emoji: '🚗', color: '#A0C4FF',
+      id: 'transport', tint: '#3CC6E0', image: 'images/kiddora/modules/transport.webp', title: m('Transport', 'Pengangkutan'), emoji: '🚗', color: '#A0C4FF',
       activities: [
         act('learn', m('Learn', 'Belajar'), '📚', 'learnCards', B.learnTransport),
         act('sort', m('Sort the Transport', 'Asingkan Kenderaan'), '🗂️', 'sortBuckets', B.sortTransport),
@@ -92,7 +92,7 @@ export default {
       ],
     },
     {
-      id: 'shapes', image: 'images/kiddora/modules/shapes.webp', title: m('Shapes', 'Bentuk'), emoji: '🔺', color: '#BDB2FF',
+      id: 'shapes', tint: '#F6B52C', image: 'images/kiddora/modules/shapes.webp', title: m('Shapes', 'Bentuk'), emoji: '🔺', color: '#BDB2FF',
       activities: [
         act('learn', m('Learn', 'Belajar'), '📚', 'learnCards', B.learnShapes),
         act('match', m('Match', 'Padankan'), '🔗', 'matchLines', B.matchShapes),
@@ -101,7 +101,7 @@ export default {
       ],
     },
     {
-      id: 'money', image: 'images/kiddora/modules/money.webp', title: m('Money', 'Duit'), emoji: '💰', color: '#FFE08A',
+      id: 'money', tint: '#F2705D', image: 'images/kiddora/modules/money.webp', title: m('Money', 'Duit'), emoji: '💰', color: '#FFE08A',
       activities: [
         act('know', m('Know Your Money', 'Kenali Duit'), '💵', 'shopScene', M.know),
         act('more', m('Which Is More?', 'Mana Lebih Banyak?'), '⚖️', 'shopScene', M.more),
@@ -110,19 +110,19 @@ export default {
       ],
     },
     {
-      id: 'jobs', image: 'images/kiddora/modules/jobs.webp', title: m('Jobs & Profession', 'Pekerjaan'), emoji: '🧑‍🚒', color: '#FFD6A5',
+      id: 'jobs', tint: '#4A8FE6', image: 'images/kiddora/modules/jobs.webp', title: m('Jobs & Profession', 'Pekerjaan'), emoji: '🧑‍🚒', color: '#FFD6A5',
       activities: [act('learn', m('Jobs & Profession', 'Pekerjaan'), '📚', 'learnCards', B.jobs)],
       direct: 'learn',
     },
     {
-      id: 'colouring', image: 'images/kiddora/modules/colouring.webp', title: m('Colouring', 'Mewarna'), emoji: '🖍️', color: '#9BF6FF',
+      id: 'colouring', tint: '#C49AF0', image: 'images/kiddora/modules/colouring.webp', title: m('Colouring', 'Mewarna'), emoji: '🖍️', color: '#9BF6FF',
       activities: [act('book', m('Colouring', 'Mewarna'), '🎨', 'colouring', B.colouring)],
       direct: 'book',
     },
     // Coming soon: picture tile only, not playable yet.
-    { id: 'emergency', image: 'images/kiddora/modules/emergency.webp', title: m('Emergency Hero', 'Wira Kecemasan'), emoji: '🚑', color: '#7ED6C4', comingSoon: true, activities: [] },
-    { id: 'puzzle', image: 'images/kiddora/modules/puzzle.webp', title: m('Puzzle', 'Teka-teki'), emoji: '🧩', color: '#8CC8FF', comingSoon: true, activities: [] },
-    { id: 'space', image: 'images/kiddora/modules/space.webp', title: m('Space Adventure', 'Pengembaraan Angkasa'), emoji: '🚀', color: '#9B8CFF', comingSoon: true, activities: [] },
-    { id: 'reads', image: 'images/kiddora/modules/reads.webp', title: m('Kiddy Reads', 'Kiddy Membaca'), emoji: '📖', color: '#FFE9B5', comingSoon: true, activities: [] },
+    { id: 'emergency', tint: '#2BB3A3', image: 'images/kiddora/modules/emergency.webp', title: m('Emergency Hero', 'Wira Kecemasan'), emoji: '🚑', color: '#7ED6C4', comingSoon: true, activities: [] },
+    { id: 'puzzle', tint: '#4A90E2', image: 'images/kiddora/modules/puzzle.webp', title: m('Puzzle', 'Teka-teki'), emoji: '🧩', color: '#8CC8FF', comingSoon: true, activities: [] },
+    { id: 'space', tint: '#7B5CE0', image: 'images/kiddora/modules/space.webp', title: m('Space Adventure', 'Pengembaraan Angkasa'), emoji: '🚀', color: '#9B8CFF', comingSoon: true, activities: [] },
+    { id: 'reads', tint: '#F2C46B', image: 'images/kiddora/modules/reads.webp', title: m('Kiddy Reads', 'Kiddy Membaca'), emoji: '📖', color: '#FFE9B5', comingSoon: true, activities: [] },
   ],
 };
