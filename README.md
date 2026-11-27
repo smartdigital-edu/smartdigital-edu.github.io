@@ -116,7 +116,7 @@ The banks were generated from the compact tables in `scripts/build-grammar.mjs` 
 **Workflow for a change**
 
 1. Commit to `dev` and push → tests run → staging site updates (~3 min).
-2. Check it on staging (phone, both languages).
+2. Check it on staging (phone, both languages). `npm run check:staging` runs an automated end-to-end check against the deployed staging site using the dev test accounts in `.env.test` (git-ignored; `TEST_PARENT_EMAIL`, `TEST_OUTSIDER_EMAIL`, `TEST_PASSWORD`; the parent must be on the dev allowlist).
 3. Release: open a pull request `dev → main` (`gh pr create -B main -H dev`), wait for the tests, merge. Production updates.
 
 The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds **both** branches on every push and publishes them as one Pages site (`/` + `/kiddora/` + `/grammarhub/` from `main`, `/staging/…` from `dev`). Rebuilding unchanged `main` code gives identical files, so a `dev` push never changes production; a broken `dev` build is skipped and never blocks production.
