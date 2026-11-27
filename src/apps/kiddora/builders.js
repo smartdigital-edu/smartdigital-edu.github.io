@@ -115,7 +115,7 @@ export const B = {
         text: `${l.letter} ${l.letter.toLowerCase()}`,
         visual: { en: l.en.emoji, ms: l.ms.emoji },
         word: { en: `${l.letter} for ${l.en.word}`, ms: `${l.letter} untuk ${l.ms.word}` },
-        say: { en: `${l.letter}. ${l.letter} for ${l.en.word}`, ms: `${l.letter}. ${l.letter} untuk ${l.ms.word}` },
+        say: { en: `${l.letter} for ${l.en.word}`, ms: `${l.letter} untuk ${l.ms.word}` },
       })),
       lang,
     };
