@@ -15,8 +15,8 @@ CLIPS = {
     },
     # When the child taps Cici after that.
     'tap': {
-        'en': "Meow!! Let's learn together! Pick an activity to get started!!",
-        'ms': "Meow! Jom belajar bersama! Pilih aktiviti untuk bermula!",
+        'en': "Let's learn together!! Pick an activity to get started!!",
+        'ms': "Jom belajar bersama! Pilih aktiviti untuk bermula!",
     },
 }
 async def main():

@@ -33,8 +33,8 @@ export default {
         times: ciciTimes.hello,
       },
       tap: {
-        text: m('Meow! Let\'s learn together. Pick an activity to get started!',
-          'Meow! Jom belajar bersama. Pilih aktiviti untuk bermula!'),
+        text: m('Let\'s learn together! Pick an activity to get started!',
+          'Jom belajar bersama! Pilih aktiviti untuk bermula!'),
         audio: m('audio/kiddora/cici-tap-en.mp3', 'audio/kiddora/cici-tap-ms.mp3'),
         times: ciciTimes.tap,
       },
