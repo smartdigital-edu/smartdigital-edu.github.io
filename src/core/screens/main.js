@@ -160,9 +160,12 @@ export function moduleScreen({ params }) {
       },
       el('span.activity-emoji', { 'aria-hidden': 'true' }, a.emoji || m.emoji),
       el('span.activity-title', tx(a.title)))))),
-    // The home decorations again, softly blurred behind the activity list.
-    (session.app.decor || []).map((d) => el(`img.home-deco.bg.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' }))));
+    backdrop()));
 }
+
+/** The home decorations again, softly blurred behind activity lists and games. */
+const backdrop = () => (session.app.decor || [])
+  .map((d) => el(`img.home-deco.bg.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' }));
 
 /* ---------------- play ---------------- */
 let lastResult = null;
@@ -174,7 +177,7 @@ export async function playScreen({ params, query }) {
   const back = m.direct ? '#/home' : `#/m/${m.id}`;
   const stage = el('div.play-stage');
   const title = tx(a.title);
-  show(screen(title, { back, cls: `play engine-${a.engine}` }, stage));
+  show(screen(title, { back, cls: `play engine-${a.engine}` }, stage, backdrop()));
   stage.append(loader());
 
   let config;
