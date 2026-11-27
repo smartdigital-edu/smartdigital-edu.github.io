@@ -51,6 +51,7 @@
   "profiles.done": "Done",
   "home.hello": "Hi, {name}!",
   "home.pick": "What shall we learn today?",
+  "home.comingSoon": "Coming soon",
   "home.activities": "{n} activities",
   "scores.title": "Scores",
   "scores.no": "No.",

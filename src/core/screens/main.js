@@ -1,5 +1,5 @@
 /** Home, module menu, play, results, scores, install and help screens. */
-import { el, button, screen, loader, stars, confetti, confirmDialog, toast, clear, preloadImages } from '../ui.js';
+import { el, button, screen, loader, stars, confetti, confirmDialog, toast, clear, preloadImages, animate } from '../ui.js';
 import { t, tx, getLang } from '../i18n/index.js';
 import { speak, sfx } from '../audio.js';
 import { session, setActiveProfile } from '../session.js';
@@ -23,21 +23,46 @@ export function homeScreen() {
         el('h1', { tabindex: '-1' }, t('home.hello', { name: p.name })),
         el('p.muted', t('home.pick'))),
       el('a.btn.secondary.small', { href: '#/profiles' }, el('span.btn-icon', { 'aria-hidden': 'true' }, '🔄'), t('profiles.switch'))),
-    el('ul.module-grid', {}, app.modules.map((m) => el('li', {},
-      el('a.module-card', {
-        href: m.direct ? `#/play/${m.id}/${m.direct}` : `#/m/${m.id}`,
-        style: { '--card': m.color },
-        onclick: () => { sfx.tap(); if (app.bilingual) speak(tx(m.title)); },
-      },
-      el('span.module-emoji', { 'aria-hidden': 'true' }, m.emoji),
-      el('span.module-title', tx(m.title)),
-      m.subtitle ? el('span.module-sub', tx(m.subtitle)) : (m.activities.length > 1 ? el('span.module-sub', t('home.activities', { n: m.activities.length })) : null)))))));
+    el('ul.module-grid', {}, app.modules.map((m) => el('li', {}, moduleTile(m, app))))));
+}
+
+/** Home tile: a picture tile when the module has an image, else the emoji card. */
+function moduleTile(m, app) {
+  const sub = m.comingSoon ? t('home.comingSoon')
+    : m.subtitle ? tx(m.subtitle) : (m.activities.length > 1 ? t('home.activities', { n: m.activities.length }) : '');
+  if (m.image) {
+    const body = [
+      el('img.module-img', { src: m.image, alt: '', loading: 'lazy', decoding: 'async', draggable: 'false' }),
+      m.comingSoon ? el('span.soon-ribbon', { 'aria-hidden': 'true' }, t('home.comingSoon')) : null,
+      // The picture already shows the English name; show the title in other languages.
+      el('span.module-caption', {}, el(`span.module-title${getLang() === 'en' ? '.sr-only' : ''}`, tx(m.title)), sub ? el('span.module-sub', sub) : null),
+    ];
+    if (m.comingSoon) {
+      return el('button.module-card.pic.soon', {
+        type: 'button', 'aria-label': `${tx(m.title)}, ${t('home.comingSoon')}`,
+        onclick: (e) => { sfx.pop(); animate(e.currentTarget, 'shake', 500); speak(`${tx(m.title)}. ${t('home.comingSoon')}!`); },
+      }, ...body);
+    }
+    return el('a.module-card.pic', {
+      href: m.direct ? `#/play/${m.id}/${m.direct}` : `#/m/${m.id}`,
+      'aria-label': sub ? `${tx(m.title)}, ${sub}` : tx(m.title),
+      onclick: () => { sfx.tap(); if (app.bilingual) speak(tx(m.title)); },
+    }, ...body);
+  }
+  return el('a.module-card', {
+    href: m.direct ? `#/play/${m.id}/${m.direct}` : `#/m/${m.id}`,
+    style: { '--card': m.color },
+    onclick: () => { sfx.tap(); if (app.bilingual) speak(tx(m.title)); },
+  },
+  el('span.module-emoji', { 'aria-hidden': 'true' }, m.emoji),
+  el('span.module-title', tx(m.title)),
+  sub ? el('span.module-sub', sub) : null);
 }
 
 /* ---------------- module (activity list) ---------------- */
 export function moduleScreen({ params }) {
   const m = findModule(params.module);
-  if (!m) return navigate('/home', { replace: true });
+  if (!m || m.comingSoon) return navigate('/home', { replace: true });
   show(screen(tx(m.title), { back: '#/home', cls: 'module' },
     el('ul.activity-grid', {}, m.activities.map((a) => el('li', {},
       el('a.activity-card', {
@@ -54,7 +79,7 @@ let lastResult = null;
 
 export async function playScreen({ params, query }) {
   const m = findModule(params.module);
-  const a = m?.activities.find((x) => x.id === params.activity);
+  const a = m?.comingSoon ? null : m?.activities.find((x) => x.id === params.activity);
   if (!a) return navigate('/home', { replace: true });
   const back = m.direct ? '#/home' : `#/m/${m.id}`;
   const stage = el('div.play-stage');

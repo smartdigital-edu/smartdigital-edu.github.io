@@ -51,6 +51,7 @@
   "profiles.done": "Siap",
   "home.hello": "Hai, {name}!",
   "home.pick": "Apa yang kita mahu belajar hari ini?",
+  "home.comingSoon": "Akan datang",
   "home.activities": "{n} aktiviti",
   "scores.title": "Markah",
   "scores.no": "Bil.",

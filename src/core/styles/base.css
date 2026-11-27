@@ -520,3 +520,25 @@ body[data-app='kiddora'] :is(.card, .dialog, .app-menu, .stage) a,
 body[data-app='kiddora'] :is(.card, .dialog, .app-menu, .stage) .link-btn { color: var(--primary); }
 body[data-app='kiddora'] :is(.card, .dialog, .stage) .btn.ghost { color: var(--text); border-color: var(--border); }
 body[data-app='kiddora'] .profile-card.add { color: var(--on-bg); border-color: rgba(255, 255, 255, .55); }
+
+/* ---------- picture module tiles (home) ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.module-card.pic {
+  position: relative; min-height: 0; height: auto; padding: 0; gap: .35rem; background: none; box-shadow: none;
+  border: 0; font: inherit; color: inherit; cursor: pointer; justify-content: flex-start;
+}
+.module-img { display: block; width: 100%; aspect-ratio: 1; border-radius: 20%; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .28)); }
+.module-caption { display: grid; justify-items: center; line-height: 1.2; }
+.module-card.pic .module-title { font-size: 1.05rem; }
+.module-card.pic .module-sub { font-size: .9rem; opacity: .85; }
+body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
+.module-card.pic:focus-visible { box-shadow: none; }
+.module-card.pic:focus-visible .module-img { outline: 4px solid #ffd98a; outline-offset: 3px; }
+.module-card.soon .module-img { filter: saturate(.55) brightness(.85) drop-shadow(0 8px 14px rgba(0, 0, 0, .28)); }
+.soon-ribbon {
+  position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%) rotate(-8deg);
+  padding: .35rem 1rem; border-radius: 999px; white-space: nowrap; pointer-events: none;
+  background: linear-gradient(#ffe48f, #ffcf3f); color: #3b2a00; font-weight: 800; font-size: clamp(.85rem, 2.6vw, 1.05rem);
+  box-shadow: 0 4px 0 #c99a2e, 0 8px 16px rgba(0, 0, 0, .3);
+}
+@media (min-width: 900px) { .module-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); } }
