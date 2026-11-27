@@ -403,6 +403,18 @@ body[data-app='grammarhub'] .choice { flex-direction: row; justify-content: flex
 .train .slot::before, .train .slot::after { content: ''; position: absolute; bottom: -14px; width: 16px; height: 16px; background: #444; border-radius: 50%; }
 .train .slot::before { left: 10px; }
 .train .slot::after { right: 10px; }
+/* Illustrated train: the picture with the letters on the wagon windows. */
+.train-art { position: relative; width: 100%; container-type: inline-size; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 18px rgba(0, 0, 0, .15); }
+.train-art-img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; user-select: none; -webkit-user-drag: none; }
+.train-art .slot {
+  position: absolute; box-sizing: border-box; min-width: 0; min-height: 0; padding: 0; margin: 0;
+  display: grid; place-items: center; border-radius: 6% / 8%;
+  font-size: clamp(1.1rem, 6.2cqi, 4rem); font-weight: 800; line-height: 1; color: #13214a;
+  background: rgba(255, 255, 255, .25); border: 3px dashed #7d93c9;
+}
+.train-art .slot.fixed { background: transparent; border-color: transparent; }
+.train-art .slot.hover { background: rgba(232, 241, 255, .9); border-color: var(--accent); }
+.train-art .slot.filled { border-style: solid; border-color: var(--ok); background: rgba(224, 247, 230, .9); }
 .figure-board { position: relative; width: min(100%, 360px); aspect-ratio: 3 / 4; margin: 0 auto; }
 .figure-board svg { width: 100%; height: 100%; }
 .figure-board .slot { position: absolute; transform: translate(-50%, -50%); min-width: 86px; min-height: 46px; font-size: 1rem; padding: 0 .3rem; background: rgba(255, 255, 255, .95); }

@@ -2,11 +2,12 @@
  * dragToSlot – drag tiles into the right slots.
  * Layouts:
  *   row    : sequence with gaps (Complete the ABC, syllables)
- *   train  : same as row, drawn as train carriages (Choo-Choo ABC / 123)
+ *   train  : same as row, drawn as train carriages (Choo-Choo ABC / 123); with `art`, on an illustrated train
  *   figure : labels positioned on an SVG figure (Label the Body Part)
  *   half   : choose the missing half of an animal (Complete the Animal)
  * Question JSON:
- *   { layout, prompt, say?, slots: [{ answer, fixed?, x?, y? }], tiles: [values], figure?: "<svg…>", emoji? }
+ *   { layout, prompt, say?, slots: [{ answer, fixed?, x?, y? }], tiles: [values], figure?: "<svg…>", emoji?,
+ *     art?: { src, ratio, panels: [[left, top, right, bottom] in %] } }
  */
 import { el, clear } from '../core/ui.js';
 import { shuffle } from '../core/scoring.js';
@@ -64,6 +65,16 @@ function render(q, { stage }, ctx) {
     q.slots.forEach((s, i) => board.append(makeSlot(s, i)));
   } else if (q.layout === 'half') {
     board = el('div.half-board', { role: 'img', 'aria-label': api.tx(q.prompt) }, halfNode(q.emoji, 'left'), makeSlot(q.slots[0], 0));
+  } else if (q.layout === 'train' && q.art?.panels?.length === q.slots.length) {
+    // Illustrated train: each slot sits exactly on a wagon window of the picture.
+    board = el('div.train-art', { style: { aspectRatio: q.art.ratio } },
+      el('img.train-art-img', { src: q.art.src, alt: '', draggable: 'false' }),
+      q.slots.map((s, i) => {
+        const [l, t, r, b] = q.art.panels[i];
+        const node = makeSlot(s, i);
+        Object.assign(node.style, { left: `${l}%`, top: `${t}%`, width: `${r - l}%`, height: `${b - t}%` });
+        return node;
+      }));
   } else if (q.layout === 'train') {
     board = el('div.train', {}, el('span.engine', { 'aria-hidden': 'true' }, '🚂'), q.slots.map(makeSlot));
   } else {

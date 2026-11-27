@@ -79,8 +79,18 @@ export function sortRounds(items, buckets, { rounds = 5, per = 6, prompt }) {
   };
 }
 
+/**
+ * Illustrated train for Choo-Choo ABC / 123: Cici's engine and five wagons. `panels` are the wagons'
+ * white windows as [left, top, right, bottom] in % of the picture; the letters/numbers go there.
+ */
+const TRAIN_ART = {
+  src: 'images/kiddora/train.webp',
+  ratio: '1744 / 530',
+  panels: [[28.84, 35.28, 38.88, 62.83], [42.89, 34.91, 53.27, 64.34], [57.34, 35.28, 67.37, 64.53], [71.85, 35.28, 82.17, 64.34], [86.93, 35.47, 96.5, 64.53]],
+};
+
 /** Consecutive sequence with gaps (Complete the ABC / Choo-Choo). */
-export function sequence(list, { n = 10, len = 5, gaps = 2, layout = 'row', prompt, distract = 2 }) {
+export function sequence(list, { n = 10, len = 5, gaps = 2, layout = 'row', prompt, distract = 2, art }) {
   return {
     questions: Array.from({ length: n }, () => {
       const start = rint(0, list.length - len);
@@ -91,6 +101,7 @@ export function sequence(list, { n = 10, len = 5, gaps = 2, layout = 'row', prom
       return {
         layout,
         prompt,
+        art,
         slots: seq.map((v, i) => ({ answer: v, fixed: !hide.has(i) })),
         tiles: [...missing, ...others],
       };
@@ -157,7 +168,7 @@ export const B = {
   },
   async chooChooAbc() {
     const L = (await load('alphabet')).letters.map((l) => l.letter);
-    return sequence(L, { n: 10, len: 5, gaps: 3, layout: 'train', prompt: both('Fill the train with the missing letters', 'Isi kereta api dengan huruf yang hilang') });
+    return sequence(L, { n: 10, len: 5, gaps: 3, layout: 'train', art: TRAIN_ART, prompt: both('Fill the train with the missing letters', 'Isi kereta api dengan huruf yang hilang') });
   },
   async sukuKata() {
     const { words, families } = await load('syllables');
@@ -249,7 +260,7 @@ export const B = {
     };
   },
   async chooChoo123() {
-    return sequence(range(1, 20).map(String), { n: 10, len: 5, gaps: 2, layout: 'train', prompt: both('Put the missing numbers on the train', 'Letakkan nombor yang hilang di atas kereta api') });
+    return sequence(range(1, 20).map(String), { n: 10, len: 5, gaps: 2, layout: 'train', art: TRAIN_ART, prompt: both('Put the missing numbers on the train', 'Letakkan nombor yang hilang di atas kereta api') });
   },
   async findNumber() {
     const N = range(0, 20).map(String);
