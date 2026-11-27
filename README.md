@@ -70,7 +70,7 @@ users/{uid}/profiles/{profileId}              { name, avatar, level, app, create
 users/{uid}/profiles/{profileId}/attempts/{id} { app, module, activity, title, score, correct, total, duration, timestamp }
 ```
 
-Offline: Firestore's persistent cache (IndexedDB) keeps profiles and scores available offline and queues new attempts; they sync automatically when the device is back online. The service worker caches the app shell, every activity's code and content after first use.
+Offline: Firestore's persistent cache (IndexedDB) keeps profiles and scores available offline and queues new attempts; they sync automatically when the device is back online. The service worker precaches the app shell and every activity's code and content on first visit, so the whole app works offline afterwards. Each build gets a new cache version, and old caches are deleted automatically.
 
 ## 3. Add or edit content (no code changes)
 

@@ -1,32 +1,37 @@
 /*
  * Service worker: offline support for the app shell and content.
+ *  - Install: precache index.html and every built JS/CSS chunk (the list is
+ *    injected at build time by the 'sw-precache' plugin in vite.config.js), so
+ *    every activity works offline even if it was never opened online.
  *  - Navigations: network first, fall back to the cached index.html.
- *  - Same-origin assets (hashed JS/CSS chunks, JSON content, icons, audio):
- *    stale-while-revalidate, so every activity you have opened once works offline.
+ *  - Other same-origin assets (fonts, icons, audio): stale-while-revalidate.
  *  - Firebase / Google APIs are never cached here (Firestore has its own offline cache).
- * Bump VERSION to force clients to drop old caches.
+ * APP and VERSION are injected at build time; VERSION changes whenever any
+ * built file changes, so each deploy gets a fresh cache and old chunks are dropped.
+ * Both apps share one origin on GitHub Pages, so caches are prefixed per app.
  */
-const VERSION = 'v1';
-const CACHE = `bijak-${VERSION}`;
-const SHELL = ['./', './index.html', './sw.js'];
+const APP = 'dev';
+const VERSION = 'dev';
+const PRECACHE = [];
+const PREFIX = `${APP}-`;
+const CACHE = `${PREFIX}${VERSION}`;
+const SHELL = ['./', './index.html'];
+// Hosts such as `vite preview` send "Vary: Origin"; crossorigin module requests
+// carry an Origin header that precache requests don't, so ignore Vary on lookup.
+const MATCH = { ignoreVary: true };
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE).then(async (cache) => {
-      await cache.addAll(SHELL);
-      // Precache every asset referenced by index.html (entry JS + CSS).
-      try {
-        const html = await (await fetch('./index.html', { cache: 'no-cache' })).text();
-        const urls = [...html.matchAll(/(?:src|href)="(\.\/[^"]+)"/g)].map((m) => m[1]);
-        await cache.addAll(urls);
-      } catch { /* offline during install: runtime caching will fill in */ }
-    }).then(() => self.skipWaiting()),
+    caches.open(CACHE)
+      .then((cache) => cache.addAll([...new Set([...SHELL, ...PRECACHE])]))
+      .then(() => self.skipWaiting()),
   );
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k.startsWith('bijak-') && k !== CACHE).map((k) => caches.delete(k))))
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith(PREFIX) && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });
@@ -40,21 +45,23 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith(
       fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE).then((c) => c.put('./index.html', copy));
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put('./index.html', copy));
+        }
         return res;
-      }).catch(() => caches.match('./index.html')),
+      }).catch(async () => (await caches.match('./index.html', MATCH)) || Response.error()),
     );
     return;
   }
 
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
-      const cached = await cache.match(req);
+      const cached = await cache.match(req, MATCH);
       const network = fetch(req).then((res) => {
         if (res.ok) cache.put(req, res.clone());
         return res;
-      }).catch(() => cached);
+      }).catch(() => cached || Response.error());
       return cached || network;
     }),
   );

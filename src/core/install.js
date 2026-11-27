@@ -25,7 +25,8 @@ export async function promptInstall() {
 /** Register the service worker (production builds only). */
 export function registerSW() {
   if (!('serviceWorker' in navigator) || import.meta.env.DEV) return;
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch((e) => console.warn('SW registration failed', e));
-  });
+  const register = () => navigator.serviceWorker.register('./sw.js').catch((e) => console.warn('SW registration failed', e));
+  // boot() runs after dynamic imports, so 'load' has usually already fired.
+  if (document.readyState === 'complete') register();
+  else window.addEventListener('load', register, { once: true });
 }
