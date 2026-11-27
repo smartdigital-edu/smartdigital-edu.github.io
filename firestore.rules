@@ -1,0 +1,53 @@
+rules_version = '2';
+
+// Kiddora / Grammar Hub security rules.
+//  - Only emails listed in allowedEmails/{email} can use the app.
+//  - Each user can only read and write their own users/{uid}/... data.
+//  - A user can read only their OWN allowedEmails entry (to check access).
+//  - Only admins (allowedEmails/{email}.role == 'admin') can list or change the allowlist.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null && request.auth.token.email != null; }
+    function myEmail() { return request.auth.token.email.lower(); }
+    function allowedDoc() { return /databases/$(database)/documents/allowedEmails/$(myEmail()); }
+    function isAllowed() { return signedIn() && exists(allowedDoc()); }
+    function isAdmin() { return isAllowed() && get(allowedDoc()).data.role == 'admin'; }
+
+    match /allowedEmails/{email} {
+      allow get: if signedIn() && (email == myEmail() || isAdmin());
+      allow list: if isAdmin();
+      allow create, update: if isAdmin()
+        && request.resource.data.keys().hasOnly(['role', 'addedAt'])
+        && request.resource.data.role in ['user', 'admin'];
+      // Admins cannot delete themselves (prevents locking everyone out).
+      allow delete: if isAdmin() && email != myEmail();
+    }
+
+    match /users/{uid} {
+      allow read, write: if isAllowed() && request.auth.uid == uid;
+
+      match /profiles/{profileId} {
+        allow read, delete: if isAllowed() && request.auth.uid == uid;
+        allow create, update: if isAllowed() && request.auth.uid == uid
+          && request.resource.data.name is string
+          && request.resource.data.name.size() > 0
+          && request.resource.data.name.size() <= 40;
+
+        match /attempts/{attemptId} {
+          allow read, delete: if isAllowed() && request.auth.uid == uid;
+          allow create: if isAllowed() && request.auth.uid == uid
+            && request.resource.data.score is number
+            && request.resource.data.score >= 0
+            && request.resource.data.score <= 100;
+          allow update: if false; // attempts are write-once
+        }
+      }
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
