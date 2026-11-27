@@ -9,6 +9,7 @@ import { percent, starsFor, buildAttempt, formatDuration } from '../scoring.js';
 import { loadEngine } from '../../games/index.js';
 import { canPrompt, promptInstall, isIOS, isStandalone, onInstallAvailable } from '../install.js';
 import { whatsappLink } from '../config.js';
+import { progressScreen } from './progress.js';
 
 const findModule = (id) => session.app.modules.find((m) => m.id === id);
 
@@ -202,10 +203,11 @@ export async function playScreen({ params, query }) {
       title,
       kids: !!session.app.kids,
       navigate,
-      finish: async ({ correct, total, save = true }) => {
+      finish: async ({ correct, total, items, save = true }) => {
         const attempt = buildAttempt({
           profileId: session.profile.id, app: session.app.id, module: m.id, activity: a.id,
           title: m.direct ? tx(a.title, 'en') : `${tx(m.title, 'en')} – ${tx(a.title, 'en')}`, correct, total, startedAt,
+          engine: a.engine, lang: getLang(), items,
         });
         if (save) {
           try { await session.backend.addAttempt(session.user.uid, session.profile.id, attempt); } catch (e) { console.warn(e); }
@@ -261,6 +263,7 @@ export function resultsScreen() {
 
 /* ---------------- scores ---------------- */
 export async function scoresScreen({ query }) {
+  if (session.app.kids) return progressScreen({ query }); // Kiddora: Learning Progress dashboard
   const pid = query.p || session.profile?.id || session.profiles[0]?.id;
   const profile = session.profiles.find((p) => p.id === pid);
   const select = el('select#score-profile', {

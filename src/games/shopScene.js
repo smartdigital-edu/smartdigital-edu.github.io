@@ -41,6 +41,7 @@ export default function shopScene(root, config, api) {
   const sceneCfg = config.scene || {};
   let index = 0;
   let correct = 0;
+  const items = []; // per question, for the parent's progress page
 
   /* ---------- layout ---------- */
   const bg = sceneCfg.background?.img
@@ -90,7 +91,7 @@ export default function shopScene(root, config, api) {
   function next() {
     if (index >= questions.length) {
       [...dots.children].forEach((d) => { d.className = 'dot done'; });
-      api.finish({ correct, total: questions.length });
+      api.finish({ correct, total: questions.length, items });
       return;
     }
     updateProgress();
@@ -102,6 +103,8 @@ export default function shopScene(root, config, api) {
 
   function done(firstTry, message) {
     if (firstTry) correct += 1;
+    const q = questions[index];
+    items.push({ label: String(q.type === 'pay' ? `${tx(q.item)} ${formatAmount(q.price)}` : tx(q.say)).slice(0, 60), result: firstTry ? 'first' : 'retry' });
     mood('happy');
     api.sfx.correct();
     say(message);

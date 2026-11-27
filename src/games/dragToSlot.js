@@ -48,7 +48,9 @@ function render(q, { stage }, ctx) {
       if (filled === open.length) finish();
     },
   });
-  const finish = () => ctx.attempt(mistakes === 0, board, { answerText: open.map((s) => api.tx(s.answer)).join(', ') });
+  // Kids keep going until every slot is right (a mistake already counted via ctx.wrong);
+  // single-attempt mode (Grammar Hub) is judged on the first try.
+  const finish = () => ctx.attempt(ctx.once ? mistakes === 0 : true, board, { answerText: open.map((s) => api.tx(s.answer)).join(', ') });
 
   const makeSlot = (s, i) => {
     const node = el(`div.slot${s.fixed ? '.fixed' : ''}`, {

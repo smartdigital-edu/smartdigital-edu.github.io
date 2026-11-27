@@ -9,6 +9,9 @@
  *   ctx.setPrompt(text, opts)          show + speak the instruction
  *   ctx.attempt(ok, node, info)        judge one answer; returns true when the question is over
  *   ctx.complete({ correct, total })   finish a multi-part round (match lines, sorting…)
+ *
+ * Each question is also recorded for the parent's progress page as { label, result }:
+ * result 'first' (right first time), 'retry' (right after another try) or 'wrong' (single-attempt mode).
  *   ctx.once                           true = single attempt per question (Grammar Hub)
  */
 import { el, clear, animate, button, visual } from '../core/ui.js';
@@ -22,6 +25,7 @@ export function runQuestions(root, config, render, api) {
   let index = 0;
   let correct = 0;
   let total = 0;
+  const items = [];
 
   const counter = el('span.game-counter', { 'aria-live': 'polite' });
   const starEl = el('span.game-stars', { 'aria-label': 'score' });
@@ -45,7 +49,7 @@ export function runQuestions(root, config, render, api) {
   function next() {
     if (index >= questions.length) {
       bar.style.width = '100%';
-      api.finish({ correct, total });
+      api.finish({ correct, total, items });
       return;
     }
     updateBar();
@@ -55,10 +59,13 @@ export function runQuestions(root, config, render, api) {
     const q = questions[index];
     let missed = false;
     let finished = false;
+    let promptText = '';
 
-    const end = (res) => {
+    const end = (res, result) => {
       if (finished) return;
       finished = true;
+      const label = res.answerText || q.target || q.item || promptText;
+      items.push({ label: String(api.tx(label) ?? '').slice(0, 60), result });
       correct += res.correct;
       total += res.total;
       starEl.textContent = `⭐ ${correct}`;
@@ -81,6 +88,7 @@ export function runQuestions(root, config, render, api) {
       api,
       setPrompt(text, { say, visual: v, size = 'lg', label } = {}) {
         clear(prompt);
+        promptText = text || '';
         const spoken = say ?? text;
         if (v != null) prompt.append(visual(v, { size, label }));
         if (text) prompt.append(el('span.prompt-text', text));
@@ -95,7 +103,7 @@ export function runQuestions(root, config, render, api) {
           api.sfx.correct();
           animate(node, 'celebrate', 700);
           showFeedback(true, info);
-          end({ correct: once ? 1 : missed ? 0 : 1, total: 1, answerText: info.answerText });
+          end({ correct: once ? 1 : missed ? 0 : 1, total: 1, answerText: info.answerText }, missed && !once ? 'retry' : 'first');
           return true;
         }
         api.sfx.wrong();
@@ -103,13 +111,14 @@ export function runQuestions(root, config, render, api) {
         missed = true;
         if (once) {
           showFeedback(false, info);
-          end({ correct: 0, total: 1, answerText: info.answerText });
+          end({ correct: 0, total: 1, answerText: info.answerText }, 'wrong');
           return true;
         }
         showFeedback(false, { tryAgain: true });
         return false;
       },
       wrong(node) { // a wrong move inside a multi-part round
+        missed = true;
         api.sfx.wrong();
         animate(node, 'shake', 500);
         showFeedback(false, { tryAgain: true });
@@ -122,7 +131,7 @@ export function runQuestions(root, config, render, api) {
       complete(res) {
         api.sfx.correct();
         showFeedback(res.correct >= res.total * 0.5, {});
-        end(res);
+        end(res, res.correct >= res.total ? 'first' : once ? 'wrong' : 'retry');
       },
     };
 

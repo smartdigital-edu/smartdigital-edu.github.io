@@ -76,7 +76,12 @@ export function checkAnswer(q, given) {
 }
 
 /** Build the attempt record saved to scores. */
-export function buildAttempt({ profileId, app, module, activity, title, correct, total, startedAt, endedAt = Date.now() }) {
+export function buildAttempt({ profileId, app, module, activity, title, correct, total, startedAt, endedAt = Date.now(), engine, lang, items }) {
+  const extra = {};
+  if (engine) extra.engine = engine;
+  if (lang) extra.lang = lang;
+  // Per-question detail for the progress page (kept small).
+  if (Array.isArray(items) && items.length) extra.items = items.slice(0, 40).map(({ label, result }) => ({ label: String(label ?? '').slice(0, 60), result }));
   return {
     profileId,
     app,
@@ -88,6 +93,7 @@ export function buildAttempt({ profileId, app, module, activity, title, correct,
     score: percent(correct, total),
     duration: Math.max(0, Math.round((endedAt - startedAt) / 1000)),
     timestamp: endedAt,
+    ...extra,
   };
 }
 
