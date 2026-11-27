@@ -18,7 +18,12 @@ export default {
   heroEmoji: '🦄',
   /** Home-screen decorations beside the grid (wide screens only): waving cat on the left, paws reaching in on the right. */
   decor: [
-    { src: 'images/kiddora/mascot.webp', side: 'left' },
+    {
+      src: 'images/kiddora/mascot.webp', side: 'left',
+      // Cici greets the child once per session (and again when tapped).
+      greet: m('Hi! My name is Cici. Welcome to Kiddora! Ready to play? Let\'s go!',
+        'Hai! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk bermain? Jom!'),
+    },
     { src: 'images/kiddora/paws.webp', side: 'right' },
   ],
   avatars: ['🦁', '🐼', '🐰', '🦊', '🐯', '🐨', '🐸', '🐵', '🦄', '🐙', '🐥', '🐶'],

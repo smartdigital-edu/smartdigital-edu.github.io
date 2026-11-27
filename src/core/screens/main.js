@@ -24,7 +24,36 @@ export function homeScreen() {
         el('p.muted', t('home.pick'))),
       el('a.btn.secondary.small', { href: '#/profiles' }, el('span.btn-icon', { 'aria-hidden': 'true' }, '🔄'), t('profiles.switch'))),
     el('ul.module-grid', {}, app.modules.map((m) => el('li', {}, moduleTile(m, app)))),
-    (app.decor || []).map((d) => el(`img.home-deco.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' }))));
+    (app.decor || []).map(decoration)));
+}
+
+let greetedProfile = null;
+
+/** A side decoration; one with `greet` speaks in a bubble on arrival (once per session) and when tapped. */
+function decoration(d) {
+  const img = el(`img.home-deco.${d.side}`, { src: d.src, alt: '', 'aria-hidden': 'true', draggable: 'false' });
+  if (!d.greet) return img;
+  const bubble = el(`div.deco-bubble.${d.side}`, { role: 'status', 'aria-live': 'polite' });
+  let hideTimer;
+  const greet = () => {
+    if (!img.isConnected || getComputedStyle(img).display === 'none') return; // hidden on small screens
+    const text = tx(d.greet);
+    bubble.textContent = text;
+    bubble.classList.remove('gone');
+    bubble.classList.add('on');
+    animate(img, 'cici-hop', 300);
+    sfx.hello();
+    setTimeout(() => speak(text, { rate: 0.95, pitch: 1.5 }), 550);
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => bubble.classList.add('gone'), 9000);
+  };
+  img.addEventListener('click', greet);
+  const who = session.profile?.id ?? session.profile?.name;
+  if (greetedProfile !== who) {
+    greetedProfile = who;
+    setTimeout(greet, 900); // after the slide-in
+  }
+  return el('div.deco-wrap', {}, img, bubble);
 }
 
 /** Home tile: a picture tile when the module has an image, else the emoji card. */

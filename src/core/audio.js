@@ -77,7 +77,7 @@ let currentAudio = null;
  * the MP3 is played instead and speech is used only if the file fails.
  * Resolves when finished, replaced, or immediately if sound is off.
  */
-export function speak(text, { lang = getLang(), audioSrc, rate = 0.85 } = {}) {
+export function speak(text, { lang = getLang(), audioSrc, rate = 0.85, pitch = 1.05 } = {}) {
   if (!enabled || !text) return Promise.resolve();
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
   if (audioSrc) {
@@ -86,18 +86,18 @@ export function speak(text, { lang = getLang(), audioSrc, rate = 0.85 } = {}) {
       const a = new Audio(audioSrc);
       currentAudio = a;
       a.onended = () => resolve();
-      a.onerror = () => { currentAudio = null; tts(text, lang, rate).then(resolve); };
-      a.play().catch(() => { tts(text, lang, rate).then(resolve); });
+      a.onerror = () => { currentAudio = null; tts(text, lang, rate, pitch).then(resolve); };
+      a.play().catch(() => { tts(text, lang, rate, pitch).then(resolve); });
     });
   }
-  return tts(text, lang, rate);
+  return tts(text, lang, rate, pitch);
 }
 
-function tts(text, lang, rate) {
+function tts(text, lang, rate, pitch) {
   return new Promise((resolve) => {
     if (!('speechSynthesis' in window)) return resolve();
     if (queued) queued.resolve(); // superseded before it even started
-    queued = { text, lang, rate, resolve };
+    queued = { text, lang, rate, pitch, resolve };
     pump();
   });
 }
@@ -111,7 +111,7 @@ function pump() {
   const wait = 150 - (Date.now() - lastCancelAt);
   if (wait > 0) { pumpTimer = setTimeout(pump, wait); return; }
 
-  const { text, lang, rate, resolve } = queued;
+  const { text, lang, rate, pitch, resolve } = queued;
   queued = null;
   if (!voices.length) loadVoices();
   const u = new SpeechSynthesisUtterance(text);
@@ -119,7 +119,7 @@ function pump() {
   const v = pickVoice(u.lang);
   if (v) u.voice = v;
   u.rate = rate;
-  u.pitch = 1.05;
+  u.pitch = pitch ?? 1.05;
   const c = { u, started: false, done: false, resolve, killOnStart: false };
   cur = c;
   const finish = () => {
@@ -153,6 +153,25 @@ function audioCtx() {
   return ctx;
 }
 
+/** A pitch glide (used for the mascot's little "mew" chirp). */
+function glide(from, to, start, dur, gain = 0.14) {
+  const c = audioCtx();
+  if (!c) return;
+  const o = c.createOscillator();
+  const g = c.createGain();
+  const t0 = c.currentTime + start;
+  o.type = 'sine';
+  o.frequency.setValueAtTime(from, t0);
+  o.frequency.exponentialRampToValueAtTime(to, t0 + dur * 0.6);
+  o.frequency.exponentialRampToValueAtTime(to * 0.85, t0 + dur);
+  g.gain.setValueAtTime(0.0001, t0);
+  g.gain.exponentialRampToValueAtTime(gain, t0 + 0.03);
+  g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  o.connect(g).connect(c.destination);
+  o.start(t0);
+  o.stop(t0 + dur + 0.05);
+}
+
 function tone(freq, start, dur, type = 'sine', gain = 0.18) {
   const c = audioCtx();
   if (!c) return;
@@ -173,5 +192,6 @@ export const sfx = {
   wrong() { if (!enabled) return; tone(220, 0, 0.18, 'triangle', 0.2); tone(180, 0.16, 0.25, 'triangle', 0.2); },
   tap() { if (!enabled) return; tone(520, 0, 0.06, 'sine', 0.08); },
   pop() { if (!enabled) return; tone(900, 0, 0.05, 'square', 0.06); tone(400, 0.04, 0.08, 'sine', 0.1); },
+  hello() { if (!enabled) return; glide(620, 1250, 0, 0.22); glide(760, 1500, 0.24, 0.28); tone(1760, 0.5, 0.12, 'sine', 0.06); },
   win() { if (!enabled) return; [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.12, 0.3)); },
 };

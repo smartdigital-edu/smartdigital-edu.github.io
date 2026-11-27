@@ -575,14 +575,15 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
 
 /* Home decorations: cat peeks in from the left edge, paws reach in from the right edge.
    Only where there is room beside the grid, and sized to the free space so they never cover a tile. */
-.home-deco { display: none; }
+.home-deco, .deco-bubble { display: none; }
 @media (min-width: 1180px) and (min-height: 560px) {
   .home-deco {
     display: block; position: fixed; z-index: 0; width: auto;
     pointer-events: none; user-select: none; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, .35));
   }
+  .screen.home { --cici-h: min(52vh, 470px, (50vw - 360px) * 1.25); }
   .home-deco.left {
-    left: 0; bottom: -3vh; height: min(52vh, 470px, (50vw - 360px) * 1.25);
+    left: 0; bottom: -3vh; height: var(--cici-h); pointer-events: auto; cursor: pointer;
     transform: translateX(-18%) rotate(8deg); transform-origin: 50% 100%;
     animation: decoLeft .9s cubic-bezier(.2, 1.4, .4, 1) both;
   }
@@ -591,7 +592,23 @@ body[data-app='kiddora'] .module-card.pic { color: var(--on-bg); }
     transform: translateY(-50%);
     animation: decoRight .9s .15s cubic-bezier(.2, 1.4, .4, 1) both;
   }
-  .screen.home > :not(.home-deco) { position: relative; z-index: 1; }
+  .screen.home > :not(.home-deco, .deco-wrap) { position: relative; z-index: 1; }
+  .home-deco.left { transition: translate .25s cubic-bezier(.3, 1.6, .5, 1); }
+  .home-deco.cici-hop { translate: 0 -6%; }
+  .deco-bubble.left {
+    display: block; position: fixed; z-index: 2; left: 14px; bottom: calc(var(--cici-h) * 0.97 - 3vh + 14px);
+    width: min(250px, 50vw - 380px); box-sizing: border-box; padding: .7rem .95rem;
+    background: #fff; color: #23305c; border-radius: 22px; box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+    font-size: 1.05rem; font-weight: 600; line-height: 1.3;
+    transform-origin: 40% 100%; opacity: 0; transform: scale(.4); pointer-events: none;
+    transition: opacity .25s, transform .35s cubic-bezier(.2, 1.6, .4, 1);
+  }
+  .deco-bubble.left::after {
+    content: ''; position: absolute; left: 38%; bottom: -14px;
+    border: 9px solid transparent; border-top: 16px solid #fff; border-bottom: 0;
+  }
+  .deco-bubble.on { opacity: 1; transform: none; }
+  .deco-bubble.gone { opacity: 0; transform: scale(.9); }
 }
 @keyframes decoLeft { from { transform: translateX(-100%) rotate(8deg); } }
 @keyframes decoRight { from { transform: translate(100%, -50%); } }
