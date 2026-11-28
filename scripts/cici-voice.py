@@ -10,8 +10,8 @@ VOICES = {'en': ('en-US-AnaNeural', '+6%', '+15Hz'), 'ms': ('ms-MY-YasminNeural'
 CLIPS = {
     # Greeting when the home screen opens.
     'hello': {
-        'en': "Hi!! My name is Cici! Welcome to Kiddora!! Ready to learn and play?! Let's go!!",
-        'ms': "Hai! Nama saya Cici! Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!",
+        'en': "Hi!! My name is Cici! Welcome to Kivokid!! Ready to learn and play?! Let's go!!",
+        'ms': "Hai! Nama saya Cici! Selamat datang ke Kivokid! Sedia untuk belajar dan bermain? Jom!",
     },
     # When the child taps Cici after that.
     'tap': {

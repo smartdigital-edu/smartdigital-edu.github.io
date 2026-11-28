@@ -596,7 +596,7 @@ body[data-app='grammarhub'] .choice { flex-direction: row; justify-content: flex
   .module-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 }
 
-/* ---------- Kiddora: dark blue background ----------
+/* ---------- Kivokid: dark blue background ----------
    Text placed directly on the blue is light; white surfaces (cards, header,
    menu, dialogs, game stage, tiles, inputs) keep the normal dark text. */
 body[data-app='kiddora'] {

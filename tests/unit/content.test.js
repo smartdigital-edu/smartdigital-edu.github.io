@@ -36,7 +36,7 @@ describe('Grammar Hub content', () => {
   });
 });
 
-describe('Kiddora content', () => {
+describe('Kivokid content', () => {
   const k = (f) => JSON.parse(readFileSync(`src/content/kiddora/${f}.json`, 'utf8'));
   it('has 26 letters with English and Malay words', () => {
     const { letters } = k('alphabet');

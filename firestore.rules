@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// Kiddora / Grammar Hub security rules.
+// Kivokid / Grammar Hub security rules.
 //  - Only emails listed in allowedEmails/{email} can use the app.
 //  - Each user can only read and write their own users/{uid}/... data.
 //  - A user can read only their OWN allowedEmails entry (to check access).

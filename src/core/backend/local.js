@@ -2,13 +2,13 @@
  * Demo backend used when Firebase is not configured. Mirrors the Firebase
  * backend API but stores everything in localStorage on this device.
  * Seeded accounts (for local development and the Playwright smoke test):
- *   demo@kiddora.test / demo123   (role: user)
- *   admin@kiddora.test / admin123 (role: admin)
+ *   demo@kivokid.test / demo123   (role: user)
+ *   admin@kivokid.test / admin123 (role: admin)
  */
 const KEY = 'bijak-demo-db';
 const SEED = {
-  accounts: { 'demo@kiddora.test': 'demo123', 'admin@kiddora.test': 'admin123' },
-  allowed: { 'demo@kiddora.test': { role: 'user' }, 'admin@kiddora.test': { role: 'admin' } },
+  accounts: { 'demo@kivokid.test': 'demo123', 'admin@kivokid.test': 'admin123' },
+  allowed: { 'demo@kivokid.test': { role: 'user' }, 'admin@kivokid.test': { role: 'admin' } },
   users: {},
   session: null,
 };

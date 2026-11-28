@@ -265,7 +265,7 @@ export function resultsScreen() {
 
 /* ---------------- scores ---------------- */
 export async function scoresScreen({ query }) {
-  if (session.app.kids) return progressScreen({ query }); // Kiddora: Learning Progress dashboard
+  if (session.app.kids) return progressScreen({ query }); // Kivokid: Learning Progress dashboard
   const pid = query.p || session.profile?.id || session.profiles[0]?.id;
   const profile = session.profiles.find((p) => p.id === pid);
   const select = el('select#score-profile', {

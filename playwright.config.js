@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Smoke test runs against the Grammar Hub dev server; the offline test runs
- * against a production Kiddora build (service worker active). Both use demo mode.
+ * against a production Kivokid build (service worker active). Both use demo mode.
  */
 export default defineConfig({
   testDir: 'tests/e2e',

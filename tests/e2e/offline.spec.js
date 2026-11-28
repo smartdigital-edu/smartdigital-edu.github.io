@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 
-// Production Kiddora build (see playwright.config.js). Demo-mode seed account – not a real credential.
+// Production Kivokid build (see playwright.config.js). Demo-mode seed account – not a real credential.
 const BASE = 'http://localhost:5198/';
 
 test('service worker caches every activity: app works offline after one online visit', async ({ page, context }) => {
   await page.goto(BASE);
-  await page.getByLabel('Email').fill('demo@kiddora.test');
+  await page.getByLabel('Email').fill('demo@kivokid.test');
   await page.getByLabel('Password').fill('demo123');
   await page.getByRole('button', { name: /^(Log In|Sign in)$/ }).click();
   await page.getByRole('button', { name: 'Add Learner' }).click();

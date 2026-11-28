@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { playArticlesQuiz } from './helpers.js';
 
 // Demo-mode seed account (src/core/backend/local.js) – not a real credential.
-const EMAIL = 'demo@kiddora.test';
+const EMAIL = 'demo@kivokid.test';
 const PASSWORD = 'demo123';
 
 test('login → pick profile → finish a quiz → score appears', async ({ page }) => {

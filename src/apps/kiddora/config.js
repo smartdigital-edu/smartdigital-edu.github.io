@@ -1,5 +1,5 @@
 /**
- * Kiddora app config: branding, profile levels/avatars and the module →
+ * Kivokid app config: branding, profile levels/avatars and the module →
  * activity → engine map. Each activity's build() returns an engine config
  * from the JSON content (see builders.js).
  */
@@ -15,7 +15,7 @@ const pic = (name, tint) => ({ image: `images/kiddora/activities/${name}.webp`, 
 
 export default {
   id: 'kiddora',
-  name: 'Kiddora',
+  name: 'Kivokid',
   bilingual: true,
   kids: true,
   heroEmoji: '🦄',
@@ -29,8 +29,8 @@ export default {
       // Recorded natural voices (EN: Ana, BM: Yasmin) by scripts/cici-voice.py; `times` = when each word is
       // spoken, so the bubble follows her voice. The device voice is the fallback.
       greet: {
-        text: m('Hi! My name is Cici. Welcome to Kiddora! Ready to learn and play? Let\'s go!',
-          'Hai! Nama saya Cici. Selamat datang ke Kiddora! Sedia untuk belajar dan bermain? Jom!'),
+        text: m('Hi! My name is Cici. Welcome to Kivokid! Ready to learn and play? Let\'s go!',
+          'Hai! Nama saya Cici. Selamat datang ke Kivokid! Sedia untuk belajar dan bermain? Jom!'),
         audio: m('audio/kiddora/cici-hello-en.mp3', 'audio/kiddora/cici-hello-ms.mp3'),
         times: ciciTimes.hello,
       },

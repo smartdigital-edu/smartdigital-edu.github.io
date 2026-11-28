@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Shared platform powering Kiddora and Grammar Hub",
+  "description": "Shared platform powering Kivokid and Grammar Hub",
   "scripts": {
     "dev": "cross-env APP=kiddora vite",
     "dev:kiddora": "cross-env APP=kiddora vite",

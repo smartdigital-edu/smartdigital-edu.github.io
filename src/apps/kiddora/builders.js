@@ -1,5 +1,5 @@
 /**
- * Kiddora activity builders: turn the JSON content in /src/content/kiddora
+ * Kivokid activity builders: turn the JSON content in /src/content/kiddora
  * into engine configs. Add items to the JSON and every activity that uses
  * that file picks them up automatically – no code change needed.
  */

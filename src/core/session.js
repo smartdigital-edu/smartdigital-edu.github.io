@@ -66,7 +66,7 @@ const profileKey = () => `activeProfile:${session.user?.uid}`;
 
 export async function loadProfiles() {
   const all = await session.backend.listProfiles(session.user.uid);
-  // Profiles are per app: a Kiddora child does not appear in Grammar Hub.
+  // Profiles are per app: a Kivokid child does not appear in Grammar Hub.
   session.profiles = all.filter((p) => !p.app || p.app === session.app.id);
   const activeId = store.get(profileKey());
   session.profile = session.profiles.find((p) => p.id === activeId) || null;
